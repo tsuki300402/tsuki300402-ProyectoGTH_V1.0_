@@ -1,0 +1,12 @@
+$primary:#1b4794;
+$secondary: #19d7bc;
+$light: #5487f5;
+
+@import "../libs/bootstrap/scss/bootstrap";
+.list-unstyled {
+     list-style: none;
+}
+a {
+    color: #495057;
+    text-decoration: none;
+}
