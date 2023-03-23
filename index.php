@@ -66,7 +66,7 @@
 </p>
 <div class="collapse" id="usu">
   
-    <?php include "./proyecto/index.php" ?>
+    <?php include "./configuracion/index.php" ?>
  
 </div>
 
@@ -77,7 +77,7 @@
   
 </p>
 <div class="collapse" id="admin">
-<?php include "./proyecto/index.php" ?>
+<?php include "./configuracion/index.php" ?>
 </div>
 </div>
 </div>
