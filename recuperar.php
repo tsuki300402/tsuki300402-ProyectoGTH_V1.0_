@@ -16,7 +16,7 @@
                     <form method="post" action="./paginas/funciones/restablecerC.php">
                         <label class="lead mb-3">Ingresa aqui tu contraseña para restablecerla</label>
                         <div class="">
-                            <input class="form-control form-control-lg MB-3" type="email" id="email" name="email" required>
+                            <input class="form-control form-control-lg mb-3" type="email" id="email" name="email" required>
                         </div>
                         <button class="btn btn-primary">Restablecer</button>
                     </form>
