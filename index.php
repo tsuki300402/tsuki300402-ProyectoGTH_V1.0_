@@ -1,6 +1,7 @@
 <?php session_start()?>
 hola se va a ver en la pagina?
 jejejejejejejjeej
+prueba 3 
 <!DOCTYPE html>
 <html>
 <head>
