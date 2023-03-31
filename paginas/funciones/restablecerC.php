@@ -19,6 +19,7 @@ $email = $_POST["email"];
 $sql = "SELECT password FROM usuario WHERE email='$email'";
 $result = $conn->query($sql);
 
+include_once("contraseñaC.php");
 if ($result->num_rows > 0) {
   // Enviar un correo electrónico al usuario con su contraseña o proporcionar un enlace para restablecerla
   $row = $result->fetch_assoc();

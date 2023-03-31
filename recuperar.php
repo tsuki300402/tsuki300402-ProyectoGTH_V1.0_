@@ -13,7 +13,7 @@
         <div class="container text-start bg-light mt-5">
             <div class="row mt-5">
                 <div class="col-sm-6 mx-auto bg-white mt-3 mb-3">
-                    <form method="post" action="./paginas/funciones/contraseñaC.php">
+                    <form method="post" action="./paginas/funciones/restablecerC.php">
                         <label class="lead mb-3">Ingresa aqui tu contraseña para restablecerla</label>
                         <div class="">
                             <input class="form-control form-control-lg MB-3" type="email" id="email" name="email" required>
