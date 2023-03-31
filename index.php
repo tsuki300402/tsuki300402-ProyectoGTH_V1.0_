@@ -60,7 +60,7 @@
                     <div class="d-grid gap-2 col-6 mx-auto">
     <p>
   <a class="btn btn-primary" data-bs-toggle="collapse" href="#usu" role="button" aria-expanded="false" aria-controls="collapseExample">
-    INICIO DE SECION ASPIRANTE/EMPLEADO
+    INICIO DE SESION ASPIRANTE/EMPLEADO
   </a>
   
 </p>
