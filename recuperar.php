@@ -10,14 +10,17 @@
     </head>
     <body>
         <?php include("./modules/menu/menu.php") ?>
-        <div class="container-fluid mx-auto ms-auto">
-            <div class="container text-center">
-                <form method="post" action="./paginas/funciones/">
-                    <label>Ingresa aqui tu contraseña para restablecerla</label>
-                    <div class="">
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                </form>
+        <div class="container text-start bg-light mt-5">
+            <div class="row mt-5">
+                <div class="col-sm-6 mx-auto bg-white mt-3 mb-3">
+                    <form method="post" action="./paginas/funciones/restablecerC.php">
+                        <label class="lead mb-3">Ingresa aqui tu contraseña para restablecerla</label>
+                        <div class="">
+                            <input class="form-control form-control-lg MB-3" type="email" id="email" name="email" required>
+                        </div>
+                        <button class="btn btn-primary">Restablecer</button>
+                    </form>
+                </div>
             </div>
         </div>
     </body>

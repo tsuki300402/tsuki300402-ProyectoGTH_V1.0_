@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 $email = $_POST["email"];
 
 // Realizar una consulta a la base de datos para obtener la contraseña
-$sql = "SELECT contraseña FROM users WHERE email='$email'";
+$sql = "SELECT password FROM usuario WHERE email='$email'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
