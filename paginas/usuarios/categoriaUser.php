@@ -3,7 +3,7 @@
     if(!isset($_SESSION["Usuario"])){
         header ('Location: ../index.php');
     }
-    //$_SESSION["Usuario"];
+    $_SESSION["Usuario"];
 ?>
 
     <?php

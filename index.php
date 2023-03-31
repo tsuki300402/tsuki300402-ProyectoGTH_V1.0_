@@ -1,5 +1,4 @@
 <?php session_start()?>
-hola se va a ver en la pagina?
 <!DOCTYPE html>
 <html>
 <head>
@@ -72,12 +71,13 @@ hola se va a ver en la pagina?
 
 <p>
   <a class="btn btn-primary" data-bs-toggle="collapse" href="#admin" role="button" aria-expanded="false" aria-controls="collapseExample">
-   INICIO DE SECION ADMINISTRADOR
+   INICIO DE SESION ADMINISTRADOR
   </a>
   
 </p>
 <div class="collapse" id="admin">
 <?php include "./configuracion/index.php" ?>
+
 </div>
 </div>
 </div>
@@ -87,9 +87,9 @@ hola se va a ver en la pagina?
                     <br>
                     <br><br><br><br>
 <div class="d-grid gap-2 col-6 mx-auto">
-  <a href="http://localhost/ProyectoGTH/misionvision.php"><button class="btn btn-primary btn-lg" type="button">Mision/vision</button></a>
-  <a href="http://localhost/ProyectoGTH/nosotros.php"><button class="btn btn-primary btn-lg" type="button">Sobre Nosotros</button></a>
-  <a href="http://localhost/ProyectoGTH/modules/ubicacion/ubicacion.php"><button class="btn btn-primary btn-lg" type="button">Ubicacion</button></a>
+  <a href="http://localhost/ProyectoGTH_V1.0_/misionvision.php"><button class="btn btn-primary btn-lg" type="button">Mision/vision</button></a>
+  <a href="http://localhost/ProyectoGTH_V1.0_/nosotros.php"><button class="btn btn-primary btn-lg" type="button">Sobre Nosotros</button></a>
+  <a href="http://localhost/ProyectoGTH_V1.0_/modules/ubicacion/ubicacion.php"><button class="btn btn-primary btn-lg" type="button">Ubicacion</button></a>
 </div>
 </div>
 

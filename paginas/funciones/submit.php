@@ -24,7 +24,7 @@
         $idUser=$_POST['idUser'];
         $sql="INSERT INTO `respuestas` (`idrespuesta`, `respuesta`, `idprueba`, `idusuario`) VALUES (NULL, '".$res."', '".$idQuest."', '".$idUser."')";
         if ($enlace->query($sql) === TRUE) {  
-                header('Location: http://localhost/ProyectoGTH_V1.0_/paginas/admin/categoriaUser.php');
+                header('Location: http://localhost/ProyectoGTH_V1.0_/paginas/usuarios/categoriaUser.php');
 		}        
     }
  }

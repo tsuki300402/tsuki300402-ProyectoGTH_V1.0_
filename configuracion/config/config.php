@@ -33,6 +33,7 @@
 
     ?>
     
+    <a class="btn btn-primary btn-lg mt-3" href="../../index.php">Volver</a>
  
     <div class="container-fluid">
     <div class="row g-4 text-center justify-content-center mt-5">
@@ -64,7 +65,7 @@
             <div class="invalid-feedback">Por favor llene este campo</div>
             
         </div>
-</div>deberiamos tomar captura de tdoso los errores para meterlos en lo de pruebas
+</div>
 
         <div class="form-floating m-4">
             <input type="email" class="form-control" id="email" placeholder="Ingrese su email" name="email" required>

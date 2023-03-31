@@ -70,13 +70,14 @@
         $enlace=$this->conectarDB();
         $consulta="SELECT * FROM preguntas WHERE prueba=".$id.";";
         if ($resultado = mysqli_query($enlace, $consulta)and($value = mysqli_fetch_assoc($resultado))) { 
+			echo"<form class='form mt-4' action='../funciones/submit.php' method='POST'>";
             foreach ($resultado as $value){ 
                 $answ=$value['pregunta'];
 				$idQ=$value['idpregunta'];
 
-				echo "<form class='form mt-4' action='../funciones/submit.php' method='POST'>
+				echo "
 				<div class='text-start'>
-					<h2>Pregunta #".$id."</h2>
+					<h2>Pregunta #".$idQ."</h2>
 				</div>
 				<div class='container p-4 border'>
 					<b>".$answ."</b>
@@ -88,11 +89,12 @@
 				</div>
 				<input type='hidden' name='idQuest' value='".$idQ."'></input>
 				<input type='hidden' name='idUser' value='".$idUser."'></input>
-				<div class='container text-center'>
-				<button type='submit' class='btn btn-primary mt-2'>Subir</button>
-				</div>
-			</form>";
+				";
         }
+		echo "<div class='container text-center'>
+		<button type='submit' class='btn btn-primary mt-2'>Subir</button>
+		</div>
+	</form>";
         }
     }
 
