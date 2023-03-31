@@ -39,7 +39,7 @@ try {
 </head>
 <body>
 <h1>Si quieres restablecer tu contraseña porfavor dale click en le siguiente enlace</h1><br>
-<a href="http//localhost/ProyectoGTH_V1.0_/paginas/funciones/restablecerC.php">Haz click aqui</a>
+<a href="localhost/ProyectoGTH_V1.0_/contraseñaR.php">Haz click aqui</a>
 
 </body>
 </html>');
