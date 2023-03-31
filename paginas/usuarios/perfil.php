@@ -1,15 +1,10 @@
-<<<<<<< HEAD
 <?php
   session_start();
   require '../../configuracion/controller/conexion.php';
 $idUsuario = $_SESSION['email']; //el cual debes tener al validar el login
 echo $_SESSION['email'];
 //realizo la consulta
-$sql= "SELECT * FROM usuario WHERE id = :id"; 
-$stmt = $pdo->prepare($sql);
-$stmt->bindParam(':id', $idUsuario, PDO::PARAM_INT); 
-$stmt->execute();
-$row = $stmt->fetchObject();
+$sql= "SELECT email FROM usuario WHERE id = :id"; 
     if(!isset($_SESSION["Usuario"])){
         header ('Location: ../index.php');
     }
