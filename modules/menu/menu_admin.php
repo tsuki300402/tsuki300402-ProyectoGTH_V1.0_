@@ -34,15 +34,15 @@
       </div>
       <div id="sidebar-accordion" class="accordion">
         <div class="list-group">
-          <a href="admin_de_usuarios.php" data-toggle="collapse" aria-expanded="false"
+          <a href="http://localhost/ProyectoGTH_V1.0_/paginas/admin/admin_de_usuarios.php" data-toggle="collapse" aria-expanded="false"
             class="list-group-item list-group-item-action bg-dark text-light">
             <i class="fa fa-tachometer mr-3" aria-hidden="true"></i>Administracion de usuarios
           </a>
-          <a href="categoriaAdmin.php" data-toggle="collapse" aria-expanded="false"
+          <a href="http://localhost/ProyectoGTH_V1.0_/paginas/admin/categoriaAdmin.php" data-toggle="collapse" aria-expanded="false"
             class="list-group-item list-group-item-action bg-dark text-light">
             <i class="fa fa-tachometer mr-3" aria-hidden="true"></i>Pruebas
           </a>
-              <a href="../../configuracion/controller/cerrar_session.php" class="list-group-item list-group-item-action bg-dark text-light">
+              <a href="http://localhost/ProyectoGTH_V1.0_/configuracion/controller/cerrar_session.php" class="list-group-item list-group-item-action bg-dark text-light">
               <i class="fa fa-window-close mr-3"></i>Cerrar Sesion
               </a>
         </div>
@@ -51,7 +51,7 @@
     <div class="content w-100">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-xl">
-          <div class="text-white text-center">Bienvenido <?php echo $_SESSION['Usuario']?> a la empresa nombre de empresa</div>
+          <div class="text-white text-center">Bienvenido <?php echo $_SESSION['Usuario']?> a la empresa NielRooQui</div>
           
             <form class="form-inline my-2 my-md-0">
               <input class="form-control" type="text" placeholder="Search" aria-label="Search">
@@ -63,6 +63,6 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <h2>Lista de los aspirantes que realizaron las pruebas psicotecnicas</h2>
+             
               
             

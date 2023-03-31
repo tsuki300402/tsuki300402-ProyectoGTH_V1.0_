@@ -34,6 +34,7 @@
         <div class="row mt-5">
             <?php
                 include 'pruebasU.php'; 
+
             ?>
         </div>
     </div>
@@ -85,6 +86,38 @@
                 console.log(tem);
             });
         });
+
+        let link = document.getElementsByClassName("link");
+
+        let liValue = 1;
+        function activeLink(){
+             for(l of link){
+                l.classList.remove("active");
+             }
+             event.target.classList.add("active");
+             liValue = event.target.value;
+        }
+
+        function BtnPrev(){
+            if(liValue > 1){
+                for(l of link){
+                    l.classList.remove("active");
+                } 
+
+                liValue--;
+                link[liValue-1].classList.add("active");
+            }
+        }
+        function BtnNext(){
+            if(liValue < 6){
+                for(l of link){
+                    l.classList.remove("active");
+                } 
+
+                liValue++;
+                link[liValue-1].classList.add("active");
+            }
+        }
     </script>
     </div>
           </div>
@@ -94,7 +127,52 @@
   </div>
   
 </body>
+<style>
+.conPag{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pagination{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    color: #383838;
+    padding: 10px 40px;
+    border-radius: 6px ;
+}
+ul{
+    margin: 20px 30px;
 
-</html>
-</body>
+}
+ul li{
+    display: inline-block;
+    margin: 0 10px; 
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+    background-position: 0 -45px;
+    transition: background-position 0.5s;
+}
+ul li.active{
+    color: #fff;
+    background-image: linear-gradient(#ff4568, #ff4568);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.btn1, .btn2 {
+    display: flex;
+    align-items: center;
+    color: #383838;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+</style>
 </html>
