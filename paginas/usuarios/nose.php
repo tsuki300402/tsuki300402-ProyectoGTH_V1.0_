@@ -1,21 +1,12 @@
 <?php
     session_start();
-
+    if(!isset($_SESSION["Usuario"])){
+        header ('Location: ../index.php');
+    }
+    $_SESSION["Usuario"];
 ?>
-<html lang="en">
-<head>
-    <title>Human's Proyect</title>
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Pagina de inicio">
-	<link href="../../../css/custom.css"  rel="stylesheet">
-	<link href="../../../libs/bootstrap-icons/bootstrap-icons.css"  rel="stylesheet">
-	<script src="../../../js/bootstrap.bundle.min.js"></script>
-    <script src="../../../jq/jquery-3.6.1.min.js"></script>
-</head>
-<body>
     <?php
-        //include "../../../modules/menu/menu_usuario.php"
+        include "../../modules/menu/menu_usuario.php"
     ?>
     <div class="container mt-4">
         <div class="row">
@@ -25,7 +16,7 @@
               <?php
                      $id=$_POST['archivo'];
                      $idUser=$_SESSION['idUsuario'];
-                     include './archivos.php';
+                     include '../funciones/archivos.php';
                      $conexion = new Traer();
                      $conexion->Data($id,$idUser);
                 ?>

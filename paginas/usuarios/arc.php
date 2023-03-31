@@ -20,7 +20,7 @@
     <div class="container mt-4">
         <form action="nose.php" method="POST">
             <div class="row">
-                <?php 
+            <?php 
                     $archivo=$_POST["archivo"];    
                     include '../funciones/archivos.php';
                     $conexion = new Traer();
