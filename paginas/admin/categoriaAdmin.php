@@ -5,21 +5,6 @@
     }
     $_SESSION["Usuario"];
 ?>
-    </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-    <div class="content w-100">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-xl">
-          
-      
-        </div>
-      </nav>
-    </div>
-  </div>
     <?php
        include "../../modules/menu/menu_admin.php"
     ?>
