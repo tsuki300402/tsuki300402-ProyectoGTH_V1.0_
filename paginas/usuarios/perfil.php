@@ -1,5 +1,13 @@
 <?php
   session_start();
+  require '../../configuracion/controller/conexion.php';
+$idUsuario = $_SESSION['email']; //el cual debes tener al validar el login
+//realizo la consulta
+$sql= "SELECT * FROM usuario WHERE id = :id"; 
+$stmt = $pdo->prepare($sql);
+$stmt->bindParam(':id', $idUsuario, PDO::PARAM_INT); 
+$stmt->execute();
+$row = $stmt->fetchObject();
     if(!isset($_SESSION["Usuario"])){
         header ('Location: ../index.php');
     }
@@ -40,19 +48,22 @@
               include "../../configuracion/controller/conexion.php";
                 $conexion = new Conexion();
                 $con = $conexion->conectarDB();
-                $user_id = $_GET['id']; // Obtener el ID del usuario de la URL
-                $query = "SELECT * FROM usuario ";// WHERE id = $user_id
-                $resultado = mysqli_query($con, $query); // Ejecutar la consulta SQL
-                while($row = mysqli_fetch_assoc($resultado)){ 
+                ?>
+                <form method="POST" action="actualizarPerfil.php">
+                <table>
+                <tr>
+                <td>Usuario:</td>
+                <td><input type="text" name="usuario" value="<?=$row->usuario;?>"></td>
+                </tr>
+                <tr>
+                <td>Correo:</td>
+                <td><input type="text" name="correo" value="<?=$row->correo;?>"></td>
+                </tr>
+                ...
 
-                  ?>
-                <div>
-                  <p>Nombre:<?php echo $row['nombre']  ?></p>
-                  <p>Apellido:<?php echo $row['apellido'] ?></p>
-                  <p>Correo Electronico<?php echo $row['email'] ?></p>
-                  <p>Rol:<?php echo $row['rol'] ?></p>
-                </div>
-                <?php }?>
+                </table>
+                <button type="submit">Grabar Datos</button>
+                </form>
           </div>
         </div>
       </section>

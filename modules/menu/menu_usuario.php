@@ -39,7 +39,7 @@
             class="list-group-item list-group-item-action bg-dark text-light">
             <i class="fa fa-user mr-3" aria-hidden="true"></i>Perfil
           </a>
-          <a href="categoriaUser" data-toggle="collapse" aria-expanded="false"
+          <a href="categoriaUser.php" data-toggle="collapse" aria-expanded="false"
             class="list-group-item list-group-item-action bg-dark text-light">
             <i class="fa fa-user mr-3" aria-hidden="true"></i>Prueba
           </a>
