@@ -30,7 +30,7 @@
     <div id="sidebar">
       <div class="p-2">
         <a href="#" class="navbar-brand text-center text-light w-100 p-4 border-bottom">
-          Logo de la empresa
+          NielRooQui
         </a>
       </div>
       <div id="sidebar-accordion" class="accordion">
@@ -39,14 +39,14 @@
             class="list-group-item list-group-item-action bg-dark text-light">
             <i class="fa fa-user mr-3" aria-hidden="true"></i>Perfil
           </a>
-          <a href="categoriaUser" data-toggle="collapse" aria-expanded="false"
+          <a href="http://localhost/ProyectoGTH_V1.0_/paginas/usuarios/categoriaUser.php" data-toggle="collapse" aria-expanded="false"
             class="list-group-item list-group-item-action bg-dark text-light">
             <i class="fa fa-user mr-3" aria-hidden="true"></i>Prueba
           </a>
-          <a href="../../foro/index.php" class="list-group-item list-group-item-action bg-dark text-light">
+          <a href="http://localhost/ProyectoGTH_V1.0_/foro/index.php" class="list-group-item list-group-item-action bg-dark text-light">
             <i class="fa fa-window-close mr-3"></i>Foro
           </a>
-          <a href="../../configuracion/controller/cerrar_session.php" class="list-group-item list-group-item-action bg-dark text-light">
+          <a href="http://localhost/ProyectoGTH_V1.0_/configuracion\controller\cerrar_session.php" class="list-group-item list-group-item-action bg-dark text-light">
             <i class="fa fa-window-close mr-3"></i>Cerrar Sesion
           </a>
         </div>
@@ -55,7 +55,7 @@
     <div class="content w-100">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-xl">
-          <div class="text-white text-center">Bienvenido <?php echo $_SESSION['Usuario']?> a la empresa nombre de empresa</div>
+          <div class="text-white text-center">Bienvenido <?php echo $_SESSION['Usuario']?> a la empresa NielRooQui</div>
         </div>
       </nav>
       <section class="p-3">
