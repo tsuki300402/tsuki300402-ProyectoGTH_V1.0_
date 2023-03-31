@@ -1,5 +1,5 @@
 <?php session_start()?>
-
+hola se va a ver en la pagina?
 <!DOCTYPE html>
 <html>
 <head>
