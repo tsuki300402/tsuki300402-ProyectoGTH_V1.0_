@@ -1,8 +1,8 @@
 <?php
     session_start();
-    if(!isset($_SESSION["Usuario"])){
-        header ('Location: ../index.php');
-    }
+    if(!isset($_SESSION["Usuario"])&&($_SESSION['rol']!='administrador')){
+      header ('Location: ../index.php');
+  }
     $_SESSION["Usuario"];
 ?>
 <?php
