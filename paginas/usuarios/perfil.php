@@ -4,7 +4,8 @@
 $idUsuario = $_SESSION['email']; //el cual debes tener al validar el login
 echo $_SESSION['email'];
 //realizo la consulta
-$sql= "SELECT email FROM usuario WHERE id = :id"; 
+$sql= "SELECT email FROM usuario WHERE id = ''"; 
+echo $sql;
     if(!isset($_SESSION["Usuario"])){
         header ('Location: ../index.php');
     }
