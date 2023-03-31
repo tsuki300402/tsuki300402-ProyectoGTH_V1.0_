@@ -33,6 +33,7 @@
 
     ?>
     
+    <a class="btn btn-primary btn-lg mt-3" href="../../index.php">Volver</a>
  
     <div class="container-fluid">
     <div class="row g-4 text-center justify-content-center mt-5">
