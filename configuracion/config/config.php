@@ -65,7 +65,7 @@
             <div class="invalid-feedback">Por favor llene este campo</div>
             
         </div>
-</div>deberiamos tomar captura de tdoso los errores para meterlos en lo de pruebas
+</div>
 
         <div class="form-floating m-4">
             <input type="email" class="form-control" id="email" placeholder="Ingrese su email" name="email" required>
