@@ -1,4 +1,4 @@
-<?php
+<!--/*
 // Importar la biblioteca PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -46,8 +46,53 @@ try {
 
     // Enviar el correo electrónico
     $mail->send();
-    echo 'Correo electrónico enviado correctamente';
+    $_SESSION["mensaje"] = 'Correo electrónico enviado correctamente';
+    //header('../../recuperar.php');
 } catch (Exception $e) {
-    echo 'Ocurrió un error al enviar el correo electrónico: ', $mail->ErrorInfo;
-}
+    $_SESSION["mensaje"] = "Ocurrió un error al enviar el correo electrónico: " . $mail->ErrorInfo;
+    //header('../../recuperar.php');
+}*/
+-->
+<?php
+
+ if (isset($_POST['email'])) {
+    $email = $_POST['email'];
+ //$conexion = new Conexion();
+ //$con = $conexion->conectarDB();
+ //$queryusuario = mysqli_query ($con, "SELECT * FROM usuario WHERE email = '$email' ");
+ //$nr = mysqli_num_rows ($queryusuario);
+ //if ($nr == 1)
+ //{
+ //$mostrar = mysqli_fetch_array ($queryusuario);
+ //$enviarpass = $mostrar['pass'];
+ 
+ $para = $email;
+ $titulo = "Recuperar Contraseña";
+ $mensaje = '
+ <html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Pagina de inicio">
+</head>
+<body>
+<h1>Si quieres restablecer tu contraseña porfavor dale click en le siguiente enlace</h1><br>
+<a href="localhost/ProyectoGTH_V1.0_/contraseñaR.php">Haz click aqui</a>
+
+</body>
+</html>';
+ $tuemail = "From: elmasgamerdelmundo@gmail.com";
+ if(mail( $para , $titulo , $mensaje , $tuemail)){
+      echo "<script> alert('se envio el correo ".$para."'); </script>";
+    }else{
+     echo "No se envio ningun correo";
+
+ }}
+ /*if (mail ($paracorreo, $titulo, $mensaje, $tucorreo) )
+ {
+     echo "<script> alert ('Contrasena enviado') ;window. location= '../../recuperar.php' </script>";
+ }else{
+         echo "<script> alert ('Error') ;window. location= '../../recuperar.php' </script>";
+     }*/
+//}
 ?>

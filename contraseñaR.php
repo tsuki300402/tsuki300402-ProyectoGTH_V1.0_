@@ -18,7 +18,7 @@
                         <div class="">
                             <input class="form-control form-control-lg mb-3" type="password" id="password" name="password" required>
                         </div>
-                        <button class="btn btn-primary">Restablecer</button>
+                        <button type="submit" class="btn btn-primary">Restablecer</button>
                     </form>
                 </div>
             </div>
