@@ -22,29 +22,23 @@
                               <th>Id</th>
                               <th>Nombre</th>
                               <th>Apellido</th>
-                              <th>Email</th>
-                              <th>Estado</th>
-                              <th>Ultimo ingreso</th>   
+                              <th>Nivel de prueba</th>   
                           </tr>
                       </thead>
                       <tbody>
                           <?php 
-                          $sql_query = "SELECT * FROM usuario where rol='usuario'";
+                          $sql_query = "SELECT * FROM resultados";
                           $resultset = mysqli_query($con, $sql_query) or die("error base de datos:". mysqli_error($con));
                           while( $libro = mysqli_fetch_assoc($resultset) ) {
                           ?>
                              <tr id="<?php echo $libro ['id']; ?>">
-                             <td><?php echo $libro ['idUsuario']; ?></td>
+                             <td><?php echo $libro ['id']; ?></td>
                              <td><?php echo $libro ['nombre']; ?></td>
                              <td><?php echo $libro ['apellido']; ?></td>
-                             <td><?php echo $libro ['email']; ?></td>
-                             <td><?php echo $libro ['estado']; ?></td>
-                             <td><?php echo $libro ['ultimo_ingreso']; ?></td>
-                             <?php
-                             echo "<form action='../funciones/estado.php' method='post'>";
-                              echo "<input type='hidden' name='idBtnDel' value='".$libro['idUsuario']."'>";
-                              echo "<td><button class='btn btn-danger' onclick='return Confirm()' name='btnDel' id='btnDel' value='1'><i class='bi bi-recycle'></i></button></td>";
-                              echo "</form>";  ?>
+                             <td><?php echo $libro ['nivel de prueba']; ?></td>
+                             <td><a class="btn btn-primary fa fa-download" href="../../controlador/pdf.php"></a></td>   
+                             <td><a class="btn btn-primary fa fa-eye" href="../../controlador/mpdf/pdf/index.php"></a></td>   
+                             <td><a class="btn btn-primary fa fa-share-square" href="../../controlador/phpmailer/enviarC.php"></a></td>   
                             </tr>
                           <?php } ?>
                       </tbody>
@@ -55,17 +49,5 @@
       </section>
     </div>
 </div>
-<script>
-      function Confirm() {
-        if(confirm("¿Está seguro que desea realizar esta acción?")) {
-        } else {
-          event.preventDefault(); 
-          return false;
-        }
-       
-      }
-//controlador de Evento submit
-      document.getElementById("btnDel").addEventListener("submit", Confirm);
-    </script>
 </body>
 </html>

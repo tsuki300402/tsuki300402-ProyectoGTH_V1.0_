@@ -94,12 +94,14 @@
     <script>
       function Confirm() {
         if(confirm("¿Está seguro que desea realizar esta acción?")) {
-          return true;
         } else {
+          event.preventDefault(); 
           return false;
         }
        
       }
+//controlador de Evento submit
+      document.getElementById("btnDel").addEventListener("submit", Confirm);
     </script>
 </body>
 </html>

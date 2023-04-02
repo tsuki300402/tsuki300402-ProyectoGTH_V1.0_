@@ -29,7 +29,7 @@
 								<td colspan='2'><b>Info</b</td>
 							</thead>
 							<tr>
-								<td rowspan='2'><img src='../../../img/	".$value['imagen']."'></td>
+								<td rowspan='2'><img src='../img/".$value['imagen']."'></td>
 								<td><b class='text-start '>Titulo</b></td>
 								<td ><i class='text-end'>".$value['titulo']."</i></td>
 							</tr>
