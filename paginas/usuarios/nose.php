@@ -5,6 +5,25 @@
     }
     $_SESSION["Usuario"];
 ?>
+<style>
+.form-slider {
+  overflow: hidden;
+}
+
+.form-page {
+  display: none;
+}
+
+.form-page:first-of-type {
+  display: block;
+}
+
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+</style>
     <?php
         include "../../modules/menu/menu_usuario.php"
     ?>
@@ -23,20 +42,46 @@
             </div>  
             
     </div>
-    <!--<script>
-        $(document).ready(function(){
-            $('#type').click(function(){
-                var tp= $(this).val();    
-                console.log(tp);
-                if(tp=="mul"){
-                        $('div#respuestas').html('<br> <input type="text" class="form-control" id="1" placeholder="Respuesta 1"> <br> <input type="text" class="form-control" id="2" placeholder="Respuesta 2"> <br> <input type="text" class="form-control" id="3" placeholder="Respuesta 3"> ');
-                } else if(tp=="des"){
-                    $('div#respuestas').html('<label for="rango" class="form-label">Rango Satisfaccion</label><input type="range" class="form-range" id="rango">');
-                }else if(tp=="abi"){
-                    $('div#respuestas').html('<label for="answ">Respuesta</label><input type="text" class="form-control" id="answ">');
-                }
-            });
-        });
-    </script>-->
+    <script>
+        const previousButton = document.querySelector('.previous-button');
+        const nextButton = document.querySelector('.next-button');
+        const formPages = document.querySelectorAll('.form-page');
+
+        let currentPageIndex = 0;
+
+        function showPage(pageIndex) {
+        formPages[currentPageIndex].style.display = 'none';
+        formPages[pageIndex].style.display = 'block';
+        currentPageIndex = pageIndex;
+
+        if (currentPageIndex == 1) {
+            previousButton.setAttribute("disabled", "disabled");
+        } else {
+            previousButton.removeAttribute("disabled");
+        }
+
+        if (currentPageIndex === formPages.length - 1) {
+            nextButton.textContent = 'Enviar';
+        } else {
+            nextButton.textContent = 'Siguiente';
+        }
+        }
+
+        function goToPreviousPage() {
+        showPage(currentPageIndex - 1);
+        }
+
+        function goToNextPage() {
+        if (currentPageIndex === formPages.length - 1) {
+            // Submit form
+            document.querySelector('form').submit();
+        } else {
+            showPage(currentPageIndex + 1);
+        }
+        }
+
+        previousButton.addEventListener('click', goToPreviousPage);
+        nextButton.addEventListener('click', goToNextPage);
+    </script>
 </body>
 </html>
