@@ -1,4 +1,5 @@
-<!--/*
+<?php
+
 // Importar la biblioteca PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -43,18 +44,21 @@ try {
 
 </body>
 </html>');
+ 
+// Enviar el correo electrónico
 
-    // Enviar el correo electrónico
-    $mail->send();
-    $_SESSION["mensaje"] = 'Correo electrónico enviado correctamente';
+if ($mail->send()){
+    echo "<script> alert ('Correo enviado') ;window. location= '../../recuperar.php' </script>";
     //header('../../recuperar.php');
+}else{
+    echo "<script> alert ('Error') ;window. location= '../../recuperar.php' </script> " . $mail->ErrorInfo;
+    //header('../../recuperar.php');
+}
 } catch (Exception $e) {
-    $_SESSION["mensaje"] = "Ocurrió un error al enviar el correo electrónico: " . $mail->ErrorInfo;
-    //header('../../recuperar.php');
-}*/
--->
+}
+?>
 <?php
-
+/*
  if (isset($_POST['email'])) {
     $email = $_POST['email'];
  //$conexion = new Conexion();
@@ -94,5 +98,5 @@ try {
  }else{
          echo "<script> alert ('Error') ;window. location= '../../recuperar.php' </script>";
      }*/
-//}
+//}*/
 ?>
