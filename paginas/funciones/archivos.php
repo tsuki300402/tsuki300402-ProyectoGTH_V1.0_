@@ -90,9 +90,9 @@
 				";
         }
 		echo "<div class='form-navigation'>
-		<button class='previous-button' type='button'>Anterior</button>
-		<button class='next-button' type='button'>Siguiente</button>
-	  </div>
+				<button class='previous-button' type='button'>Anterior</button>
+				<button class='next-button' type='button'>Siguiente</button>
+			</div>
 		</div>	
 	</form>";
         }
