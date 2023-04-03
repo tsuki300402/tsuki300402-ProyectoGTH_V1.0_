@@ -9,7 +9,8 @@
 	<script src="./js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
-        <?php include("./modules/menu/menu.php") ?>
+        <?php include("./modules/menu/menu.php");     
+        ?>
         <div class="container text-start bg-light mt-5">
             <div class="row mt-5">
                 <div class="col-sm-6 mx-auto bg-white mt-3 mb-3">
@@ -17,6 +18,7 @@
                         <label class="lead mb-3">Contraseña</label>
                         <div class="">
                             <input class="form-control form-control-lg mb-3" type="password" id="password" name="password" required>
+                            <input class="form-control form-control-lg mb-3" type="email" id="email" name="email" placeholder="">
                         </div>
                         <button type="submit" class="btn btn-primary">Restablecer</button>
                     </form>
