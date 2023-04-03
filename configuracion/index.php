@@ -25,7 +25,7 @@
    
 <div class="container-fluid">
     <div class="row ">
-  <div class="col-14">
+  <div class="col-12">
     <div class="card h-100">
       <img src="http://localhost/ProyectoGTH_V1.0_/libs/bootstrap-icons/people-fill.svg" class="card-img-top" alt="person-plus" width="90px" height="90">
       <div class="card-body">
