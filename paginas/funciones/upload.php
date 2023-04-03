@@ -25,9 +25,9 @@
         $tem=$_POST['tema'];
         $img=$_POST['image'];
         
-        $sql="INSERT INTO `prueba` (`id`,`titulo`, `descripcion`, `nivel`, `tema`, `imagen`) VALUES (NULL, '".$name."', '".$desc."', '".$niv."', '".$tem."', '".$img."' )";
+        $sql="INSERT INTO `prueba` (`id`,`titulo`, `descripcion`, `nivel`, `tema`, `imagen`,'estado') VALUES (NULL, '".$name."', '".$desc."', '".$niv."', '".$tem."', '".$img."','activo')";
         if ($enlace->query($sql) === TRUE) {  
-                header('Location: http://localhost/ProyectoGTH/paginas/usuario/categoriaUser.php');
+                header('Location: http://localhost/ProyectoGTH/paginas/admin/categoriaAdmin.php');
 		} else{
             echo "error";
         }

@@ -29,7 +29,7 @@
 								<td colspan='2'><b>Info</b</td>
 							</thead>
 							<tr>
-								<td rowspan='2'><img src='../../../img/	".$value['imagen']."'></td>
+								<td rowspan='2'><img src='../img/".$value['imagen']."'></td>
 								<td><b class='text-start '>Titulo</b></td>
 								<td ><i class='text-end'>".$value['titulo']."</i></td>
 							</tr>
@@ -74,26 +74,26 @@
             foreach ($resultado as $value){ 
                 $answ=$value['pregunta'];
 				$idQ=$value['idpregunta'];
-
-				echo "
-				<div class='text-start'>
-					<h2>Pregunta #".$idQ."</h2>
-				</div>
-				<div class='container p-4 border'>
-					<b>".$answ."</b>
 					
-				</div>
-				<div class='form mt-2'>a
-					<label for='answ'>Respuesta</label>
-					<input type='text' class='form-control' id='res' name='res'>
+				echo "
+				<div class='form-page'>
+					<label for='name'><h2>Pregunta</h2></label>
+					<div class='container p-4 border'>
+					<b>".$answ."</b>
+					</div>
+				
+					<label for='valores[]'>Respuesta</label>
+					<input type='text' class='form-control' id='valores[]' name='valores[]'>
 				</div>
 				<input type='hidden' name='idQuest' value='".$idQ."'></input>
 				<input type='hidden' name='idUser' value='".$idUser."'></input>
 				";
         }
-		echo "<div class='container text-center'>
-		<button type='submit' class='btn btn-primary mt-2'>Subir</button>
-		</div>
+		echo "<div class='form-navigation'>
+		<button class='previous-button' type='button'>Anterior</button>
+		<button class='next-button' type='button'>Siguiente</button>
+	  </div>
+		</div>	
 	</form>";
         }
     }

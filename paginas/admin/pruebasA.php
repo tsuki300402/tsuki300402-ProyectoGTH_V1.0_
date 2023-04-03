@@ -18,8 +18,8 @@
     }
 	function Pruebas(){
 		$enlace = $this->conectarDB();
-        $consulta = "SELECT * FROM prueba ORDER by id ASC ";
-        $table="<table class='table table-bordered'><thead class='text-center'><tr><td>Num</td><td>Nombre</td><td>Descripción</td><td>Preguntas</td><td>Tema</td><td>Nivel</td><td>Editar</td><td>Eliminar</td></tr></thead><tr>";
+        $consulta = "SELECT * FROM prueba where estado != 'inactivo' ORDER by id ASC ";
+        $table="<table class='table table-bordered'><thead class='text-center'><tr><td>Num</td><td>Nombre</td><td>Descripción</td><td>Preguntas</td><td>Tema</td><td>Nivel</td><td>Estado</td><td>Editar</td><td>Eliminar</td></tr></thead><tr>";
 		if ($resultado = mysqli_query($enlace, $consulta)and($value = mysqli_fetch_assoc($resultado))) { 
             echo $table;
             foreach ($resultado as $value){ 
@@ -29,13 +29,14 @@
                 echo "<td>".$value['preguntas']."</td>";
                 echo "<td>".$value['tema']."</td>";
                 echo "<td>".$value['nivel']."</td>";
+                echo "<td>".$value['estado']."</td>";
                 echo "<form action='mod.php' method='post'>";
                 echo "<input type='hidden' name='idBtnMod' value='".$value['id']."'>";
-                echo "<td><button type='submit' class='btn btn-success'  name='btnMod'><i class='bi bi-pencil-square'></i></a></td>";
+                echo "<td><button class='btn btn-success'  name='btnMod'><i class='bi bi-pencil-square'></i></button></td>";
                 echo "</form>";
-                echo "<form action='delete.php' method='post' id='miFormulario'>";
+                echo "<form action='../funciones/estado.php' method='post'>";
                 echo "<input type='hidden' name='idBtnDel' value='".$value['id']."'>";
-                echo "<td><button type='submit' class='btn btn-danger' onclick='Confirm()' name='btnDel'><i class='bi bi-recycle'></i></a></td></tr>";
+                echo "<td><button class='btn btn-danger' onclick='return Confirm()' name='btnDel' id='btnDel' value='2'><i class='bi bi-recycle'></i></button></td></tr>";
                 echo "</form>";
 
                 echo " <div class='modal fade' id='modal'>";

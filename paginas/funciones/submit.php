@@ -19,13 +19,14 @@
    
     function Guardar(){
         $enlace=$this->conectarDB();
-        $res=$_POST['res'];
+        $respuestas = array_values($_POST['valores']);
+        $serial_respuestas = serialize($respuestas);
         $idQuest=$_POST['idQuest'];
         $idUser=$_POST['idUser'];
-        $sql="INSERT INTO `respuestas` (`idrespuesta`, `respuesta`, `idprueba`, `idusuario`) VALUES (NULL, '".$res."', '".$idQuest."', '".$idUser."')";
+        $sql="INSERT INTO `respuestas` (`idrespuesta`, `respuesta`, `idprueba`, `idusuario`) VALUES (NULL, '".$serial_respuestas."', '".$idQuest."', '".$idUser."')";
         if ($enlace->query($sql) === TRUE) {  
                 header('Location: http://localhost/ProyectoGTH_V1.0_/paginas/usuarios/categoriaUser.php');
-		}        
+		}
     }
  }
     $sub = new Sub();

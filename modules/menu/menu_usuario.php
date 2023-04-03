@@ -35,7 +35,7 @@
       </div>
       <div id="sidebar-accordion" class="accordion">
         <div class="list-group">
-          <a href="perfil.php" aria-expanded="false"
+          <a href="http://localhost/ProyectoGTH_V1.0_/paginas/usuarios/perfil.php" aria-expanded="false"
             class="list-group-item list-group-item-action bg-dark text-light">
             <i class="fa fa-user mr-3" aria-hidden="true"></i>Perfil
           </a>

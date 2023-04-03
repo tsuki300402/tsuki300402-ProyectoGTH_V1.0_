@@ -38,6 +38,10 @@
             class="list-group-item list-group-item-action bg-dark text-light">
             <i class="fa fa-tachometer mr-3" aria-hidden="true"></i>Administracion de usuarios
           </a>
+          <a href="http://localhost/ProyectoGTH_V1.0_/paginas/admin/admin_de_resultados.php" aria-expanded="false"
+            class="list-group-item list-group-item-action bg-dark text-light">
+            <i class="fa fa-tachometer mr-3" aria-hidden="true"></i>Administracion de resultados
+          </a>
           <a href="http://localhost/ProyectoGTH_V1.0_/paginas/admin/categoriaAdmin.php" aria-expanded="false"
             class="list-group-item list-group-item-action bg-dark text-light">
             <i class="fa fa-tachometer mr-3" aria-hidden="true"></i>Pruebas
