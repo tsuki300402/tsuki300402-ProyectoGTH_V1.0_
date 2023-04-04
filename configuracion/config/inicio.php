@@ -77,12 +77,12 @@ class Configuracion{
             $sql="INSERT INTO USUARIO (nombre,apellido,email,password,rol,estado)
             VALUES('".$_POST["nombre"]."','".$_POST["apellido"]."','".$_POST["email"]."','".$password."','".$_POST["rol"]."','activo');";
 
-            if($con->query($sql) === TRUE){
-                $_SESSION["status"]="Se ha creado un usuario en la base de datos";
-            header('Location: config.php');
+            $validar = "SELECT * FROM usuario where email = '".$_POST['email']."' ";
+            $validando = $con->query($validar);
+            if($validando->num_rows > 0){
+                echo "<script> alert('El usuario ya esta registrado con ese correo, utilize otro porfavor'); window.location = 'config.php'</script>";
             }else{
-                $_SESSION["ErrorDB"]="Error creando un usuario en la base de datos".$con->error;
-                    header('Location: config.php');
+                echo "<script> alert('El usuario ha sido registrado'); window.location = 'config.php'</script>";
             }
             $con->close();
         }
