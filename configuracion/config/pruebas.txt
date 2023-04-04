@@ -1,0 +1,36 @@
+            include("../controller/conexion.php");
+            $conexion = new Conexion();
+            $con = $conexion->conectarDB();
+            // Obtener el valor del correo electrónico ingresado por el usuario en el formulario
+            $email = $_POST["email"];
+            if (isset($_POST["email"])) {
+                echo $email;
+              } else {
+                echo "<script> alert ('NO esta haciendo nada')</script>";
+                // hacer algo en caso de que el índice 'email' no esté definido en el array
+              }
+            
+            // Consultar la base de datos para ver si hay algún registro que ya tenga ese correo electrónico
+            $sql = "SELECT * FROM usuario WHERE email = '$email'";
+            $resultado = mysqli_query($con, $sql);
+            
+            // Comprobar si la consulta devuelve algún registro
+            if (mysqli_num_rows($resultado) > 0) {
+              // El correo electrónico ya existe en la base de datos, mostrar mensaje de error al usuario
+              $error_email = "<script> alert('Este correo electrónico ya está registrado, por favor ingrese otro')</script>";
+            } else {
+              // El correo electrónico es único, continuar con el proceso de registro
+            }
+
+
+
+
+            <!-- parte de agregar usuario-->
+            if($con->query($sql) === TRUE){
+                
+                $_SESSION["status"]="Se ha creado un usuario en la base de datos";
+                    header('Location: config.php');
+            }else{
+                $_SESSION["ErrorDB"]="Error creando un usuario en la base de datos".$con->error;
+                    header('Location: config.php');
+            }
