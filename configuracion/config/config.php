@@ -32,11 +32,11 @@
 
     ?>
     
-    <a class="btn btn-primary btn-lg mt-3" href="../../index.php">Volver</a>
- 
+    
     <div class="container-fluid">
+        <a class="btn btn-primary btn-lg mt-3" href="../../index.php">Volver</a>
     <div class="row g-4 text-center justify-content-center mt-5">
-  <div class="col">
+  <div class="col-6">
     <div class="card h-100">
       <img src="../../libs/bootstrap-icons/people-fill.svg" class="card-img-top" alt="person-plus" width="90px" height="90">
       <div class="card-body">
