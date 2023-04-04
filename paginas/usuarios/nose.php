@@ -46,7 +46,7 @@
         const previousButton = document.querySelector('.previous-button');
         const nextButton = document.querySelector('.next-button');
         const formPages = document.querySelectorAll('.form-page');
-
+        previousButton.setAttribute("disabled", "disabled");
         let currentPageIndex = 0;
 
         function showPage(pageIndex) {
@@ -54,12 +54,7 @@
         formPages[pageIndex].style.display = 'block';
         currentPageIndex = pageIndex;
 
-        if (currentPageIndex == 1) {
-            previousButton.setAttribute("disabled", "disabled");
-        } else {
-            previousButton.removeAttribute("disabled");
-        }
-
+        
         if (currentPageIndex === formPages.length - 1) {
             nextButton.textContent = 'Enviar';
         } else {
