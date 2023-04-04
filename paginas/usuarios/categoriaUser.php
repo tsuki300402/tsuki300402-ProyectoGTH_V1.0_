@@ -1,14 +1,42 @@
 <?php
     session_start();
     if(!isset($_SESSION["Usuario"])){
-        header ('Location: ../index.php');
+        header('Location: ../index.php');
+    } 
+    if(isset($_SESSION["Usuario"]) && ($_SESSION["estado"] == "inactivo")){
+        echo "<script>
+        $(document).ready(function(){
+            $('#myModal').modal('show');
+            $('.modal-body').html('Aquí se mostrará el mensaje de validación.');
+        });
+      </script>";
     }
+
     $_SESSION["Usuario"];
 ?>
-
+<style>
+    
+</style>
+   
     <?php
         include "../../modules/menu/menu_usuario.php"
     ?>
+    <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Mensaje de validación</h4>
+      </div>
+      <div class="modal-body">
+        <p>Aquí se mostrará el mensaje de validación.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
    <div class="container">
         <div class="row justify-content-center">
             <div class="col-4 p-4">
@@ -117,7 +145,7 @@
                 liValue++;
                 link[liValue-1].classList.add("active");
             }
-        }
+        }   
     </script>
     </div>
           </div>

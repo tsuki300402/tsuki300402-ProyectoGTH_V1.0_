@@ -26,6 +26,7 @@
                     header("Location: http://localhost/ProyectoGTH_V1.0_/paginas/admin/categoriaAdmin.php");
                 }else{
                     $_SESSION['Usuario']=$fila['nombre'];
+                    $_SESSION['estado']=$fila['estado'];
                     $_SESSION['idUsuario']=$fila['idUsuario'];
                     header("Location: http://localhost/ProyectoGTH_V1.0_/paginas/usuarios/categoriaUser.php");
                 }
