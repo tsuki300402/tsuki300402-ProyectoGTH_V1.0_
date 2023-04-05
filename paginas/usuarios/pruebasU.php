@@ -53,7 +53,7 @@
 				<ul>";
 			for ($i = 1; $i <= $total_pag; $i++) {
 				if($i==$pagina_actual){
-					echo "<li class='link active' value='$i' ><a href='categoriaUser.php?pagina=$i' onclick='activeLink()'>$i</a></li> ";
+					echo "<li class='link active' value='$i' ><a style='text-decoration none' href='categoriaUser.php?pagina=$i' onclick='activeLink()'>$i</a></li> ";
 				}else{
 					echo "<li class='link' value='$i'><a href='categoriaUser.php?pagina=$i'>$i</a></li> ";
 				}	

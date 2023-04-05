@@ -102,6 +102,8 @@
             });
         });
 
+        //paginacion de las pruebas
+
         let link = document.getElementsByClassName("link");
 
         let liValue = 1;
