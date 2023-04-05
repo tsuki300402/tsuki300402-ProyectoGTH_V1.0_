@@ -148,6 +148,7 @@
 .conPag{
     width: 100%;
     height: 100%;
+    background: linear-gradient(45deg, #410358, #4700bc);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -165,13 +166,16 @@ ul{
 
 }
 ul li{
+
     display: inline-block;
     margin: 0 10px; 
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     text-align: center;
-    line-height: 35px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 45px;
     cursor: pointer;
     background-position: 0 -45px;
     transition: background-position 0.5s;
@@ -182,9 +186,14 @@ ul li.active{
     background-repeat: no-repeat;
     background-position: 0 0;
 }
+ul li a{
+    color: #fff;
+}
 .btn1, .btn2 {
     display: flex;
     align-items: center;
+    font-size: 22px;
+    font-weight: 500;
     color: #383838;
     background: transparent;
     outline: none;
