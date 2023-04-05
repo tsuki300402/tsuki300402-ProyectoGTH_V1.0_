@@ -68,7 +68,7 @@
 
 	 function Data($id,$idUser){
         $enlace=$this->conectarDB();
-        $consulta="SELECT * FROM preguntas WHERE prueba=".$id.";";
+        $consulta="SELECT * FROM preguntas WHERE idprueba=".$id.";";
         if ($resultado = mysqli_query($enlace, $consulta)and($value = mysqli_fetch_assoc($resultado))) { 
 			echo"<form class='form mt-4' action='../funciones/submit.php' method='POST'>";
             foreach ($resultado as $value){ 
