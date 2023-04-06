@@ -48,20 +48,22 @@
 				
 			  </form>";
 			}
-			echo "<div class='conPag'>
-			<div class='pagination'>
-				<ul>";
-			for ($i = 1; $i <= $total_pag; $i++) {
-				if($i==$pagina_actual){
-					echo "<li class='link active' value='$i' ><a href='categoriaUser.php?pagina=$i' onclick='activeLink()'>$i</a></li> ";
-				}else{
-					echo "<li class='link' value='$i'><a href='categoriaUser.php?pagina=$i'>$i</a></li> ";
-				}	
-				
-			}
-			echo "</ul>
-			</div>
-		 </div>";
+		  echo "<div class='conPag'>
+				   <div class='pagination'>
+				   <button class='btn1' onclick='BtnPrev()'>prev</button>
+					 <ul>";
+				for ($i = 1; $i <= $total_pag; $i++) {
+					if($i==$pagina_actual){
+						echo "<li class='link active' value='$i'><a style='text-decoration none' href='categoriaUser.php?pagina=$i' onclick='activeLink()'>$i</a></li> ";
+					}else{
+						echo "<li class='link' value='$i'><a href='categoriaUser.php?pagina=$i'>$i</a></li> ";
+					}	
+					
+				}
+				echo "</ul>
+					<button class='btn2' onclick='BtnNext()'>next</button>
+					</div>
+		 		</div>";
 	}
 	
 }
