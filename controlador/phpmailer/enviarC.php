@@ -1,4 +1,5 @@
 <?php
+$correo = $_GET['correoA'];
 // Importar la biblioteca PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -24,7 +25,7 @@ try {
 
     // Configurar el correo electrónico
     $mail->setFrom('elmasgamerdelmundo@gmail.com', 'Correo de registro');
-    $mail->addAddress('sebastianmunevar348@gmail.com', 'nombre del usuario');
+    $mail->addAddress($correo, 'nombre del usuario');
     //$mail->addReplyTo('tu_correo@gmail.com', 'Responder a');
     $mail->isHTML(true);
     $mail->Subject = 'Registro Exitoso';

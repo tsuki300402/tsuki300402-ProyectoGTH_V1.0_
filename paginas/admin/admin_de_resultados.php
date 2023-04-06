@@ -27,7 +27,7 @@
                       </thead>
                       <tbody>
                           <?php 
-                          $sql_query = "SELECT * FROM resultados";
+                          $sql_query = "SELECT * FROM resultados ";//join usuario on usuario.email
                           $resultset = mysqli_query($con, $sql_query) or die("error base de datos:". mysqli_error($con));
                           while( $libro = mysqli_fetch_assoc($resultset) ) {
                           ?>
@@ -38,7 +38,7 @@
                              <td><?php echo $libro ['nivel de prueba']; ?></td>
                              <td><a class="btn btn-primary fa fa-download" href="../../controlador/pdf.php"></a></td>   
                              <td><a class="btn btn-primary fa fa-eye" href="../../controlador/mpdf/pdf/index.php"></a></td>   
-                             <td><a class="btn btn-primary fa fa-share-square" href="../../controlador/phpmailer/enviarC.php"></a></td>   
+                             <td><a class="btn btn-primary fa fa-share-square" href="../../controlador/phpmailer/enviarC.php?CorreoA='<?php echo $libro ['email']; ?>'"></a></td>   
                             </tr>
                           <?php } ?>
                       </tbody>
