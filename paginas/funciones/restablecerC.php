@@ -44,7 +44,14 @@ $email = $_POST['email'];
 include ("contraseñaC.php");
 //include_once("../../recuperar.php");
 //$sql=("SELECT * FROM usuario where email = '$correo' ");
+$email = $_POST['email'];
 $password = $_POST['password'];
+
+if($con->query($sql) === TRUE){
+
+}else{
+
+}
 if($mail){
     echo "<script> alert ('su contraseña fue cambiada') ;window. location= '../../recuperar.php' </script>";
     //header("location: ../../recuperar.php");
