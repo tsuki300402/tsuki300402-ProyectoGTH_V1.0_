@@ -26,7 +26,7 @@
                 echo "<td>".$value['id']."</td>";
                 echo "<td>".$value['titulo']."</td>";
                 echo "<td>".$value['descripcion']."</td>";
-                echo "<td>".$value['preguntas']."</td>";
+                echo "<td>".$value['cantidad_preguntas']."</td>";
                 echo "<td>".$value['tema']."</td>";
                 echo "<td>".$value['nivel']."</td>";
                 echo "<td>".$value['estado']."</td>";
@@ -36,7 +36,7 @@
                 echo "</form>";
                 echo "<form action='../funciones/estado.php' method='post'>";
                 echo "<input type='hidden' name='idBtnDel' value='".$value['id']."'>";
-                echo "<td><button class='btn btn-danger' onclick='return Confirm()' name='btnDel' id='btnDel' value='2'><i class='bi bi-recycle'></i></button></td></tr>";
+                echo "<td><button class='btn btn-danger' onclick='return Confirm()' name='btnDel' id='btnDel' value='prueba'><i class='bi bi-recycle'></i></button></td></tr>";
                 echo "</form>";
 
                 echo " <div class='modal fade' id='modal'>";

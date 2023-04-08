@@ -11,18 +11,7 @@
 
 </head>
 <body onload="btnInicio()">
-
-    <?php
-        if(isset($_SESSION["Error"])){
-            echo '<div class="alert alert-danger m-0"><i class="bi bi-x-octagon-fill"></i>';
-            echo $_SESSION["Error"];
-            echo '</div>'; 
-            session_unset();
-            session_destroy();
-        }
-   
-    ?>
-   
+  
 <div class="container-fluid">
     <div class="row ">
   <div class="col-12">

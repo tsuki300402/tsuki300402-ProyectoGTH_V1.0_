@@ -20,6 +20,16 @@
   </head>
 <body>
     <?php include "./modules/menu/menu.php" ?>
+    <?php
+        if(isset($_SESSION["Error"])){
+            echo '<div class="alert alert-danger m-0"><i class="bi bi-x-octagon-fill"></i>';
+            echo $_SESSION["Error"];
+            echo '</div>'; 
+            session_unset();
+            session_destroy();
+        }
+   
+    ?>
                     <!--CARRUSEL-->
    <div class="row justify-content-center">
    <div class="col-4">

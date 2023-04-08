@@ -50,9 +50,9 @@
 							</tr>
 							<tr>
 								<td colspan='3'>
-									<div class='progress mt-1' style='height: 100%'>
+									<div class='progress mt-1' style='height: 20px'>
 										<div class='progress-bar bg-success progress-bar-striped progress-bar-animated' style='width:".$value['progreso']."%'>
-										".$value['progreso']."%
+										".$value['progreso']."%	
 										</div>
 									</div>
 								</td>
@@ -73,7 +73,7 @@
 			echo"<form class='form mt-4' action='../funciones/submit.php' method='POST'>";
             foreach ($resultado as $value){ 
                 $answ=$value['pregunta'];
-				$idQ=$value['idpregunta'];
+				$idQ=$value['idprueba'];
 					
 				echo "
 				<div class='form-page'>
