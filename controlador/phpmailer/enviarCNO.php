@@ -47,7 +47,7 @@ try {
     $mail->addAddress($texto, 'nombre del usuario');
     //$mail->addReplyTo('tu_correo@gmail.com', 'Responder a');
     $mail->isHTML(true);
-    $mail->Subject = 'Felicidades has sido contratado';
+    $mail->Subject = 'Le comunicamos que no ha pasado los requisitos minimos de la empresa';
     $mail->msgHTML('
 <html>
 <head>
@@ -58,38 +58,38 @@ try {
 	<link href="../../libs/bootstrap-icons/bootstrap-icons.css"  rel="stylesheet">
 	<script src="../../js/bootstrap.bundle.min.js"></script>
     <style>
-.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-.button1 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #4CAF50;
-    border-radius: 12px;
-}
-
-.button1:hover {
-    background-color: #4CAF50;
-    color: white;
-}
-    </style>
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    
+    .button1 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #4CAF50;
+        border-radius: 12px;
+    }
+    
+    .button1:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
+        </style>
 </head>
 <body>
-<h1>Si haz recibido este correo, es por el motivo de que haz pasado satisfactoriamente todos los filtros de la empresa</h1>
+<h1>Si haz recibido este correo, es por el motivo de que no haz pasado satisfactoriamente todos los filtros de la empresa</h1>
 
-<p>Bienvenido usuario del correo: "'.$texto.'", usted a sido contratado para que se acerque a la empresa para poder seguir con su proceso de contratacion</p>
+<p>Bienvenido usuario del correo: "'.$texto.'", usted no ha sido contratado por no pasar los estandares de la empresa</p>
 <p>Si quieres ver tus resultados dirigite al link que te dejamos para ingresar al inicio de nuestra pagina</p>
 <button class="button button1"><a href="http://localhost/ProyectoGTH_V1.0_/">Haz click aqui</a></button>
 

@@ -20,7 +20,7 @@
       <div class="card-body">
         <h5 class="card-title">Inicio de sesión</h5>
 
-        <form action="http://localhost/ProyectoGTH_V1.0_/configuracion/controller/login.php" method="POST" class="was-validated">
+        <form action="http://localhost/ProyectoGTH_V1.0_/configuracion/controller/login.php?correo=email" method="POST" class="was-validated">
         <div class="form-floating m-4">
             <input type="email" class="form-control" id="email" placeholder="Ingrese su Email" name="email" required>
             <div class="invalid-feedback">Por favor llene este campo</div>
