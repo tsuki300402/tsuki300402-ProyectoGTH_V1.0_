@@ -21,12 +21,12 @@
         $llamado=$_POST['btnDel'];
         $enlace=$this->conectarDB();
         $id=$_POST['idBtnDel'];
-       if($llamado==1){
+       if($llamado=='usuario'){
             $sql="UPDATE `usuario` SET `estado` = 'inactivo' WHERE `usuario`.`idUsuario` = '$id'; ";
             if ($enlace->query($sql) === TRUE) {  
                     header('Location: http://localhost/ProyectoGTH_V1.0_/paginas/admin/admin_de_usuarios.php');
             }    
-        } else if($llamado==2){
+        } else if($llamado=='prueba'){
             $sql="UPDATE `prueba` SET `estado` = 'inactivo' WHERE `prueba`.`id` = '$id'; ";
             if ($enlace->query($sql) === TRUE) {  
                     header('Location: http://localhost/ProyectoGTH_V1.0_/paginas/admin/categoriaAdmin.php');
