@@ -1,4 +1,6 @@
+<?php
 
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,7 +48,7 @@
         </div>
     </div>
     <div class="btn-group">
-        <button type="submit" class="btn btn-secondary m-5" ><i class="bi bi-send me-1">Ingresar</i></button>
+        <button type="submit" name="submit" class="btn btn-secondary m-5" ><i class="bi bi-send me-1">Ingresar</i></button>
     </div>
       <div class="text-center">
         <a class="btn btn-primary mb-2" href="http://localhost/ProyectoGTH_V1.0_/configuracion/config/config.php">Registrarse</a>

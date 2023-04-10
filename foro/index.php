@@ -8,6 +8,7 @@
 <link type="text/css" rel="stylesheet" href="estilo.css" >
 <link href="../libs/bootstrap-icons/bootstrap-icons.css"  rel="stylesheet">
 <link href="../css/custom.css"  rel="stylesheet">
+<link href="../jq/jquery-3.6.1.min.js">
 </head>
 <body>
 <?php include '../modules/menu/menu_usuario.php'; ?>    
@@ -40,7 +41,7 @@
             <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
         </form>
 </div>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>-->
 <script type="text/javascript">
 // jQuery Document
 $(document).ready(function(){

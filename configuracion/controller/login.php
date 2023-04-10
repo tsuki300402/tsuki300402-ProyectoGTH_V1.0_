@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $_SESSION["email"] = $_POST['email'];
     class login{
         private $email;
         private $password;

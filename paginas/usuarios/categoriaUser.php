@@ -4,7 +4,6 @@
         header('Location: ../index.php');
     } 
     
-
     $_SESSION["Usuario"];
 ?>
 <style>

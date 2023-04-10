@@ -32,21 +32,25 @@ session_start();
 
 <body>
 <?php include "../../modules/menu/menu_usuario.php" ?>
-    
+  <?php include("../../configuracion/controller/conexion.php");
+    $conexion = new Conexion();
+    $con = $conexion->conectarDB();   ?> 
         <div class="container">
           <div class="row">
             <div class="col-md-12">
                 <form method="POST" action="actualizarPerfil.php">
                   <table>
-                <tr>
-                  <td>Usuario</td>
-                  <td><?php echo $row['nombre']; ?></td>
-                </tr>
-
-                </table>
-                <button type="submit">Grabar Datos</button>
+                  <thead>
+                    <tr>
+                      <th>Nombre</th>
+                    </tr>
+                    <tr>
+                      <th>Nombre</th>
+                    </tr>
+                  </thead>                
+                  </table>
+                  <button type="submit">Grabar Datos</button>
                 </form>
-
           </div>
         </div>
       </section>
