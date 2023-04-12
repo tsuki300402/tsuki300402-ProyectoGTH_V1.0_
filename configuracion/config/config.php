@@ -73,10 +73,10 @@
             
         </div>
 
-        <div class="form-floating m-4">
+        <!--<div class="form-floating m-4">
             <input type="password" class="form-control" id="password" placeholder="Ingrese su Email" name="password" required>
             <label for="password"><i class="bi bi-lock">Password</i></label>
-        </div>
+        </div>-->
         <div class="d-grid m-0">
             
                 <button type="submit" class="btn btn-secondary m-5" ><i class="bi bi-pc me-1">Agregar usuario</i></button>

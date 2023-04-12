@@ -43,6 +43,7 @@
                              <?php
                              echo "<form action='../funciones/estado.php' method='post'>";
                               echo "<input type='hidden' name='idBtnDel' value='".$libro['idUsuario']."'>";
+                              echo "<td><button class='btn btn-success' onclick='return Confirm()' name='btnagregar' id='btnagregar' value='usuario'><i class='bi bi-recycle'></i></button></td>";
                               echo "<td><button class='btn btn-danger' onclick='return Confirm()' name='btnDel' id='btnDel' value='usuario'><i class='bi bi-recycle'></i></button></td>";
                               echo "</form>";  ?>
                             </tr>

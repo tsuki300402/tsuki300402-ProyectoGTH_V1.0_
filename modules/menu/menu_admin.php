@@ -46,6 +46,10 @@
             class="list-group-item list-group-item-action bg-dark text-light">
             <i class="fa fa-tachometer mr-3" aria-hidden="true"></i>Pruebas
           </a>
+          <a href="http://localhost/ProyectoGTH_V1.0_/" aria-expanded="false"
+            class="list-group-item list-group-item-action bg-dark text-light">
+            <i class="fa fa-tachometer mr-3" aria-hidden="true"></i>Administracion de foros
+          </a>
               <a href="http://localhost/ProyectoGTH_V1.0_/configuracion/controller/cerrar_session.php" class="list-group-item list-group-item-action bg-dark text-light">
               <i class="fa fa-window-close mr-3"></i>Cerrar Sesion
               </a>
