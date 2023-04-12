@@ -3,6 +3,7 @@ session_start();
     if(!isset($_SESSION["Usuario"])){
         header ('Location: ../index.php');
     }
+    //echo $_SESSION['email'];
     $_SESSION["Usuario"];
       ?>
 <!doctype html>
@@ -34,7 +35,8 @@ session_start();
 <?php include "../../modules/menu/menu_usuario.php" ?>
   <?php include("../../configuracion/controller/conexion.php");
     $conexion = new Conexion();
-    $con = $conexion->conectarDB();   ?> 
+    $con = $conexion->conectarDB();   
+    $sql = "SELECT * FROM usuario WHERE email = '".$_SESSION['email']."';"?> 
         <div class="container">
           <div class="row">
             <div class="col-md-12">
