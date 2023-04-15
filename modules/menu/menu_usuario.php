@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Pagina de inicio">
-  <title>hola, <?php echo $_SESSION['Usuario']?></title>
-	<link href="http://localhost/ProyectoGTH_V1.0_/css/custom.css"  rel="stylesheet">
-	<link href="http://localhost/ProyectoGTH_V1.0_/libs/bootstrap-icons/bootstrap-icons.css"  rel="stylesheet">
-	<script src="http://localhost/ProyectoGTH_V1.0_/js/bootstrap.bundle.min.js"></script>
+  <title>hola,
+    <?php echo $_SESSION['Usuario'] ?>
+  </title>
+  <link href="http://localhost/ProyectoGTH_V1.0_/css/custom.css" rel="stylesheet">
+  <link href="http://localhost/ProyectoGTH_V1.0_/libs/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <script src="http://localhost/ProyectoGTH_V1.0_/js/bootstrap.bundle.min.js"></script>
   <script src="http://localhost/ProyectoGTH_V1.0_/jq/jquery-3.6.1.min.js"></script>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -52,10 +55,12 @@
             class="list-group-item list-group-item-action bg-dark text-light">
             <i class="fa fa-user mr-3" aria-hidden="true"></i>Prueba
           </a>
-          <a href="http://localhost/ProyectoGTH_V1.0_/paginas/usuarios/foro.php" class="list-group-item list-group-item-action bg-dark text-light">
+          <a href="http://localhost/ProyectoGTH_V1.0_/paginas/usuarios/foro.php"
+            class="list-group-item list-group-item-action bg-dark text-light">
             <i class="fa fa-window-close mr-3"></i>Foro
           </a>
-          <a href="http://localhost/ProyectoGTH_V1.0_/configuracion\controller\cerrar_session.php" class="list-group-item list-group-item-action bg-dark text-light">
+          <a href="http://localhost/ProyectoGTH_V1.0_/configuracion\controller\cerrar_session.php"
+            class="list-group-item list-group-item-action bg-dark text-light">
             <i class="fa fa-window-close mr-3"></i>Cerrar Sesion
           </a>
         </div>
@@ -64,13 +69,12 @@
     <div class="content w-100">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-xl">
-          <div class="text-white text-center">Bienvenido <?php echo $_SESSION['Usuario']?> a la empresa NielRooQui</div>
+          <div class="text-white text-center">Bienvenido
+            <?php echo $_SESSION['Usuario'] ?> a la empresa NielRooQui
+          </div>
         </div>
       </nav>
       <section class="p-3">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              
-              
-            
