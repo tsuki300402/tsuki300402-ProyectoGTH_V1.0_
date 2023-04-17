@@ -5,8 +5,7 @@ if (!isset($_SESSION["Usuario"]) && ($_SESSION['rol'] != 'administrador')) {
 }
 $_SESSION["Usuario"];
 ?>
-<?php
-<<<<<<< HEAD
+    <?php
         include "../../modules/menu/menu_admin.php"
     ?>
         <div class="container">
@@ -55,64 +54,6 @@ $_SESSION["Usuario"];
           </div>
         </div>
       </section>
-=======
-include "../../modules/menu/menu_admin.php"
-  ?>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h2>Lista de los aspirantes que realizaron las pruebas psicotecnicas</h2>
-      <table id="data_table" class="table table-striped mt-5">
-        <thead>
-          <?php include("../../configuracion/controller/conexion.php");
-          $conexion = new Conexion();
-          $con = $conexion->conectarDB();
-          ?>
-          <tr>
-            <th>Id</th>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Email</th>
-            <th>Estado</th>
-            <th>Ultimo ingreso</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php
-          $sql_query = "SELECT * FROM usuario where rol='usuario'";
-          $resultset = mysqli_query($con, $sql_query) or die("error base de datos:" . mysqli_error($con));
-          while ($libro = mysqli_fetch_assoc($resultset)) {
-            ?>
-            <tr id="<?php echo $libro['id']; ?>">
-              <td>
-                <?php echo $libro['idUsuario']; ?>
-              </td>
-              <td>
-                <?php echo $libro['nombre']; ?>
-              </td>
-              <td>
-                <?php echo $libro['apellido']; ?>
-              </td>
-              <td>
-                <?php echo $libro['email']; ?>
-              </td>
-              <td>
-                <?php echo $libro['estado']; ?>
-              </td>
-              <td>
-                <?php echo $libro['ultimo_ingreso']; ?>
-              </td>
-              <?php
-              echo "<form action='../funciones/estado.php' method='post'>";
-              echo "<input type='hidden' name='idBtnDel' value='" . $libro['idUsuario'] . "'>";
-              echo "<td><button class='btn btn-success' onclick='return Confirm()' name='btnagregar' id='btnagregar' value='usuario'><i class='bi bi-recycle'></i></button></td>";
-              echo "<td><button class='btn btn-danger' onclick='return Confirm()' name='btnDel' id='btnDel' value='usuario'><i class='bi bi-recycle'></i></button></td>";
-              echo "</form>"; ?>
-            </tr>
-          <?php } ?>
-        </tbody>
-      </table>
->>>>>>> 8f29181ad136baef6828ce51614ac09e9a605346
     </div>
   </div>
 </div>
