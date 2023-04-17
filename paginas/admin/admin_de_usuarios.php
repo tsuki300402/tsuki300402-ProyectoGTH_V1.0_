@@ -25,6 +25,7 @@
                               <th>Email</th>
                               <th>Estado</th>
                               <th>Ultimo ingreso</th>   
+                              <th>Cambiar Estado</th>   
                           </tr>
                       </thead>
                       <tbody>
@@ -33,7 +34,7 @@
                           $resultset = mysqli_query($con, $sql_query) or die("error base de datos:". mysqli_error($con));
                           while( $libro = mysqli_fetch_assoc($resultset) ) {
                           ?>
-                             <tr id="<?php echo $libro ['id']; ?>">
+                             <tr>
                              <td><?php echo $libro ['idUsuario']; ?></td>
                              <td><?php echo $libro ['nombre']; ?></td>
                              <td><?php echo $libro ['apellido']; ?></td>
@@ -43,8 +44,7 @@
                              <?php
                              echo "<form action='../funciones/estado.php' method='post'>";
                               echo "<input type='hidden' name='idBtnDel' value='".$libro['idUsuario']."'>";
-                              echo "<td><button class='btn btn-success' onclick='return Confirm()' name='btnagregar' id='btnagregar' value='usuario'><i class='bi bi-recycle'></i></button></td>";
-                              echo "<td><button class='btn btn-danger' onclick='return Confirm()' name='btnDel' id='btnDel' value='usuario'><i class='bi bi-recycle'></i></button></td>";
+                              echo "<td class='text-center'><button class='btn btn-danger' onclick='return Confirm()' name='btnDel' id='btnDel' value='usuario'><i class='bi bi-recycle'></i></button></td>";
                               echo "</form>";  ?>
                             </tr>
                           <?php } ?>

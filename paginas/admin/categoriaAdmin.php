@@ -5,25 +5,24 @@
     }
     $_SESSION["Usuario"];
 ?>
-    <?php
-       include "../../modules/menu/menu_admin.php"
-    ?>
+
+<style>
+    .no-arrow {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    }
+    .no-arrow::-ms-expand {
+        display: none;
+    }
+</style>
+    <?php include "../../modules/menu/menu_admin.php" ?>
     
-   <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-4 p-4">
-                        
-            </div>
-            <div class="col-4 p-4">
-            </div>
-        </div>
-    </div>
     <div class="container mt-4">
-        <div class="row mt-5">
+        <div class="row">
             <?php
                 include 'pruebasA.php'; 
             ?>
-            <a class="col-1 btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAdd"><i class="bi bi-cloud-plus-fill" style="font-size:19px;"> Añadir</i></a>
+            <a class="col-1 btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAdd"><i class="bi bi-cloud-plus-fill" style="font-size:19px;color:#fff;"> Añadir</i></a>
         </div>
     </div>
     <!--EL MODAL-->
@@ -60,7 +59,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="nivel">Nivel select</label>
-                                            <select class="form-control" id="nivel" name="nivel">
+                                            <select class="form-control no-arrow" id="nivel" name="nivel">
                                                 <option>1</option>
                                                 <option>2</option>
                                                 <option>3</option>
@@ -70,7 +69,7 @@
                                         </div>	
                                         <div class="form-group custom-file">
                                             <label class="custom-file-label" for="image">Choose file...</label>
-                                            <input type="file" class="custom-file-input form-control" id="image" name="image" required>
+                                            <input type="file" class="custom-file-input form-control" id="image" name="image" required/>
                                             <div class="invalid-feedback">Invalid custom file feedback</div>
                                         </div>					
 										<div class='container-fluid p-4 text-center'>
