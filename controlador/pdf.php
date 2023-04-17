@@ -14,7 +14,7 @@ $plantilla = getplantilla();
 
 $mpdf->WriteHTML($css, \Mpdf\HTMLParserMode::HEADER_CSS);
 $mpdf->WriteHTML($plantilla, \Mpdf\HTMLParserMode::HTML_BODY);
-$pdfContent = $mpdf->Output("","S");
+$pdfContent = $mpdf->Output("", "S");
 
 header('Content-Type: application/pdf');
 header('Content-Disposition: attachment; filename="ejemplo.pdf"');

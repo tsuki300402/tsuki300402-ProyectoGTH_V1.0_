@@ -7,7 +7,7 @@ $con = $conexion->conectarDB();
 
 $mostrar = $_GET['CorreoA'];
 
-$sql = "SELECT usuario.* FROM usuario JOIN resultados ON usuario.idUsuario = resultados.id_usuario WHERE resultados.id_usuario = $mostrar";//SELECT clientes.* FROM clientes JOIN pedidos ON clientes.id = pedidos.cliente_id WHERE pedidos.id = $pedido_id
+$sql = "SELECT usuario.* FROM usuario JOIN resultados ON usuario.idUsuario = resultados.id_usuario WHERE resultados.id_usuario = $mostrar"; //SELECT clientes.* FROM clientes JOIN pedidos ON clientes.id = pedidos.cliente_id WHERE pedidos.id = $pedido_id
 
 // Ejecutar la consulta
 $resultado = mysqli_query($con, $sql);
@@ -89,7 +89,7 @@ try {
 <body>
 <h1>Si haz recibido este correo, es por el motivo de que haz pasado satisfactoriamente todos los filtros de la empresa</h1>
 
-<p>Bienvenido usuario del correo: "'.$texto.'", usted a sido contratado para que se acerque a la empresa para poder seguir con su proceso de contratacion</p>
+<p>Bienvenido usuario del correo: "' . $texto . '", usted a sido contratado para que se acerque a la empresa para poder seguir con su proceso de contratacion</p>
 <p>Si quieres ver tus resultados dirigite al link que te dejamos para ingresar al inicio de nuestra pagina</p>
 <button class="button button1"><a href="http://localhost/ProyectoGTH_V1.0_/">Haz click aqui</a></button>
 
