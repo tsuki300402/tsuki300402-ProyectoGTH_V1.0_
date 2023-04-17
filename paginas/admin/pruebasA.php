@@ -18,20 +18,11 @@ class Crear
         }
         return $con;
     }
-<<<<<<< HEAD
 	function Pruebas(){
 		$enlace = $this->conectarDB();
         $consulta = "SELECT * FROM prueba ORDER by id ASC ";
         $table="<table class='table table-bordered'><thead class='text-center'><tr><td>No.</td><td>Nombre</td><td>Descripción</td><td>Preguntas</td><td>Tema</td><td>Nivel</td><td>Estado</td><td>Editar</td><td>Cambiar Estado</td></tr></thead><tr>";
 		if ($resultado = mysqli_query($enlace, $consulta)and($value = mysqli_fetch_assoc($resultado))) { 
-=======
-    function Pruebas()
-    {
-        $enlace = $this->conectarDB();
-        $consulta = "SELECT * FROM prueba where estado != 'inactivo' ORDER by id ASC ";
-        $table = "<table class='table table-bordered'><thead class='text-center'><tr><td>Num</td><td>Nombre</td><td>Descripción</td><td>Preguntas</td><td>Tema</td><td>Nivel</td><td>Estado</td><td>Editar</td><td>Eliminar</td></tr></thead><tr>";
-        if ($resultado = mysqli_query($enlace, $consulta) and ($value = mysqli_fetch_assoc($resultado))) {
->>>>>>> 8f29181ad136baef6828ce51614ac09e9a605346
             echo $table;
             foreach ($resultado as $value) {
                 echo "<td>" . $value['id'] . "</td>";
@@ -46,41 +37,10 @@ class Crear
                 echo "<td><button class='btn btn-success'  name='btnMod'><i class='bi bi-pencil-square'></i></button></td>";
                 echo "</form>";
                 echo "<form action='../funciones/estado.php' method='post'>";
-<<<<<<< HEAD
                 echo "<input type='hidden' name='idBtnDel' value='".$value['id']."'>";
                 echo "<td class='text-center'><button class='btn btn-danger' onclick='return Confirm()' name='btnDel' id='btnDel' value='prueba'><i class='bi bi-recycle'></i></button></td></tr>";
                 echo "</form>";               
 	        }
-=======
-                echo "<input type='hidden' name='idBtnDel' value='" . $value['id'] . "'>";
-                echo "<td><button class='btn btn-danger' onclick='return Confirm()' name='btnDel' id='btnDel' value='prueba'><i class='bi bi-recycle'></i></button></td></tr>";
-                echo "</form>";
-
-                echo " <div class='modal fade' id='modal'>";
-                echo " <div class='modal-dialog'>";
-                echo " <div class='modal-content'>";
-                echo " <!--modal header-->";
-                echo " <div class='modal-header'>";
-                echo " <h2>Pregunta </h2>";
-                echo " <button type='button' class='btn-close' data-bs-dismiss='modal'></button>";
-                echo " </div>";
-                echo " <div class='modal-body'>";
-                echo " <form action='upload.php' method='post'>";
-                echo " <div class='container-fluid p-4 text-center'>";
-                echo " <span></span>";
-                echo " </div>";
-                echo " <div class='container-fluid p-4 text-center'>";
-                echo " <input type='text' class='form-control' id='asnw' name='asnw' placeholder=''>";
-                echo " <button type='button' class='btn btn-primary mt-2'>Subir</button>";
-                echo " </div>";
-                echo " </form>";
-                echo " </div>";
-                echo " </div>";
-                echo " </div>";
-
-
-            }
->>>>>>> 8f29181ad136baef6828ce51614ac09e9a605346
             echo "</table>";
         }
     }

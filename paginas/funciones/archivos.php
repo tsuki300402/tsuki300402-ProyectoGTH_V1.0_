@@ -64,11 +64,6 @@ class Traer
 						</table>
 						<button class='btn mt-2 btn-success btn-lg' id='Edit' name='Edit'><i class='bi bi-clipboard-check'></i> Realizar </button>";
 				echo "</div>";
-<<<<<<< HEAD
-				}
-			}	
- 	}
-=======
 			}
 		}
 
@@ -83,7 +78,6 @@ class Traer
 			foreach ($resultado as $value) {
 				$answ = $value['pregunta'];
 				$idQ = $value['idprueba'];
->>>>>>> 8f29181ad136baef6828ce51614ac09e9a605346
 
 				echo "
 				<div class='form-page'>
@@ -107,8 +101,7 @@ class Traer
 	</form>";
 		}
 	}
-
-<<<<<<< HEAD
+	
 	function Listar($id){
 		$enlace=$this->conectarDB();
 		$sql="SELECT * FROM preguntas WHERE idprueba = ".$id." ;";
@@ -144,26 +137,6 @@ class Traer
 					echo " </div>" ;
 				$i++;
 				
-=======
-	function Listar($id)
-	{
-		$enlace = $this->conectarDB();
-		$sql = "SELECT * FROM prueba WHERE id = " . $id . ";";
-		if ($resultado = mysqli_query($enlace, $sql) and ($value = mysqli_fetch_assoc($resultado))) {
-			$list = "<table class='table table-bordered text-center'><thead><tr><td>Num</td><td>Pregunta</td><td colspan='2'>botones</td></tr></thead>";
-			foreach ($resultado as $value) {
-				echo $list;
-				for ($i = 1; $i < 5; $i++) {
-					echo "<tr><td></input>" . $i . "</td><td>" . $value["pregunta " . $i] . "</td><td><button class='btn btn-success' data-bs-toggle='modal' data-bs-target='#modal" . $i . "'><i class='bi bi-pencil-square'></i></button></td><td><form action='delete.php' method='post'><input type='hidden' name='pregunta' value='" . $i . "'></input><button type='submit' class='btn btn-danger'><i class='bi bi-trash3'></i></button></td></tr></form>";
-					echo "<div class='row'>
-					
-					</div>
-				</div>      ";
-				}
-				echo "</table>";
-
-				echo "";
->>>>>>> 8f29181ad136baef6828ce51614ac09e9a605346
 			}
 			echo "</table>";
 			echo "<form action='#' method='post'>
@@ -172,7 +145,6 @@ class Traer
 			
 		}
 	}
-<<<<<<< HEAD
 
 	function Prueba($id){
 		$enlace = $this->conectarDB();
@@ -260,7 +232,4 @@ class Traer
  	}
 	
  }
-=======
-}
->>>>>>> 8f29181ad136baef6828ce51614ac09e9a605346
 ?>
