@@ -1,11 +1,11 @@
 <?php
-session_start();
-if (!isset($_SESSION["Usuario"]) && ($_SESSION['rol'] != 'administrador')) {
-  header('Location: ../index.php');
-}
-$_SESSION["Usuario"];
+    session_start();
+    if(!isset($_SESSION["Usuario"])&&($_SESSION['rol']!='administrador')){
+      header ('Location: ../index.php');
+  }
+    $_SESSION["Usuario"];
 ?>
-    <?php
+<?php
         include "../../modules/menu/menu_admin.php"
     ?>
         <div class="container">
@@ -55,23 +55,18 @@ $_SESSION["Usuario"];
         </div>
       </section>
     </div>
-  </div>
-</div>
-</section>
-</div>
 </div>
 <script>
-  function Confirm() {
-    if (confirm("¿Está seguro que desea realizar esta acción?")) {
-    } else {
-      event.preventDefault();
-      return false;
-    }
-
-  }
-  //controlador de Evento submit
-  document.getElementById("btnDel").addEventListener("submit", Confirm);
-</script>
+      function Confirm() {
+        if(confirm("¿Está seguro que desea realizar esta acción?")) {
+        } else {
+          event.preventDefault(); 
+          return false;
+        }
+       
+      }
+//controlador de Evento submit
+      document.getElementById("btnDel").addEventListener("submit", Confirm);
+    </script>
 </body>
-
 </html>

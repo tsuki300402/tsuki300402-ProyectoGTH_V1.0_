@@ -18,7 +18,6 @@ class Sub
         }
         return $con;
     }
-<<<<<<< HEAD
    
     function Del(){
         $llamado=$_POST['btnDel'];
@@ -49,23 +48,6 @@ class Sub
                 foreach($resultado as $value){
                     $estado_actual=$value["estado"];
                 }
-=======
-
-    function Del()
-    {
-        $llamado = $_POST['btnDel'];
-        $enlace = $this->conectarDB();
-        $id = $_POST['idBtnDel'];
-        if ($llamado == 'usuario') {
-            $sql = "UPDATE `usuario` SET `estado` = 'inactivo' WHERE `usuario`.`idUsuario` = '$id'; ";
-            if ($enlace->query($sql) === TRUE) {
-                header('Location: http://localhost/ProyectoGTH_V1.0_/paginas/admin/admin_de_usuarios.php');
-            }
-        } else if ($llamado == 'prueba') {
-            $sql = "UPDATE `prueba` SET `estado` = 'inactivo' WHERE `prueba`.`id` = '$id'; ";
-            if ($enlace->query($sql) === TRUE) {
-                header('Location: http://localhost/ProyectoGTH_V1.0_/paginas/admin/categoriaAdmin.php');
->>>>>>> 8f29181ad136baef6828ce51614ac09e9a605346
             }
 
             if($estado_actual=="activo"){
