@@ -86,6 +86,11 @@ include("../../modules/menu/menu_usuario.php");
             <label for="mensaje">Descripción</label>
             <textarea class="form-control" id="mensaje" name="mensaje" required></textarea>
           </div>
+          <div class="form-group" >
+            <label for="mensaje">Descripción</label>
+            <textarea class="form-control" id="mensaje" name="mensaje" required></textarea>
+            <input name="id_foro" hidden>
+          </div>
           <button type="submit" class="btn btn-primary">Agregar tema</button>
         </form>
       </div>

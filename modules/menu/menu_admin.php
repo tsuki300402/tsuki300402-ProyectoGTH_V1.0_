@@ -56,7 +56,7 @@
             class="list-group-item list-group-item-action bg-dark text-light">
             <i class="fa fa-tachometer mr-3" aria-hidden="true"></i>Pruebas
           </a>
-          <a href="http://localhost/ProyectoGTH_V1.0_/" aria-expanded="false"
+          <a href="http://localhost/ProyectoGTH_V1.0_/paginas/admin/admin_de_foro.php" aria-expanded="false"
             class="list-group-item list-group-item-action bg-dark text-light">
             <i class="fa fa-tachometer mr-3" aria-hidden="true"></i>Administracion de foros
           </a>
