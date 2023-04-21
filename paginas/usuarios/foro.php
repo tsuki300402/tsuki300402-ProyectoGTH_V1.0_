@@ -74,6 +74,7 @@ include("../../modules/menu/menu_usuario.php");
       </div>
       <div class="modal-body">
         <form method="POST" action="../funciones/agregar-tema.php">
+          <input type='hidden' id="identificador" name='identificador' value="">
           <div class="form-group">
             <label for="autor">Autor</label>
             <input type="text" class="form-control" id="autor" name="autor" required>
@@ -85,11 +86,6 @@ include("../../modules/menu/menu_usuario.php");
           <div class="form-group">
             <label for="mensaje">Descripción</label>
             <textarea class="form-control" id="mensaje" name="mensaje" required></textarea>
-          </div>
-          <div class="form-group" >
-            <label for="mensaje">Descripción</label>
-            <textarea class="form-control" id="mensaje" name="mensaje" required></textarea>
-            <input name="id_foro" hidden>
           </div>
           <button type="submit" class="btn btn-primary">Agregar tema</button>
         </form>

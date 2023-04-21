@@ -1,4 +1,4 @@
-<?php echo $_SERVER["REQUEST_METHOD"] == "POST"; echo $_POST['borrarForo']; echo $idForo ?>
+<?php   ?>
 <?php
 session_start();
 if (!isset($_SESSION["Usuario"]) && ($_SESSION['rol'] != 'administrador')) {
@@ -17,12 +17,12 @@ $con = $conexion->conectarDB();
 //para borrar el foro
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $accion = $_POST["borrarForo"];
-    if ($accion == "'borrar?idforo=" . $foro['id'] . "'") {
-        $idForo = $foro['id'];
+    $dato = $_POST['idF'];
+    if ($accion == "borrar") {
         // Código para borrar los datos
-        $sql = "DELETE tema WHERE id = $idForo ";
+        $sql = " DELETE FROM tema WHERE id = $dato ";
         if ($con->query($sql) === TRUE) {
-            echo "<script> alert('".$con->error."');</script>";
+            echo "<script> alert('Foro borrado exitosamente');</script>";
           } else {
             echo "Error al borrar el registro: " . $con->error;
           }
@@ -76,8 +76,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <?php echo $foro['respuestas']; ?>
                             </td>
                             <?php
-                            echo "<form method='post' action= '$_SERVER[PHP_SELF];' >";
-                            echo "<td><button class='btn btn-danger' type='hidden' name='borrarForo' value='borrar?idforo=" . $foro['id'] . "'>Eliminar</button></td>";
+                            echo "<form method='POST' action= '".$_SERVER['PHP_SELF']."' >";
+                            echo "<td><button class='btn btn-danger' type='submit' name='borrarForo' value='borrar'>Eliminar</button></td>";
+                            echo "<input type='hidden' name='idF' value='".$foro['id']."'>";
                             echo "</form>"; ?>
                         </tr>
                         <?php }?>
