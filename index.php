@@ -100,7 +100,7 @@ $_SESSION["email"] = $_POST['email'];
           <a class="btn btn-block btn-primary btn-lg mb-3"
             href="http://localhost/ProyectoGTH_V1.0_/paginas/visitantes/misionvision.php">Mision/vision</a>
           <a class="btn btn-block btn-primary btn-lg mb-3"
-            href="http://localhost/ProyectoGTH_V1.0_/nosotros.php">Nosotros</a>
+            href="http://localhost/ProyectoGTH_V1.0_/paginas/visitantes/nosotros.php">Nosotros</a>
           <a class="btn btn-block btn-primary btn-lg mb-3"
             href="http://localhost/ProyectoGTH_V1.0_/paginas/visitantes/ubicacion.php">Ubicacion</a>
         </div>
@@ -108,7 +108,7 @@ $_SESSION["email"] = $_POST['email'];
       <!--Fin del grupo de botones-->
 
 
-      <?php include("./modules/footer.html") ?>
+      <?php include("./modules/footer.php") ?>
 </body>
 
 </html>

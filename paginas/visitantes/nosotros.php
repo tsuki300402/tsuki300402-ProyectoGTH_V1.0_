@@ -277,6 +277,6 @@
             </div>
         </div>
     </div>
-    <?php include 'modules\footer\footer.html' ?>
+    <?php include 'modules\footer\footer.php' ?>
 </body>
 </html>

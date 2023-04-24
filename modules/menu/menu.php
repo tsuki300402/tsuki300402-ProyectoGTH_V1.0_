@@ -35,7 +35,7 @@
 </nav>-->
 
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
-  <a class="navbar-brand" href="index.php">
+  <a class="navbar-brand" href="../../index.php">
     <img class="img-fluid w-25 h-25 ms-5" src="./img/logo.jpeg" alt="Logo">
   </a>
 </nav>

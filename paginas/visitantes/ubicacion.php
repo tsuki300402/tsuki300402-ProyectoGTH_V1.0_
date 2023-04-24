@@ -11,7 +11,7 @@
 
 </head>
 <body>
-    <?php include "../menu/menu.php" ?>
+    <?php include "../../modules/menu/menu.php" ?>
 
     <div class="container mt-5">
         <div class="row justify-content-center">
@@ -25,7 +25,7 @@
         </div>
     </div>
    
-    <?php include './modules/footer/footer.html' ?>
+    <?php include '../../modules/footer.php' ?>
 <!--Scripts -->
 <script>
             const x = document.getElementById("p1");
