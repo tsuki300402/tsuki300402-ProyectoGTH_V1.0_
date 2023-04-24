@@ -8,8 +8,8 @@ $_SESSION["Usuario"];
 
 <style>
     .no-arrow {
-    -webkit-appearance: none;
-    -moz-appearance: none;
+     -webkit-appearance: none;
+     -moz-appearance: none;
     }
     .no-arrow::-ms-expand {
         display: none;
@@ -35,7 +35,7 @@ $_SESSION["Usuario"];
 									<button type='button' class='btn-close' data-bs-dismiss='modal'></button>
 								</div>
 								<div class='modal-body'>
-									<form action='../funciones/upload.php' method='post' class="was-validated">
+									<form action='../funciones/upload.php' method='post' class="was-validated" enctype='multipart/form-data'>
 										<div class="form-group">
                                             <label for="title">Titulo</label>
                                             <input type="text" class="form-control is-valid" id="title" name="title" placeholder="Ingrese Titulo o Nombre" required>
@@ -52,10 +52,12 @@ $_SESSION["Usuario"];
                                         </div>
                                         <div class="form-group">
                                             <label for="tema">Tema</label>
-                                            <input type="text" class="form-control is-valid" id="tema" name="tema" placeholder="Ingrese el tema" required>
-                                            <div class="invalid-feedback">
-                                            Doesn't Looks good!
-                                            </div>
+                                            <select class='form-control no-arrow' id='sel_tema' name='tema'> 
+													<option value='Salud Mental'>Salud Mental</option>
+													<option value='Matematicas'>Matematicas</option>
+													<option value='P. Abstracto'>P. Abstracto</option>
+													<option value='Logica'>Logica</option>
+											</select>
                                         </div>
                                         <div class="form-group">
                                             <label for="nivel">Nivel select</label>
@@ -68,9 +70,10 @@ $_SESSION["Usuario"];
                                             </select>
                                         </div>	
                                         <div class="form-group custom-file">
+                                            
                                             <label class="custom-file-label" for="image">Choose file...</label>
-                                            <input type="file" class="custom-file-input form-control" id="image" name="image" required/>
-                                            <div class="invalid-feedback">Invalid custom file feedback</div>
+                                            <input type="file" class="custom-file-input form-control" id="image" name="image" accept='.png, .jpg, .jpeg' required/>
+                                            <span id="imagen">Nada seleccionado</span>
                                         </div>					
 										<div class='container-fluid p-4 text-center'>
 											<button type='submit' class='btn btn-success mt-2'>Añadir</button>
@@ -101,6 +104,25 @@ $_SESSION["Usuario"];
         }
         //controlador de Evento submit
         document.getElementById("btnDel").addEventListener("submit", Confirm);
+
+        //MOSTRAR NOMBRE DE ARCHIVO
+        const input = document.getElementById('image');
+        const span = document.getElementById('imagen');
+
+        // Agregar un evento change al input file
+        input.addEventListener('change', function() {
+            // Verificar si se ha seleccionado un archivo
+            if (input.files.length > 0) {
+                // Obtener el nombre del archivo seleccionado
+                const fileName = input.files[0].name;
+                
+                // Asignar el nombre del archivo al texto del span
+                span.textContent ="Seleccionado: "+fileName;
+            } else {
+                // No se ha seleccionado un archivo
+                span.textContent = "Nada seleccionado";
+            }
+        });
     </script>
     </body>
 
