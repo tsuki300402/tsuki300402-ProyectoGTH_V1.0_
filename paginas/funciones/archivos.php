@@ -139,11 +139,10 @@ class Traer
 				
 			}
 			echo "</table>";
-			echo "<form action='#' method='post'>
-					<button class='btn btn-success' >Añadir</button>		";
-			echo "</form>";
-			
 		}
+		echo "<form action='#' method='post'>
+				<button class='btn btn-success' >Añadir</button>";
+		echo "</form>";
 	}
 
 	function Prueba($id){
@@ -155,18 +154,20 @@ class Traer
 						const  valor_tema = '".$value['tema']."';
 						const valor_nivel = '".$value['nivel']."'
 					  </script>";
-				echo "<form action='../funciones/upload.php' method='post'  class='was-validated' enctype='multipart/form-data'>
+				echo "<form action='../funciones/update.php' method='post'  class='was-validated' enctype='multipart/form-data'>
+						<input type='hidden' name='idP' value='" . $id . "'></input>
+						<input type='hidden' name='imgAct' value='" . $value['imagen'] . "'></input>
 						<table class='table table-bordered text-center'>
 								<div class='row'>
 									<div class='col'>
-										<div class='container justify-content-center' style='height:262px;width:220px;border:1px dashed #000;'>
-											<img id='preview' src='../../img/".$value['imagen']."' alt='Vista previa de la imagen'>
+										<div class='text-center' style='margin-left:12px;;height:262px;width:224px;border:1px dashed #000;'>
+											<img id='preview' src='../../img/".$value['imagen']."'  style='max-height:262px;max-width:220px;' alt='Vista previa de la imagen'>
 										</div>
-										<div class='form-group mt-1 mb-1 custom-file'>
+										<div class='form-group mt-1 mb-3 custom-file'>
 											<label class='custom-file-label' for='image'>Seleccionar portada</label>
-                                            <input type='file' class='custom-file-input form-control' id='image' name='image' value='".$value['imagen']."' onchange='previewImage();' required>
-											<span id='errorArchivo' style='display:none; color:red;'>El archivo seleccionado no es una imagen</span>
+                                            <input type='file' accept='.png, .jpg, .jpeg' class='custom-file-input form-control' id='image' name='image' onchange='previewImage();'>
 
+											<span id='errorArchivo' style='display:none; color:red;'>Nada seleccionado</span>
 										</div>	
 										<div class='form-group'>
 												<label for='tema'>Tema</label>

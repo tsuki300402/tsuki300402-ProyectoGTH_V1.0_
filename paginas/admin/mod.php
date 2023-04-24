@@ -26,6 +26,9 @@
                     $conexion->Prueba($prueba);
                 ?> 
         </div>
+        <?php
+        
+        ?>
         <div class="col">
                 <?php 
                     $conexion = new Traer();
@@ -36,21 +39,61 @@
     </div>
                 
 </div>
-<script>
+<script> 
     //MOSTRAT IMAGEN
     function previewImage() {
-        var preview = document.querySelector('#preview');
-        var file    = document.querySelector('#image').files[0];
-        var reader  = new FileReader();
+    var MAX_WIDTH = 224;
+    var MAX_HEIGHT = 261;
+    var preview = document.querySelector('#preview');
+    var file = document.querySelector('#image').files[0];
+    var reader = new FileReader();
+    var image = new Image();
 
-        reader.addEventListener("load", function () {
-            preview.src = reader.result;
-        }, false);
+    reader.addEventListener("load", function () {
+        image.src = reader.result;
+    }, false);
 
-        if (file) {
-            reader.readAsDataURL(file);
-        }
+    if (file) {
+        reader.readAsDataURL(file);
     }
+
+    image.onload = function() {
+        var width = image.width;
+        var height = image.height;
+
+        // Redimensionar la imagen si es más grande que los límites dados
+        if (width > MAX_WIDTH) {
+            width = MAX_WIDTH;
+        }
+        if (height > MAX_HEIGHT) {
+            height = MAX_HEIGHT;
+        }
+
+        // Redimensionar la imagen si es más pequeña que los límites dados
+        if (width < MAX_WIDTH) {
+            width = MAX_WIDTH;
+        }
+        if (height < MAX_HEIGHT) {
+            height = MAX_HEIGHT;
+        }
+
+        // Dibujar la imagen redimensionada en un lienzo temporal
+        var canvas = document.createElement('canvas');
+        canvas.width = width;
+        canvas.height = height;
+        var ctx = canvas.getContext('2d');
+        
+        // Detectar el tipo de archivo y establecer el tipo MIME correspondiente
+        var mimeType = file.type || 'image/jpeg';
+        
+        // Dibujar la imagen redimensionada en el lienzo temporal
+        ctx.drawImage(image, 0, 0, width, height);
+
+        // Actualizar la vista previa con la imagen redimensionada
+        preview.src = canvas.toDataURL(mimeType, 0.8);
+    }
+}
+
 
     
 	//ESPECIFICAR SELECT
@@ -70,6 +113,24 @@
         }
     }  
     
+    //verificar si el archivo es imagen
+
+    const archivoInput = document.getElementById('image');
+    const errorArchivo = document.getElementById('errorArchivo');
+    
+    archivoInput.addEventListener('change', function() {
+        if (!validarArchivo(archivoInput.files[0])) {
+            archivoInput.value = '';
+            errorArchivo.style.display = 'block';
+        } else {
+            errorArchivo.style.display = 'none';
+        }
+    });
+    
+    function validarArchivo(archivo) {
+        const allowedTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/svg+xml', 'image/jpg',];
+        return archivo && allowedTypes.includes(archivo.type);
+    }
 </script>
 
 </body>
