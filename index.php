@@ -98,11 +98,11 @@ $_SESSION["email"] = $_POST['email'];
       <div class="mt-5 col-4 w-25 text-center mx-auto">
         <div class="mt-5 d-grid mx-auto ">
           <a class="btn btn-block btn-primary btn-lg mb-3"
-            href="http://localhost/ProyectoGTH_V1.0_/misionvision.php">Mision/vision</a>
+            href="http://localhost/ProyectoGTH_V1.0_/paginas/visitantes/misionvision.php">Mision/vision</a>
           <a class="btn btn-block btn-primary btn-lg mb-3"
             href="http://localhost/ProyectoGTH_V1.0_/nosotros.php">Nosotros</a>
           <a class="btn btn-block btn-primary btn-lg mb-3"
-            href="http://localhost/ProyectoGTH_V1.0_/modules/ubicacion/ubicacion.php">Ubicacion</a>
+            href="http://localhost/ProyectoGTH_V1.0_/paginas/visitantes/ubicacion.php">Ubicacion</a>
         </div>
       </div>
       <!--Fin del grupo de botones-->

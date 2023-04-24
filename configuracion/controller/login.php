@@ -26,11 +26,13 @@ class login
             if ($fila['rol'] == "Administrador") {
                 $_SESSION['Usuario'] = $fila['nombre'];
                 $_SESSION['idUsuario'] = $fila['idUsuario'];
+                $_SESSION['rol'] = $fila['rol'];
                 header("Location: http://localhost/ProyectoGTH_V1.0_/paginas/admin/categoriaAdmin.php");
             } else {
                 $_SESSION['Usuario'] = $fila['nombre'];
                 $_SESSION['estado'] = $fila['estado'];
                 $_SESSION['idUsuario'] = $fila['idUsuario'];
+                $_SESSION['rol'] = $fila['rol'];
                 header("Location: http://localhost/ProyectoGTH_V1.0_/paginas/usuarios/categoriaUser.php");
             }
 

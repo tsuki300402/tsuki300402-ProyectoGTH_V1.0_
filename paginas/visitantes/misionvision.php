@@ -14,7 +14,7 @@
     </style>
   </head>
 <body>
-    <?php include "./modules/menu/menu.php" ?>
+    <?php include "../../modules/menu/menu.php" ?>
     <div class="row featurette">
   <div class="col-md-7 order-md-2">
     <h2 class="featurette-heading fw-normal lh-1">MISION</h2>

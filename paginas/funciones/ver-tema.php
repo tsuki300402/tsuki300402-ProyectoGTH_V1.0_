@@ -1,6 +1,11 @@
 <?php
 session_start();
-include("../../modules/menu/menu_usuario.php");
+if (($_SESSION['rol'] == 'Administrador')){
+    //header('Location: ../index.php');
+    include("../../modules/menu/menu_admin.php");
+}else{
+    include("../../modules/menu/menu_usuario.php");
+}
 // Conexión a la base de datos y consulta del tema
 include("../../configuracion/controller/conexion.php");
 $conexion = new Conexion();

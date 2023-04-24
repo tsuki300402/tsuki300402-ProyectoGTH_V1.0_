@@ -28,7 +28,7 @@ include("../../modules/menu/menu_usuario.php");
       <th>Mensaje</th>
       <th>Fecha</th>
       <th>Respuestas</th>
-      <th>Ult_Respuesta</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -51,9 +51,6 @@ include("../../modules/menu/menu_usuario.php");
         </td>
         <td>
           <?php echo $fila['respuestas']; ?>
-        </td>
-        <td>
-          <?php echo $fila['ult_respuesta']; ?>
         </td>
         <td>
           <?php echo '<a class="btn btn-primary" href="../funciones/ver-tema.php?id=' . $fila['id'] . '">Ver tema</a>' ?>

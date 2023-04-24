@@ -77,6 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </td>
                             <?php
                             echo "<form method='POST' action= '".$_SERVER['PHP_SELF']."' >";
+                            echo '<td><a class="btn btn-primary" href="../funciones/ver-tema.php?id=' . $foro['id'] . '">Ver tema</a></td>';
                             echo "<td><button class='btn btn-danger' type='submit' name='borrarForo' value='borrar'>Eliminar</button></td>";
                             echo "<input type='hidden' name='idF' value='".$foro['id']."'>";
                             echo "</form>"; ?>

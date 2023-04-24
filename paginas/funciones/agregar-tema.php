@@ -8,7 +8,8 @@ $titulo = mysqli_real_escape_string($conexion, $_POST['titulo']);
 $descripcion = mysqli_real_escape_string($conexion, $_POST['mensaje']);
 mysqli_query($conexion, "INSERT INTO tema (autor,titulo, mensaje) VALUES ('$autor','$titulo', '$descripcion');");
 //mysqli_query($conexion, "UPDATE tema SET identificador = SCOPE_IDENTITY() WHERE id = SCOPE_IDENTITY();");
-// Redirigir de vuelta a la página principal
+// Redirigir de vuelta a la página principal 
+//unserialize();
 header('Location: ../usuarios/foro.php');
 ?>
 
