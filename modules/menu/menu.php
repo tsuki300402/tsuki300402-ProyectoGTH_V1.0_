@@ -33,9 +33,29 @@
     </div>
   </div>
 </nav>-->
+<!DOCTYPE html>
+<html lang="es">
 
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
-  <a class="navbar-brand" href="../../index.php">
-    <img class="img-fluid w-25 h-25 ms-5" src="./img/logo.jpeg" alt="Logo">
-  </a>
-</nav>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pagina de inicio">
+  <title>hola,
+    <?php echo $_SESSION['Usuario'] ?>
+  </title>
+  <link href="http://localhost/ProyectoGTH_V1.0_/css/custom.css" rel="stylesheet">
+  <link href="http://localhost/ProyectoGTH_V1.0_/libs/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <script src="http://localhost/ProyectoGTH_V1.0_/js/bootstrap.bundle.min.js"></script>
+  <script src="http://localhost/ProyectoGTH_V1.0_/jq/jquery-3.6.1.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
+    <a class="navbar-brand" href="../../index.php">
+      <img class="img-fluid w-25 h-25 ms-5" src="./img/logo.jpeg" alt="Logo">
+    </a>
+  </nav>
