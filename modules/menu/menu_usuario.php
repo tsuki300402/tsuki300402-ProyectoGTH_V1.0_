@@ -41,9 +41,7 @@
   <div class="d-flex">
     <div id="sidebar">
       <div class="p-2">
-        <a href="#" class="navbar-brand text-center text-light w-100 p-4 border-bottom">
-          NielRooQui
-        </a>
+        <img src="http://localhost/ProyectoGTH_V1.0_/img/NielRoo.png" alt=""  style="width:150px;height:200px;">
       </div>
       <div id="sidebar-accordion" class="accordion">
         <div class="list-group">

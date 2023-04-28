@@ -39,7 +39,7 @@
     <div id="sidebar">
       <div class="p-2">
         <a href="#" class="navbar-brand text-center text-light w-100 p-4 border-bottom">
-          <img src="../../img/NielRoo.png" alt="Logo">
+          <img src="http://localhost/ProyectoGTH_V1.0_/img/NielRoo.png" alt=""  style="width:150px;height:200px;">
         </a>
       </div>
       <div id="sidebar-accordion" class="accordion">
