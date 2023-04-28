@@ -40,8 +40,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Pagina de inicio">
-  <title>hola,
-    <?php echo $_SESSION['Usuario'] ?>
+  <title>hola
   </title>
   <link href="http://localhost/ProyectoGTH_V1.0_/css/custom.css" rel="stylesheet">
   <link href="http://localhost/ProyectoGTH_V1.0_/libs/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -55,7 +54,7 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
-    <a class="navbar-brand" href="../../index.php">
-      <img class="img-fluid w-25 h-25 ms-5" src="./img/logo.jpeg" alt="Logo">
-    </a>
+      <div class="" style="width:200px;height:200px;">
+        <img src="./img/NielRoo.png" alt=""  style="width:150px;height:200px;">
+      </div>    
   </nav>

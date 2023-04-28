@@ -39,7 +39,7 @@
     <div id="sidebar">
       <div class="p-2">
         <a href="#" class="navbar-brand text-center text-light w-100 p-4 border-bottom">
-          Logo de la empresa
+          <img src="../../img/NielRoo.png" alt="Logo">
         </a>
       </div>
       <div id="sidebar-accordion" class="accordion">
