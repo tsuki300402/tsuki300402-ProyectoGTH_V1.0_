@@ -40,7 +40,7 @@
     <div id="sidebar">
       <div class="p-2">
         <a href="#" class="navbar-brand text-center text-light w-100 p-4 border-bottom">
-          <img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo_logo.png" alt="NielRoo"  style="width:70px;height:70px;">
+          <img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo_logo.png" alt="NielRoo"  style="width:70px;height:65px;">
             <u class="">NielRoo</u>
         </a>
       </div>
