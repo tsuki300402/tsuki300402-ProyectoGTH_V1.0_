@@ -139,10 +139,7 @@ class Traer
 				
 			}
 			echo "</table>";
-		}
-		echo "<form action='#' method='post'>
-				<button class='btn btn-success' >Añadir</button>";
-		echo "</form>";
+		}		
 	}
 
 	function Prueba($id){
