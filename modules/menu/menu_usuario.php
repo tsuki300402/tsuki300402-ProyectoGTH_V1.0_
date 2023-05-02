@@ -14,10 +14,10 @@
   <script src="http://localhost/ProyectoGTH_V1.0_/js/bootstrap.bundle.min.js"></script>
   <script src="http://localhost/ProyectoGTH_V1.0_/jq/jquery-3.6.1.min.js"></script>
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">-->
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
   <!--<link rel="stylesheet" href="styles.css">-->
   <!--<link href="../../libs/bootstrap-icons/bootstrap-icons.css"  rel="stylesheet">-->
   <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -39,43 +39,35 @@
 </head>
 
 <body>
-  <div class="d-flex">
-    <div id="sidebar">
-      <div class="p-2">
-        <a href="#" class="navbar-brand text-center text-light w-100 p-4 border-bottom">
-            <img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo_logo.png" alt="NielRoo"  style="width:70px;height:65px;">
-              <u class="">NielRoo</u>
-          </a>
-      </div>
-      <div id="sidebar-accordion" class="accordion">
-        <div class="list-group">
-          <a href="http://localhost/ProyectoGTH_V1.0_/paginas/usuarios/perfil.php" aria-expanded="false"
-            class="list-group-item list-group-item-action bg-dark text-light">
-            <i class="fa fa-user mr-3" aria-hidden="true"></i>Perfil
-          </a>
-          <a href="http://localhost/ProyectoGTH_V1.0_/paginas/usuarios/categoriaUser.php" aria-expanded="false"
-            class="list-group-item list-group-item-action bg-dark text-light">
-            <i class="fa fa-user mr-3" aria-hidden="true"></i>Prueba
-          </a>
-          <a href="http://localhost/ProyectoGTH_V1.0_/paginas/usuarios/foro.php"
-            class="list-group-item list-group-item-action bg-dark text-light">
-            <i class="fa fa-window-close mr-3"></i>Foro
-          </a>
-          <a href="http://localhost/ProyectoGTH_V1.0_/configuracion\controller\cerrar_session.php"
-            class="list-group-item list-group-item-action bg-dark text-light">
-            <i class="fa fa-window-close mr-3"></i>Cerrar Sesion
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="content w-100">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-xl">
-          <div class="text-white text-center">Bienvenido
-            <?php echo $_SESSION['Usuario'] ?> a la empresa NielRooQui
+  <div class="content w-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-xl">
+        <div class="text-white text-center">Bienvenido
+          <?php echo $_SESSION['Usuario'] ?> a la empresa NielRooQui
           </div>
         </div>
       </nav>
+      <div id="sidebar">
+
+        <ul class="nav flex-column">
+          <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled">Disabled</a>
+      </li>
+      </ul>
+    </div>
+
+
+
+
       <section class="p-3">
         <div class="container">
           <div class="row">
