@@ -34,11 +34,34 @@
                     $conexion = new Traer();
                     $conexion->Listar($prueba);
                 ?> 
-                
+            <button class='btn btn-success' data-bs-toggle='modal' data-bs-target='#añadirPregunta'>Añadir</button>
         </div>  
     </div>
-                
-</div>
+    <!--MODAL AÑADIR PREGUNTA-->
+    <div class='modal fade' id='añadirPregunta'>
+	    <div class='modal-dialog'>
+	        <div class='modal-content'>
+                <!--modal header-->
+                <div class='modal-header'>
+	                <h2>Añadir Pregunta </h2>
+	            </div>
+	            <div class='modal-body'>
+	                <form action='' method='post'>
+	                    <div class='form-group'>
+                            <label for='title'>Pregunta</label>
+                            <textarea class='form-control is-valid' id='title' name='title' rows='2' cols='1'required> </textarea>
+                            <div class='invalid-feedback'>
+                                Doesn't Looks good!
+                            </div>
+				        </div>								
+                        <div class='container-fluid text-center'>
+                            <button type='submit' class='btn btn-primary mt-2'>Aceptar</button>
+                        </div>
+	                </form>
+                </div>
+            </div>
+        </div>
+    </div>
 <script> 
     //MOSTRAT IMAGEN
     function previewImage() {

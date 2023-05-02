@@ -1,20 +1,48 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Inicio</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Pagina de inicio">
-	<link href="./css/custom.css"  rel="stylesheet">
-	<link href="./libs/bootstrap-icons/bootstrap-icons.css"  rel="stylesheet">
-	<script src="./js/bootstrap.bundle.min.js"></script>
-  <link type="text/css" rel="stylesheet" href="./foro/estilo.css" >
+<?php include "../../modules/menu/menu.php" ?>
   <style>
-
-    </style>
-  </head>
-<body>
-    <?php include "../../modules/menu/menu.php" ?>
+    /* Cubo */
+#pool{
+    width: 100%;
+    height: 339px;
+}
+#cube{
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    animation: loop 10s linear infinite;
+}
+#cube img{
+    margin-top: 20%;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    opacity: 0.9;
+    width: inherit;
+}
+#cube img:nth-child(1){
+    transform: rotateY(0deg) translateZ(100px);
+}
+#cube img:nth-child(2){
+    transform: rotateY(90deg) translateZ(100px);
+}
+#cube img:nth-child(3){
+    transform: rotateY(180deg) translateZ(100px);
+}
+#cube img:nth-child(4){
+    transform: rotateY(-90deg) translateZ(100px);
+}
+@keyframes loop{
+    0%{
+        transform: rotateX(0deg) rotateY(0deg);
+        }
+        100%{
+            transform: rotateY(360deg);
+        }
+}
+</style>
     <div class="row featurette">
   <div class="col-md-7 order-md-2">
     <h2 class="featurette-heading fw-normal lh-1">MISION</h2>
@@ -30,6 +58,21 @@
 </ul>
 </p>
   </div>
+  <div class="col-5 bg-success p-4">
+                <div class="container bg-white">
+                    <div id="cont">
+                        <div id="pool">
+                            <div id="cube">
+                                <img src="../../img/1.jpg" alt="">
+                                <img src="../../img/1.jpg" alt="">
+                                <img src="../../img/1.jpg" alt="">
+                                <img src="../../img/1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
   <div class="col-md-5 order-md-1">
   <img src="./img/u.png" alt="" class="img-fluid"  style="width: 400px; height: 300px">
 

@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Pagina de inicio">
+  <link rel="Website Icon" href="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo_logo.png"  type="png">
   <title> Paginas Administracion </title>
   <link href="http://localhost/ProyectoGTH_V1.0_/css/custom.css" rel="stylesheet">
   <link href="http://localhost/ProyectoGTH_V1.0_/libs/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -39,7 +40,8 @@
     <div id="sidebar">
       <div class="p-2">
         <a href="#" class="navbar-brand text-center text-light w-100 p-4 border-bottom">
-          Logo de la empresa
+          <img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo_logo.png" alt="NielRoo"  style="width:70px;height:65px;">
+            <u class="">NielRoo</u>
         </a>
       </div>
       <div id="sidebar-accordion" class="accordion">

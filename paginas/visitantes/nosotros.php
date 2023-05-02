@@ -85,48 +85,7 @@
     transform: perspective(600px) rotateY(-360deg);
 }
 
-/* Cubo */
-#pool{
-    width: 100%;
-    height: 339px;
-}
-#cube{
-    transform-style: preserve-3d;
-    width: 200px;
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    animation: loop 10s linear infinite;
-}
-#cube img{
-    margin-top: 20%;
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    opacity: 0.9;
-    width: inherit;
-}
-#cube img:nth-child(1){
-    transform: rotateY(0deg) translateZ(100px);
-}
-#cube img:nth-child(2){
-    transform: rotateY(90deg) translateZ(100px);
-}
-#cube img:nth-child(3){
-    transform: rotateY(180deg) translateZ(100px);
-}
-#cube img:nth-child(4){
-    transform: rotateY(-90deg) translateZ(100px);
-}
-@keyframes loop{
-    0%{
-        transform: rotateX(0deg) rotateY(0deg);
-        }
-        100%{
-            transform: rotateY(360deg);
-        }
-}
+
 /*Aqui finaliza los estilos que implemento daniel*/
     </style>
 </head>
@@ -141,21 +100,7 @@
                 </div>
                 
             </div>
-            <div class="col-5 bg-success p-4">
-                <div class="container bg-white">
-                    <div id="cont">
-                        <div id="pool">
-                            <div id="cube">
-                                <img src="../../img/1.jpg" alt="">
-                                <img src="../../img/1.jpg" alt="">
-                                <img src="../../img/1.jpg" alt="">
-                                <img src="../../img/1.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
+           
         </div>
     </div>
     <div class="container-fluid p-5 text-center">
