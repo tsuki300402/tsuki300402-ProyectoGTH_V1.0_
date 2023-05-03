@@ -13,10 +13,10 @@
   <script src="http://localhost/ProyectoGTH_V1.0_/jq/jquery-3.6.1.min.js"></script>
 
   <!-- Bootstrap CSS -->
-  <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
   </script>
@@ -36,11 +36,41 @@
 </head>
 
 <body>
-    <div class="content w-100 ">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="#" class="navbar-brand text-center text-light w-25 p-4 border-bottom">
+  <div class="d-flex">
+    <div id="sidebar">
+      <div class="p-2">
+        <a href="#" class="navbar-brand text-center text-light w-100 p-4 border-bottom">
           <img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo_logo.png" alt="NielRoo"  style="width:70px;height:65px;">
-          <u>NielRoo</u></a>
+            <u class="">NielRoo</u>
+        </a>
+      </div>
+      <div id="sidebar-accordion" class="accordion">
+        <div class="list-group">
+          <a href="http://localhost/ProyectoGTH_V1.0_/paginas/admin/admin_de_usuarios.php" aria-expanded="false"
+            class="list-group-item list-group-item-action bg-dark text-light">
+            <i class="fa fa-tachometer mr-3" aria-hidden="true"></i>Administracion de usuarios
+          </a>
+          <a href="http://localhost/ProyectoGTH_V1.0_/paginas/admin/admin_de_resultados.php" aria-expanded="false"
+            class="list-group-item list-group-item-action bg-dark text-light">
+            <i class="fa fa-tachometer mr-3" aria-hidden="true"></i>Administracion de resultados
+          </a>
+          <a href="http://localhost/ProyectoGTH_V1.0_/paginas/admin/categoriaAdmin.php" aria-expanded="false"
+            class="list-group-item list-group-item-action bg-dark text-light">
+            <i class="fa fa-tachometer mr-3" aria-hidden="true"></i>Pruebas
+          </a>
+          <a href="http://localhost/ProyectoGTH_V1.0_/paginas/admin/admin_de_foro.php" aria-expanded="false"
+            class="list-group-item list-group-item-action bg-dark text-light">
+            <i class="fa fa-tachometer mr-3" aria-hidden="true"></i>Administracion de foros
+          </a>
+          <a href="http://localhost/ProyectoGTH_V1.0_/configuracion/controller/cerrar_session.php"
+            class="list-group-item list-group-item-action bg-dark text-light">
+            <i class="fa fa-window-close mr-3"></i>Cerrar Sesion
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="content w-100">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-xl">
           <div class="text-white text-center">Bienvenido
             <?php echo $_SESSION['Usuario'] ?> a la empresa NielRooQui
@@ -52,39 +82,7 @@
 
         </div>
       </nav>
-        <div class="container-fluid" style="background-image: url('../../img/fondomenuadmin.jpg');">
+      <section class="p-3">
+        <div class="container">
           <div class="row">
-            <div class="col-3">
-        <div class="d-flex align-items-start">
-        <ul class="nav flex-column nav-pills">
-            <li class="nav-item mt-5">
-            <a class="text-dark" href="http://localhost/ProyectoGTH_V1.0_/paginas/admin/admin_de_usuarios.php">
-            <i class="bi bi-speedometer me-3"></i>Administracion de usuarios
-          </a>
-        </li>
-        <li class="nav-item mt-5">
-        <a class="text-dark"  href="http://localhost/ProyectoGTH_V1.0_/paginas/admin/admin_de_resultados.php">
-            <i class="bi bi-speedometer me-3"></i>Administracion de resultados
-          </a>
-        </li>
-        <li class="nav-item mt-5">
-        <a class="text-dark"  href="http://localhost/ProyectoGTH_V1.0_/paginas/admin/categoriaAdmin.php">
-            <i class="bi bi-speedometer me-3"></i>Pruebas
-          </a>
-        </li>
-        <li class="nav-item mt-5">
-        <a class="text-dark"  href="http://localhost/ProyectoGTH_V1.0_/paginas/admin/admin_de_foro.php">
-            <i class="bi bi-speedometer me-3"></i>Administracion de foros
-          </a>
-        </li>
-        <li class="nav-item mt-5">
-        <a class="text-dark"  href="http://localhost/ProyectoGTH_V1.0_/configuracion/controller/cerrar_session.php">
-            <i class="bi bi-door-closed me-3"></i>Cerrar Sesion
-          </a>
-        </li>
-        </ul>
-        <div class="vr ms-3"></div>
-      </div>
-      </div>
-      <div class="col-9">
-
+            <div class="col-md-12">
