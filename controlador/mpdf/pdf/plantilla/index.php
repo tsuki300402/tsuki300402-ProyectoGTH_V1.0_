@@ -12,6 +12,7 @@ function getplantilla(){
   $_GET['id'];
   $usuario = $_GET['id'];
   
+  
   $sql = "SELECT * FROM usuario where idUsuario = $usuario";
   $resultset = mysqli_query($con, $sql) or die("error base de datos:". mysqli_error($con));
   $dato=mysqli_fetch_assoc($resultset);
