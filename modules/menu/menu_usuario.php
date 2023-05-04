@@ -31,8 +31,11 @@
   </script>-->
   <style>
     #sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
       width: 20%;
-      height: 100vh;
       background: #343a40;
     }
   </style>
@@ -43,7 +46,7 @@
     <div id="sidebar">
       <div class="p-2">
         <a href="#" class="navbar-brand text-center text-light w-100 p-4 border-bottom">
-            <img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo_logo.png" alt="NielRoo"  style="width:70px;height:65px;">
+            <img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo.png" alt="NielRoo"  style="width:70px;height:65px;">
               <u class="">NielRoo</u>
           </a>
       </div>
@@ -72,7 +75,7 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-xl">
           <div class="text-white text-center">Bienvenido
-            <?php echo $_SESSION['Usuario'] ?> a la empresa NielRooQui
+            <?php echo $_SESSION['Usuario'] ?> a la empresa NielRoo
           </div>
         </div>
       </nav>

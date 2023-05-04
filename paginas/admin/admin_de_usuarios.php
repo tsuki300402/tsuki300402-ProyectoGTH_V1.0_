@@ -11,7 +11,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <h2>Lista de los aspirantes que realizaron las pruebas psicotecnicas</h2>
+              <h2>Lista de los usuarios registrados en el sistema</h2>
               <table id="data_table" class="table table-striped mt-5">
                 <thead>
                         <?php include("../../configuracion/controller/conexion.php");

@@ -54,7 +54,8 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
-      <div class="" style="width:200px;height:200px;">
-        <img src="./img/NielRoo.png" alt=""  style="width:150px;height:200px;">
+      <div class="container-fluid p-3 justify-content-center text-white">
+        <img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo.png" alt=""  style="width:60px;height:65px;">
+        NielRoo
       </div>    
   </nav>

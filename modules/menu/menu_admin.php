@@ -28,19 +28,27 @@
   </script>-->
   <style>
     #sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
       width: 20%;
-      height: 100vh;
       background: #343a40;
+      padding: 1rem;
     }
+    #main-content {
+    position: absolu;
+    margin-left: 15%; /* Add margin to the main content to separate it from the sidebar */
+   }
   </style>
 </head>
 
 <body>
   <div class="d-flex">
     <div id="sidebar">
-      <div class="p-2">
+      <div class="container p-2" style="">
         <a href="#" class="navbar-brand text-center text-light w-100 p-4 border-bottom">
-          <img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo_logo.png" alt="NielRoo"  style="width:70px;height:65px;">
+          <img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo.png" alt="NielRoo"  style="width:70px;height:65px;">
             <u class="">NielRoo</u>
         </a>
       </div>
@@ -69,20 +77,21 @@
         </div>
       </div>
     </div>
-    <div class="content w-100">
+    <div class="content w-100" id="main-content">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-xl">
           <div class="text-white text-center">Bienvenido
-            <?php echo $_SESSION['Usuario'] ?> a la empresa NielRooQui
+            <?php echo $_SESSION['Usuario'] ?> a la empresa NielRoo
           </div>
 
+          <!-- 
           <form class="form-inline my-2 my-md-0">
             <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-          </form>
+          </form>-->
 
         </div>
       </nav>
-      <section class="p-3">
-        <div class="container">
+      <section class="p-5">
+        <div class="container" style="margin-left: 6%;">
           <div class="row">
             <div class="col-md-12">

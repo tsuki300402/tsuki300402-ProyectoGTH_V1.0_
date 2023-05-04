@@ -21,7 +21,7 @@ class Crear
 	function Pruebas(){
 		$enlace = $this->conectarDB();
         $consulta = "SELECT * FROM prueba ORDER by id ASC ";
-        $table="<table class='table table-bordered'><thead class='text-center'><tr><td>No.</td><td>Nombre</td><td>Descripción</td><td>Preguntas</td><td>Tema</td><td>Nivel</td><td>Estado</td><td>Editar</td><td>Cambiar Estado</td></tr></thead><tr>";
+        $table="<table class='table table-striped text-center'><thead class='text-center'><tr><td>No.</td><td>Nombre</td><td>Descripción</td><td>Preguntas</td><td>Tema</td><td>Nivel</td><td>Estado</td><td>Editar</td><td>Cambiar Estado</td></tr></thead><tr>";
 		if ($resultado = mysqli_query($enlace, $consulta)and($value = mysqli_fetch_assoc($resultado))) { 
             echo $table;
             foreach ($resultado as $value) {

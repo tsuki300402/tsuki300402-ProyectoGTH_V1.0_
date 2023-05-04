@@ -46,14 +46,37 @@
 	                <h2>Añadir Pregunta </h2>
 	            </div>
 	            <div class='modal-body'>
-	                <form action='' method='post'>
-	                    <div class='form-group'>
-                            <label for='title'>Pregunta</label>
-                            <textarea class='form-control is-valid' id='title' name='title' rows='2' cols='1'required> </textarea>
+	                <form action='' method='post' class='was-validated' enctype='multipart/form-data'>
+                        <div class="form-group">
+                            <label for='pregun_tipo'>Respuesta Tipo:</label>
+                            <select class="form-control" name="pregun_tipo" id="pregun_tipo" onchange="QuestType()">
+                                <option value="uni">unica</option>
+                                <option value="img">imagen</option>
+                            </select>
+                        </div>
+	                    <div class='form-group' id="Tipo_Pregunta">
+                            <label for='title'>Texto de la Pregunta</label>
+                            <textarea class='form-control is-valid' id='title' name='title' rows='2' cols='1'required></textarea>
                             <div class='invalid-feedback'>
                                 Doesn't Looks good!
                             </div>
-				        </div>								
+				        </div>	
+                        <div class="form-group">
+                            <label for='resp_tipo'>Respuesta Tipo:</label>
+                            <select class="form-control" name="resp_tipo" id="resp_tipo" onchange="QuestType()">
+                                <option value="uni">unica</option>
+                                <option value="mul">multiple</option>
+                                <option value="img">imagen</option>
+                                <option value="slid">deslizante</option>
+                            </select>
+                        </div>		
+                        <div class='form-group' id="Tipo_Respuesta">
+                            <label for='ResP'>Texto de la Pregunta</label>
+                            <textarea class='form-control is-valid' id='ResP' name='ResP' rows='2' cols='1'required></textarea>
+                            <div class='invalid-feedback'>
+                                Doesn't Looks good!
+                            </div>
+				        </div>						
                         <div class='container-fluid text-center'>
                             <button type='submit' class='btn btn-primary mt-2'>Aceptar</button>
                         </div>
@@ -154,6 +177,70 @@
         const allowedTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/svg+xml', 'image/jpg',];
         return archivo && allowedTypes.includes(archivo.type);
     }
+
+    //TIPO PREGUNTA
+    function QuestType(){
+        let campo_preg = document.getElementById("Tipo_Pregunta");
+        let campo_resp = document.getElementById("Tipo_Respuesta");
+        //Modificacion tipo pregunta
+        var Ques_type = document.getElementById("pregun_tipo");
+        var QuestVTipo = Ques_type.value;
+        console.log(QuestVTipo);
+        switch (QuestVTipo){
+            case "uni": 
+                console.log("El pregunta es unica");
+                campo_preg.innerHTML = "<label for='title'>Texto de la Pregunta</label><textarea class='form-control is-valid' id='title' name='title' rows='2' cols='1'required></textarea><div class='invalid-feedback'>Doesn't Looks good!</div>";
+
+            break; 
+            case "img":
+                console.log("El pregunta es imagen");
+                $("#Tipo_Pregunta").addClass("custom-file mb-4");
+                campo_preg.innerHTML = "<label class='custom-file-label' for='imageResP'>Choose file...</label><input type='file' class='custom-file-input form-control' id='imageResP' name='imageResP' accept='.png, .jpg, .jpeg' required/><span id='imagenResP'>Nada seleccionado</span>";
+            break;    
+        }
+
+        //Modificacion tipo respuesta
+        var Answ_type = document.getElementById("resp_tipo");
+        var AnswVTipo = Answ_type.value;
+        console.log(AnswVTipo);
+        switch (AnswVTipo){
+            case "uni": 
+                console.log("El option es unica");
+                campo_resp.innerHTML = "<label for='title'>Texto de la Pregunta</label><textarea class='form-control is-valid' id='title' name='title' rows='2' cols='1'required></textarea><div class='invalid-feedback'>Doesn't Looks good!</div>";
+                const input = document.getElementById('imageResP');
+                const span = document.getElementById('imagenResP');
+
+                    // Agregar un evento change al input file
+                input.addEventListener('change', function() {
+                        // Verificar si se ha seleccionado un archivo
+                        if (input.files.length > 0) {
+                            // Obtener el nombre del archivo seleccionado
+                            const fileName = input.files[0].name;
+                            
+                            // Asignar el nombre del archivo al texto del span
+                            span.textContent ="Seleccionado: "+fileName;
+                        } else {
+                            // No se ha seleccionado un archivo
+                            span.textContent = "Nada seleccionado";
+                        }
+                    });
+            break;
+            case "mul":
+                console.log("El option es multiple");
+                campo_resp.innerHTML = "<p>Este es un nuevo párrafo.</p>";
+            break;   
+            case "img":
+                console.log("El option es imagen");
+                campo_resp.innerHTML = "<p>Este es un nuevo párrafo.</p>";
+            break;  
+            case "slid":
+                console.log("El option es slid");
+                campo_resp.innerHTML = "<p>Este es un nuevo párrafo.</p>";
+            break;  
+        } 
+        
+    }
+
 </script>
 
 </body>
