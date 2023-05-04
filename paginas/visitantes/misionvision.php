@@ -43,7 +43,7 @@
         }
 }
 </style>
-    <div class="row featurette">
+<div class="row featurette mt-2">
   <div class="col-md-7 order-md-2">
     <h2 class="featurette-heading fw-normal lh-1">MISION</h2>
     <p class="lead">Nuestra mision se vasa en gestionar y desarrollar el talento humano de Nielroqui para lograr nuestros objetivos estrategicos. los cuales son:
@@ -63,10 +63,10 @@
                     <div id="cont">
                         <div id="pool">
                             <div id="cube">
-                                <img src="../../img/1.jpg" alt="">
-                                <img src="../../img/1.jpg" alt="">
-                                <img src="../../img/1.jpg" alt="">
-                                <img src="../../img/1.jpg" alt="">
+                                <img src="../../img/1.png" alt="">
+                                <img src="../../img/1.png" alt="">
+                                <img src="../../img/1.png" alt="">
+                                <img src="../../img/1.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -74,7 +74,7 @@
                 
             </div>
   <div class="col-md-5 order-md-1">
-  <img src="./img/u.png" alt="" class="img-fluid"  style="width: 400px; height: 300px">
+  <img src="../../img/icono3.png" alt="" class="img-fluid"  style="width: 400px; height: 300px">
 
   </div>
 </div>
@@ -89,7 +89,7 @@
 En general, la visión de Nielroqui se enfoca en el fortalecimiento de la cultura organizacional y la construcción de un entorno de trabajo colaborativo, inclusivo y diverso, en el que los empleados se sientan valorados, respetados y comprometidos con los objetivos de la empresa.</p>
   </div>
   <div class="col-md-5">
-  <img src="./img/l.png" alt="" class="img-fluid "  style="width: 400px; height: 300px">
+  <img src="../../img/1.png" alt="" class="img-fluid "  style="width: 400px; height: 300px">
 
   </div>
 </div>

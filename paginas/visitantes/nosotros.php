@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Human's Proyect</title>
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Pagina de inicio">
-	<link href="../../css/custom.css"  rel="stylesheet">
-	<link href="../../libs/bootstrap-icons/bootstrap-icons.css"  rel="stylesheet">
-	<script src="../../js/bootstrap.bundle.min.js"></script>
+<?php include "../../modules/menu/menu.php" ?>
     <style>
         /* Tarjeta */
 .card {
@@ -88,10 +79,8 @@
 
 /*Aqui finaliza los estilos que implemento daniel*/
     </style>
-</head>
-<body>
-    <?php include "../menu/menu.php" ?>
-    <div class="container-fluid">
+    
+    <div class="container mt-4">
         <div class="row justify-content-center p-3">
             <div class="col-5 d-flex bg-success p-4">
                 <div class="container bg-white text-start ">
@@ -109,7 +98,7 @@
             <div class="col-3">
                 <div class="card border-0">
                     <div class="face front">
-                        <img src="../../img/1.jpg" alt="">
+                        <img src="../../img/img.jpg" alt="">
                         <h3>Black</h3>
                     </div>
                     <div class="face back">
@@ -121,7 +110,7 @@
             <div class="col-3">
             <div class="card border-0">
                     <div class="face front">
-                        <img src="../../img/2.jpg" alt="">
+                        <img src="../../img/diseño.jpg" alt="">
                         <h3>Crash</h3>
                     </div>
                     <div class="face back">
@@ -133,7 +122,7 @@
             <div class="col-3">
             <div class="card border-0">
                     <div class="face front">
-                        <img src="../../img/3.jpg" alt="">
+                        <img src="../../img/fondomenuadmin.jpg" alt="">
                         <h3>Metal Slug 2</h3>
                     </div>
                     <div class="face back">
@@ -159,17 +148,17 @@
                     <!--Las imagenes del Carousel/Slider/slideShow-->
                     <div class="carousel-inner">
                         <div class="carousel-item active" id="first">
-                            <img src="../../img/2.jpg" class="d-block w-100" style="height:350px; ">
+                            <img src="../../img/diseño.jpg" class="d-block w-100" style="height:350px; ">
                         </div>
                         
                         <div class="carousel-item" id="second">
-                            <img src="../../img/1.jpg" class="d-block w-100" style="height:350px;">
+                            <img src="../../img/img.jpg" class="d-block w-100" style="height:350px;">
                         </div>		
                         <div class="carousel-item" id="tird">
-                            <img src="../../img/6.jpg" class="d-block w-100" style="height:350px;">
+                            <img src="../../img/logo.jpg" class="d-block w-100" style="height:350px;">
                         </div>
                         <div class="carousel-item" id="forth">
-                            <img src="../../img/3.jpg" class="d-block w-100" style="height:350px;">
+                            <img src="../../img/prueba_Salud Mental.png" class="d-block w-100" style="height:350px;">
                         </div>
                         </div>
                         <!--Controles izquierda y derecha-->
@@ -184,7 +173,7 @@
                 </div>
             </div>
             <div class="col-5">
-                <div class="container bg-light text-center p-5 " style=" height: 100%;">
+                <div class="container bg-light text-center p-5 " style="height: 100%;">
                     <div id="slider2" class="carousel slide" data-bs-ride="carousel">
                         <!--Las imagenes del Carousel/Slider/slideShow-->
                         <div class="container p-4">
@@ -222,6 +211,6 @@
             </div>
         </div>
     </div>
-    <?php include 'modules\footer\footer.php' ?>
+    <?php include '../../modules\footer.php' ?>
 </body>
 </html>

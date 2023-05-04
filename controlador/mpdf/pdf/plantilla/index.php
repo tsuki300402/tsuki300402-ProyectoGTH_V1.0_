@@ -11,13 +11,14 @@ function getplantilla(){
   
   $_GET['id'];
   $usuario = $_GET['id'];
-  
+
   
   $sql = "SELECT * FROM usuario where idUsuario = $usuario";
   $resultset = mysqli_query($con, $sql) or die("error base de datos:". mysqli_error($con));
   $dato=mysqli_fetch_assoc($resultset);
    
   $nombre = $dato ['nombre'];
+  $apellido = $dato ['apellido'];
 
   $plantilla = '<body>
   <header class="clearfix">
@@ -34,7 +35,7 @@ function getplantilla(){
     <div id="project">
     <div><span>Proyecto</span> Pagina de talento humano</div>
     <div><span>Nombre</span> '.$nombre.'</div>
-    <div><span>Apellido</span> Mayo 03, 2023</div>
+    <div><span>Apellido</span> '.$apellido.'</div>
     <div><span>Fecha</span> Mayo 03, 2023</div>
     </div>
     </header>

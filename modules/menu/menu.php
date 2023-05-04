@@ -40,7 +40,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Pagina de inicio">
-  <title>hola
+  <title>Hi
   </title>
   <link href="http://localhost/ProyectoGTH_V1.0_/css/custom.css" rel="stylesheet">
   <link href="http://localhost/ProyectoGTH_V1.0_/libs/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
