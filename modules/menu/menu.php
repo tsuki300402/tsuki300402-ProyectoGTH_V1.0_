@@ -40,8 +40,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Pagina de inicio">
-  <title>Hi
-  </title>
+  <link rel="Website Icon" href="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo_logo.png"  type="png">
+  <title>Hi</title>
   <link href="http://localhost/ProyectoGTH_V1.0_/css/custom.css" rel="stylesheet">
   <link href="http://localhost/ProyectoGTH_V1.0_/libs/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <script src="http://localhost/ProyectoGTH_V1.0_/js/bootstrap.bundle.min.js"></script>
@@ -52,10 +52,10 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
 </head>
-<body>
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
+<body class="bg-light">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-danger">
       <div class="container-fluid p-3 justify-content-center text-white">
         <img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo.png" alt=""  style="width:60px;height:65px;">
-        NielRoo
+        <h1 class="text-white">Niel</h1><h1 class="text-primary">Roo</h1>
       </div>    
   </nav>

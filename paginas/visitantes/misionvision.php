@@ -46,17 +46,9 @@
 <div class="row featurette mt-2">
   <div class="col-md-7 order-md-2">
     <h2 class="featurette-heading fw-normal lh-1">MISION</h2>
-    <p class="lead">Nuestra mision se vasa en gestionar y desarrollar el talento humano de Nielroqui para lograr nuestros objetivos estrategicos. los cuales son:
-        <ul class="lead">
-            <br>    
-            <li><b>Atraer y seleccionar al mejor talento</li>
-            <li>Desarrollar y retener el mejor talento</li>
-            <li>Administrar la compensacion y beneficios</li>
-            <li>Gestionar el cumplimiento de las leyes y normas laborales</li>
-            <li>Promover una cultura organizacional saludable</li>
-            <li>Mejorar la eficiencia y la productividad</b></li>
-</ul>
-</p>
+    <p class="lead">
+        Somos una empresa dedicada al desarrollo y analisis de sistemas informaticas. Contamos con una gran cantidad de conocimientos especializados en diferentes areas para brindar el mejor servicio y sistema posible.
+    </p>
   </div>
   <div class="col-5 bg-success p-4">
                 <div class="container bg-white">
@@ -94,7 +86,7 @@ En general, la visión de Nielroqui se enfoca en el fortalecimiento de la cultur
   </div>
 </div>
 
-
+<?php include '../../modules\footer.php' ?>
 
 </body>
 </html>

@@ -12,7 +12,7 @@ include("../../modules/menu/menu_usuario.php");
 ?>
 
 
-
+<div class="main-content">
 <h2>Lista de foros</h2>
 <table class="table table-striped mt-5">
   <thead>

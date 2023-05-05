@@ -22,7 +22,7 @@ $_SESSION["Usuario"];
             <?php
                 include 'pruebasA.php'; 
             ?>
-            <a class="col-1 btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAdd"><i class="bi bi-cloud-plus-fill" style="font-size:19px;color:#fff;"> Añadir</i></a>
+            <a class="col-2 btn btn-primary text-light" data-bs-toggle="modal" data-bs-target="#modalAdd"><i class="bi bi-cloud-plus "> Añadir</i></a>
         </div>
     </div>
     <!--EL MODAL-->

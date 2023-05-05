@@ -6,16 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Pagina de inicio">
   <link rel="Website Icon" href="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo_logo.png"  type="png">
-  <title>hola,
-    <?php echo $_SESSION['Usuario'] ?>
-  </title>
-  <link href="http://localhost/ProyectoGTH_V1.0_/css/custom.css" rel="stylesheet">
-  <link href="http://localhost/ProyectoGTH_V1.0_/libs/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <script src="http://localhost/ProyectoGTH_V1.0_/js/bootstrap.bundle.min.js"></script>
-  <script src="http://localhost/ProyectoGTH_V1.0_/jq/jquery-3.6.1.min.js"></script>
-  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <title>hola, <?php echo $_SESSION['Usuario'] ?> </title>
+  <link href="http://localhost/ProyectoGTH_V1.0_/css/custom.css" rel="stylesheet">
+  <link href="http://localhost/ProyectoGTH_V1.0_/libs/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+ <script src="http://localhost/ProyectoGTH_V1.0_/js/bootstrap.bundle.min.js"></script>
+  <script src="http://localhost/ProyectoGTH_V1.0_/jq/jquery-3.6.1.min.js"></script>
+  <!--< Bootstrap CSS -->
+  
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!--<link rel="stylesheet" href="styles.css">-->
@@ -37,25 +36,27 @@
       bottom: 0;
       width: 20%;
       background: #343a40;
+      padding: 1rem;
     }
+    #main-content {
+    position: absolu;
+    margin-left: 20%; /* Add margin to the main content to separate it from the sidebar */
+   }
+   
   </style>
 </head>
 
 <body>
   <div class="d-flex">
     <div id="sidebar">
-      <div class="p-2">
-        <a href="#" class="navbar-brand text-center text-light w-100 p-4 border-bottom">
-            <img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo.png" alt="NielRoo"  style="width:70px;height:65px;">
-              <u class="">NielRoo</u>
-          </a>
+    <div class="container p-2 border-bottom">
+        <a href="#" class="navbar-brand text-center text-light w-100 m-2 p-4 " style="font-size: 22px;">
+          <img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo.png" alt="NielRoo"  style="max-width:70px;max-height:65px;">
+          <i class="text-white">Niel</i><i class="text-primary">Roo</i>
+        </a>
       </div>
       <div id="sidebar-accordion" class="accordion">
         <div class="list-group">
-          <a href="http://localhost/ProyectoGTH_V1.0_/paginas/usuarios/perfil.php" aria-expanded="false"
-            class="list-group-item list-group-item-action bg-dark text-light">
-            <i class="fa fa-user mr-3" aria-hidden="true"></i>Perfil
-          </a>
           <a href="http://localhost/ProyectoGTH_V1.0_/paginas/usuarios/categoriaUser.php" aria-expanded="false"
             class="list-group-item list-group-item-action bg-dark text-light">
             <i class="fa fa-user mr-3" aria-hidden="true"></i>Prueba
@@ -71,7 +72,7 @@
         </div>
       </div>
     </div>
-    <div class="content w-100">
+    <div class="content w-100" id="main-content">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-xl">
           <div class="text-white text-center">Bienvenido
@@ -79,7 +80,4 @@
           </div>
         </div>
       </nav>
-      <section class="p-3">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
+      <section class="p-4">
