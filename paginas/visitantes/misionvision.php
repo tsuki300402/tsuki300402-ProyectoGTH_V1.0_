@@ -95,6 +95,6 @@ En general, la visión de Nielroqui se enfoca en el fortalecimiento de la cultur
 </div>
 
 
-
+<?php include("../../modules/footer.php") ?>
 </body>
 </html>
