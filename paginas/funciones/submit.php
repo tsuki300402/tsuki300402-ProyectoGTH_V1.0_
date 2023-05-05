@@ -28,7 +28,10 @@ class Sub
         $idUser = $_POST['idUser'];
         $sql = "INSERT INTO `respuestas` (`idrespuesta`, `respuesta`, `idprueba`, `idusuario`) VALUES (NULL, '" . $serial_respuestas . "', '" . $idQuest . "', '" . $idUser . "')";
         if ($enlace->query($sql) === TRUE) {
-            header('Location: http://localhost/ProyectoGTH_V1.0_/paginas/usuarios/categoriaUser.php');
+            $sql1 = "INSERT INTO resultados (id,id_prueba,id_usuario) VALUES (NULL,'" . $idQuest . "', '" . $idUser . "')";
+            if ($enlace->query($sql1) === TRUE){
+                header('Location: http://localhost/ProyectoGTH_V1.0_/paginas/usuarios/categoriaUser.php');
+            }
         }
     }
 }
