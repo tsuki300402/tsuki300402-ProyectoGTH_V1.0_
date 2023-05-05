@@ -17,7 +17,7 @@
                 </ul>
             </div>
             <div class="col col-4 p-3">
-                <img src="./img/icono3.png" alt="Logo_Footer" width="200px" height="200px">
+                <img src="http://localhost/ProyectoGTH_V1.0_/img/icono3.png" alt="Logo_Footer" width="200px" height="200px">
             </div>
         </div>
     </div>

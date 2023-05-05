@@ -1,5 +1,5 @@
 <?php session_start();
-$_SESSION["email"] = $_POST['email'];
+//$_SESSION["email"] = $_POST['email'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,7 +12,6 @@ $_SESSION["email"] = $_POST['email'];
   <link href="./css/custom.css" rel="stylesheet">
   <link href="./libs/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <script src="./js/bootstrap.bundle.min.js"></script>
-  <link type="text/css" rel="stylesheet" href="./foro/estilo.css">
   <style>
     .content {
       padding-left: 0 !important;
