@@ -19,7 +19,22 @@ function getplantilla(){
    
   $nombre = $dato ['nombre'];
   $apellido = $dato ['apellido'];
+  $id = $dato['idUsuario'];
 
+  $sql1= "SELECT * FROM respuestas WHERE idUsuario = '".$id."'";
+  $resultset1 = mysqli_query($con,$sql1) or die("error base de datos:". mysqli_error($con));
+  $respuestas = mysqli_fetch_assoc($resultset1);
+
+  $idP = $respuestas ['idprueba'];
+  $array = $respuestas ['respuesta'];
+  $R = unserialize($array, ['allowed_classes' => false]);
+
+  $sql2 = "SELECT * FROM preguntas WHERE idprueba = '".$idP."'";
+  $resultset2 = mysqli_query($con,$sql2) or die("error base de datos:". mysqli_error($con));
+  $preguntas = mysqli_fetch_assoc($resultset2);
+
+  $array1 = mysqli_fetch_array($resultset2,MYSQLI_BOTH); 
+  //$P = unserialize($array1, ['allowed_classes' => false]);
   $plantilla = '<body>
   <header class="clearfix">
   <div id="logo">
@@ -49,23 +64,23 @@ function getplantilla(){
           </thead>
           <tbody>
           <tr>
-          <td class="service">Design</td>
-          <td class="desc">Creating a recognizable design solution based on the companys existing visual identity</td>
+          <td class="service">'.$array1['0'].'</td>
+          <td class="desc">'.$R['0'].'</td>
 
           </tr>
           <tr>
-          <td class="service">Development</td>
-          <td class="desc">Developing a Content Management System-based Website</td>
+          <td class="service">'.$array1['1'].'</td>
+          <td class="desc">'.$R['1'].'</td>
 
           </tr>
           <tr>
-          <td class="service">SEO</td>
-          <td class="desc">Optimize the site for search engines (SEO)</td>
+          <td class="service">'.$array1['2'].'</td>
+          <td class="desc">'.$R['2'].'</td>
 
           </tr>
           <tr>
-          <td class="service">Training</td>
-          <td class="desc">Initial training sessions for staff responsible for uploading web content</td>
+          <td class="service">'.$array1['3'].'</td>
+          <td class="desc">'.$R['3'].'</td>
 
         </tr>
           </tbody>
