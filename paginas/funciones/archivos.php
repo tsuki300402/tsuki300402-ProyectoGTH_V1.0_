@@ -32,7 +32,7 @@ class Traer
 								<td colspan='2'><b>Info</b</td>
 							</thead>
 							<tr>
-								<td rowspan='2'><img src='../img/" . $value['imagen'] . "'></td>
+								<td rowspan='2'><img src='../../img/" . $value['imagen'] . "'></td>
 								<td><b class='text-start '>Titulo</b></td>
 								<td ><i class='text-end'>" . $value['titulo'] . "</i></td>
 							</tr>
@@ -110,7 +110,7 @@ class Traer
 			echo $list;
 			$i=1;
 			foreach($resultado as $value){
-					echo "<tr><td>".$i."</td><td>".$value["pregunta"]."</td><td><button class='btn btn-success' data-bs-toggle='modal' data-bs-target='#modal".$i."'><i class='bi bi-pencil-square'></i></button></td>";
+					echo "<tr><td>".$i."</td><td>".$value["pregunta"]."</td><td><button class='btn btn-warning' data-bs-toggle='modal' data-bs-target='#modal".$i."'><i class='bi bi-pencil-square'></i></button></td>";
 					echo " <div class='modal fade' id='modal".$i."'>";
 					echo " <div class='modal-dialog'>" ;
 					echo " <div class='modal-content'>" ;
@@ -129,7 +129,7 @@ class Traer
 								</div>
 							</div>";									
 					echo " <div class='container-fluid text-center'>" ;
-					echo " <button type='button' class='btn btn-primary mt-2'>Modificar</button>" ;
+					echo " <button type='button' class='btn btn-warning mt-2'>Modificar</button>" ;
 					echo " </div>" ;
 					echo " </form>" ;
 					echo " </div>" ; 

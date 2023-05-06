@@ -18,7 +18,7 @@ session_start();
     <?php
     include "../../modules/menu/menu_usuario.php"
         ?>
-    <div class="container mt-4">
+    <div class="container mt-4 main-content">
         <form action="nose.php" method="POST">
             <div class="row">
                 <?php

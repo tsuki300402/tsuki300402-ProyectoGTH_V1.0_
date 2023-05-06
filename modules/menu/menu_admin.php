@@ -7,6 +7,8 @@
   <meta name="description" content="Pagina de inicio">
   <link rel="Website Icon" href="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo_logo.png"  type="png">
   <title> Paginas Administracion </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link href="http://localhost/ProyectoGTH_V1.0_/css/custom.css" rel="stylesheet">
   <link href="http://localhost/ProyectoGTH_V1.0_/libs/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <script src="http://localhost/ProyectoGTH_V1.0_/js/bootstrap.bundle.min.js"></script>
@@ -38,7 +40,7 @@
     }
     #main-content {
     position: absolu;
-    margin-left: 15%; /* Add margin to the main content to separate it from the sidebar */
+    margin-left: 20%; /* Add margin to the main content to separate it from the sidebar */
    }
   </style>
 </head>
@@ -47,9 +49,9 @@
   <div class="d-flex">
     <div id="sidebar">
       <div class="container p-2">
-        <a href="#" class="navbar-brand text-center w-100 p-4 border-bottom">
+        <a href="#" class="navbar-brand text-center text-light w-100 p-4 border-bottom">
           <img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo.png" alt="NielRoo"  style="width:70px;height:65px;">
-          <i class="text-light">Niel</i><i class="text-primary">Roo</i>
+            <u class="">NielRoo</u>
         </a>
       </div>
       <div id="sidebar-accordion" class="accordion">
@@ -91,7 +93,4 @@
 
         </div>
       </nav>
-      <section class="p-5">
-        <div class="container" style="margin-left: 6%;">
-          <div class="row">
-            <div class="col-md-12">
+      <section class="p-4">

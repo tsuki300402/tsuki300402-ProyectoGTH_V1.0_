@@ -52,10 +52,10 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
 </head>
-<body>
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-      <div class="container-fluid p-3 justify-content-center">
+<body class="bg-light">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-danger">
+      <div class="container-fluid p-3 justify-content-center text-white">
         <img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo.png" alt=""  style="width:60px;height:65px;">
-         <h1 class="text-light">Niel</h1><h1 class="text-primary">Roo</h1>
+        <h1 class="text-white">Niel</h1><h1 class="text-primary">Roo</h1>
       </div>    
   </nav>
