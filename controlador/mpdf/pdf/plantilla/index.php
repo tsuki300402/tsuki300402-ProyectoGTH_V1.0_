@@ -1,84 +1,92 @@
-<?php 
-  function getplantilla(){
+<?php
 
-  $plantilla = '<body>
+
+
+
+function getplantilla(){
+  
+  include("../../../configuracion/controller/conexion.php");
+  $conexion = new Conexion();
+  $con = $conexion->conectarDB();
+  
+  $_GET['id'];
+  $usuario = $_GET['id'];
+
+  
+  $sql = "SELECT * FROM usuario where idUsuario = $usuario";
+  $resultset = mysqli_query($con, $sql) or die("error base de datos:". mysqli_error($con));
+  $dato=mysqli_fetch_assoc($resultset);
+   
+  $nombre = $dato ['nombre'];
+  $apellido = $dato ['apellido'];
+  $id = $dato['idUsuario'];
+
+  $sql1= "SELECT * FROM respuestas WHERE idUsuario = '".$id."'";
+  $resultset1 = mysqli_query($con,$sql1) or die("error base de datos:". mysqli_error($con));
+  $respuestas = mysqli_fetch_assoc($resultset1);
+
+  $idP = $respuestas ['idprueba'];
+  $array = $respuestas ['respuesta'];
+  $R = unserialize($array, ['allowed_classes' => false]);
+
+  $sql2 = "SELECT * FROM preguntas WHERE idprueba = '".$idP."'";
+  $resultset2 = mysqli_query($con,$sql2) or die("error base de datos:". mysqli_error($con));
+  $preguntas = mysqli_fetch_assoc($resultset2);
+
+  $array1 = mysqli_fetch_array($resultset2,MYSQLI_BOTH); 
+  //$P = unserialize($array1, ['allowed_classes' => false]);
+  $plantilla = '
+  <body>
   <header class="clearfix">
-  <div id="logo">
-  <img src="./img/img1.png">
-  </div>
-    <h1>INVOICE 3-2-1</h1>
+  
+    <h1>Resultado de la prueba del usuario '.$nombre.'</h1>
     <div id="company" class="clearfix">
-    <div>Company Name</div>
-    <div>455 Foggy Heights,<br /> AZ 85004, US</div>
-      <div>(602) 519-0450</div>
-      <div><a href="mailto:company@example.com">company@example.com</a></div>
+    <div>NielRoo</div>
+    <div>calle 26 #15-24 Tunja</div>
+      <div>316-2657240 - 302-2196510</div>
+      <div><a href="mailto:">proyectoGTH2022@gmail.com</a></div>
     </div>
     <div id="project">
-    <div><span>PROJECT</span> Website development</div>
-    <div><span>CLIENT</span> John Doe</div>
-    <div><span>ADDRESS</span> 796 Silver Harbour, TX 79273, US</div>
-    <div><span>EMAIL</span> <a href="mailto:john@example.com">john@example.com</a></div>
-    <div><span>DATE</span> August 17, 2015</div>
-    <div><span>DUE DATE</span> September 17, 2015</div>
+    <div><span>Proyecto</span> Pagina de talento humano</div>
+    <div><span>Nombre</span> '.$nombre.'</div>
+    <div><span>Apellido</span> '.$apellido.'</div>
+    <div><span>Fecha</span> Mayo 03, 2023</div>
     </div>
     </header>
     <main>
     <table>
       <thead>
         <tr>
-          <th class="service">SERVICE</th>
-          <th class="desc">DESCRIPTION</th>
-          <th>PRICE</th>
-          <th>QTY</th>
-          <th>TOTAL</th>
+          <th class="service">Pregunta</th>
+          <th class="desc">Respuesta</th>
           </tr>
           </thead>
           <tbody>
           <tr>
-          <td class="service">Design</td>
-          <td class="desc">Creating a recognizable design solution based on the companys existing visual identity</td>
-          <td class="unit">$40.00</td>
-          <td class="qty">26</td>
-          <td class="total">$1,040.00</td>
+          <td class="service">'.$array1['0'].'</td>
+          <td class="desc">'.$R['0'].'</td>
+
           </tr>
           <tr>
-          <td class="service">Development</td>
-          <td class="desc">Developing a Content Management System-based Website</td>
-          <td class="unit">$40.00</td>
-          <td class="qty">80</td>
-          <td class="total">$3,200.00</td>
+          <td class="service">'.$array1['1'].'</td>
+          <td class="desc">'.$R['1'].'</td>
+
           </tr>
           <tr>
-          <td class="service">SEO</td>
-          <td class="desc">Optimize the site for search engines (SEO)</td>
-          <td class="unit">$40.00</td>
-          <td class="qty">20</td>
-          <td class="total">$800.00</td>
+          <td class="service">'.$array1['2'].'</td>
+          <td class="desc">'.$R['2'].'</td>
+
           </tr>
           <tr>
-          <td class="service">Training</td>
-          <td class="desc">Initial training sessions for staff responsible for uploading web content</td>
-          <td class="unit">$40.00</td>
-          <td class="qty">4</td>
-          <td class="total">$160.00</td>
+          <td class="service">'.$array1['3'].'</td>
+          <td class="desc">'.$R['3'].'</td>
+
         </tr>
-        <tr>
-          <td colspan="4">SUBTOTAL</td>
-          <td class="total">$5,200.00</td>
-          </tr>
-          <tr>
-          <td colspan="4">TAX 25%</td>
-          <td class="total">$1,300.00</td>
-          </tr>
-          <tr>
-          <td colspan="4" class="grand total">GRAND TOTAL</td>
-          <td class="grand total">$6,500.00</td>
-          </tr>
           </tbody>
           </table>
           <div id="notices">
           <div>NOTICE:</div>
-          <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
+          <div class="notice">Estos son resultados dado por un experto psicologo empleando sus conocimientos en el departamento de talento humano</div>
           </div>
           </main>
           <footer>
