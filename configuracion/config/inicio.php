@@ -84,15 +84,15 @@ class Configuracion
         $validar = "SELECT * FROM usuario where email = '" . $_POST['email'] . "' ";
         $validando = $con->query($validar);
         if ($validando->num_rows > 0) {
-            echo "<script> alert('El usuario ya esta registrado con ese correo, utilize otro porfavor'); window.location = 'config.php'</script>";
+            echo "<script> alert('El usuario ya esta registrado con ese correo, utilize otro porfavor'); window.location = '../../paginas/admin/admin_de_usuarios.php'</script>";
         } else {
-            echo "<script> alert('El usuario ha sido registrado'); window.location = 'config.php'</script>";
+            echo "<script> alert('El usuario ha sido registrado'); window.location = '../../paginas/admin/admin_de_usuarios.php'</script>";
             $sql = "INSERT INTO USUARIO (nombre,apellido,email,password,rol,estado)
                     VALUES('" . $_POST["nombre"] . "','" . $_POST["apellido"] . "','" . $_POST["email"] . "','" . $password . "','" . $_POST["rol"] . "','activo');";
         }
 
         if ($con->query($sql) === TRUE) {
-
+            header("location: ");
         } else {
 
         }

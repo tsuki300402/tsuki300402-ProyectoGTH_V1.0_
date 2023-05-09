@@ -47,9 +47,9 @@
 
 <body>
   <div class="d-flex">
-    <div id="sidebar">
+    <div id="sidebar" class="">
       <div class="container p-2">
-        <a href="#" class="navbar-brand text-center text-light w-100 p-4 border-bottom">
+        <a href="#" class="navbar-brand text-center text-light w-100 p-4 border-bottom ">
           <img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo.png" alt="NielRoo"  style="width:70px;height:65px;">
             <u class="">NielRoo</u>
         </a>
@@ -58,30 +58,30 @@
         <div class="list-group">
           <a href="http://localhost/ProyectoGTH_V1.0_/paginas/admin/admin_de_usuarios.php" aria-expanded="false"
             class="list-group-item list-group-item-action bg-dark text-light">
-            <i class="fa fa-tachometer mr-3" aria-hidden="true"></i> Administracion de usuarios
+            <i class="bi bi-speedometer mr-1" aria-hidden="true"></i> Administracion de usuarios
           </a>
           <a href="http://localhost/ProyectoGTH_V1.0_/paginas/admin/admin_de_resultados.php" aria-expanded="false"
             class="list-group-item list-group-item-action bg-dark text-light">
-            <i class="fa fa-tachometer mr-3" aria-hidden="true"></i> Administracion de resultados
+            <i class="bi bi-speedometer mr-1" aria-hidden="true"></i> Administracion de resultados
           </a>
           <a href="http://localhost/ProyectoGTH_V1.0_/paginas/admin/categoriaAdmin.php" aria-expanded="false"
             class="list-group-item list-group-item-action bg-dark text-light">
-            <i class="fa fa-tachometer mr-3" aria-hidden="true"></i> Pruebas
+            <i class="bi bi-speedometer mr-1" aria-hidden="true"></i> Administracion de Pruebas
           </a>
           <a href="http://localhost/ProyectoGTH_V1.0_/paginas/admin/admin_de_foro.php" aria-expanded="false"
             class="list-group-item list-group-item-action bg-dark text-light">
-            <i class="fa fa-tachometer mr-3" aria-hidden="true"></i> Administracion de foros
+            <i class="bi bi-speedometer mr-1" aria-hidden="true"></i> Administracion de foros
           </a>
           <a href="http://localhost/ProyectoGTH_V1.0_/configuracion/controller/cerrar_session.php"
             class="list-group-item list-group-item-action bg-dark text-light">
-            <i class="fa fa-window-close mr-3"></i> Cerrar Sesion
+            <i class="bi bi-door-closed-fill mr-1"></i> Cerrar Sesion
           </a>
         </div>
       </div>
     </div>
     <div class="content w-100" id="main-content">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-xl">
+      <nav class="navbar navbar-expand-lg navbar-primary bg-primary">
+        <div class="container-xl ">
           <div class="text-white text-center">Bienvenido
             <?php echo $_SESSION['Usuario'] ?> a la empresa NielRoo
           </div>

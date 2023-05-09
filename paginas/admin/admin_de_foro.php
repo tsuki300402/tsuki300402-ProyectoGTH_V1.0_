@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="row">
             <div class="col-md-12">
                 <h2>Lista de los foros disponibles</h2>
-                <table id="data_table" class="table table-striped mt-5">
+                <table id="data_table" class="table table-striped mt-5 text-center">
                     <thead>
                         <tr>
                             <th>Id</th>

@@ -47,8 +47,8 @@
                 class="bi bi-send me-1">Ingresar</i></button>
           </div>
           <div class="text-center">
-            <a class="btn btn-primary mb-2"
-              href="http://localhost/ProyectoGTH_V1.0_/configuracion/config/config.php">Registrarse</a>
+            <!--<a class="btn btn-primary mb-2"
+              href="http://localhost/ProyectoGTH_V1.0_/configuracion/config/config.php">Registrarse</a>-->
             <a class="btn btn-primary mb-2" href="http://localhost/ProyectoGTH_V1.0_/recuperar.php"> Restablecer
               Contraseña</a>
           </div>

@@ -57,17 +57,21 @@
       </div>
       <div id="sidebar-accordion" class="accordion">
         <div class="list-group">
+        <a href="http://localhost/ProyectoGTH_V1.0_/paginas/usuarios/inicio.php" aria-expanded="false"
+            class="list-group-item list-group-item-action bg-dark text-light">
+            <i class="bi bi-house mr-3" aria-hidden="true"></i>inicio
+          </a>
           <a href="http://localhost/ProyectoGTH_V1.0_/paginas/usuarios/categoriaUser.php" aria-expanded="false"
             class="list-group-item list-group-item-action bg-dark text-light">
-            <i class="fa fa-user mr-3" aria-hidden="true"></i>Prueba
+            <i class="bi bi-journal mr-3" aria-hidden="true"></i>Prueba
           </a>
           <a href="http://localhost/ProyectoGTH_V1.0_/paginas/usuarios/foro.php"
             class="list-group-item list-group-item-action bg-dark text-light">
-            <i class="fa fa-window-close mr-3"></i>Foro
+            <i class="bi bi-person-workspace mr-3"></i>Foro
           </a>
           <a href="http://localhost/ProyectoGTH_V1.0_/configuracion\controller\cerrar_session.php"
             class="list-group-item list-group-item-action bg-dark text-light">
-            <i class="fa fa-window-close mr-3"></i>Cerrar Sesion
+            <i class="bi bi-door-closed-fill mr-3"></i>Cerrar Sesion
           </a>
         </div>
       </div>
