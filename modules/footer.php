@@ -11,9 +11,9 @@
             <div class="col col-4 p-3">
                 <h2>Redes sociales</h2>
                 <ul class="list-unstyled">
-                    <li class="fs-5 mb-3 mt-3"><i class="bi bi-facebook me-2"></i><a href="https://www.facebook.com/profile.php?viewas=100000686899395&id=100092314973743" class="text-decoration-none">Facebook</a></li>
-                    <li class="fs-5 mb-3"><i class="bi bi-instagram me-2"></i><a href="#" class="text-decoration-none">Instagram</a></li>
-                    <li class="fs-5 mb-3"><i class="bi bi-youtube me-2"></i><a href="#" class="text-decoration-none">Youtube</a></li>
+                    <li class="fs-5 mb-3 mt-3"><i class="bi bi-facebook me-2"></i><a href="https://pt-br.facebook.com/people/Niel-Roo/pfbid02VtDHXR4WSZzPxqM46B6paNqQ5b2qRVYWcGYqAVQ5dr8XMJTqmCwWqXegD97HoTwNl/" target="_blank" class="text-decoration-none">Facebook</a></li>
+                    <li class="fs-5 mb-3"><i class="bi bi-instagram me-2"></i><a href="#" class="text-decoration-none" target="_blank">Instagram</a></li>
+                    <li class="fs-5 mb-3"><i class="bi bi-youtube me-2"></i><a href="#" class="text-decoration-none" target="_blank">Youtube</a></li>
                 </ul>
             </div>
             <div class="col col-4 p-3">
