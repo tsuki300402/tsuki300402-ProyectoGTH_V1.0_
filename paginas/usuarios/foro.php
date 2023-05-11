@@ -5,6 +5,7 @@ if (!isset($_SESSION["Usuario"])) {
 }
 
 $_SESSION["Usuario"];
+$usuario = $_SESSION['Usuario'];
 ?>
 
 <?php
@@ -14,10 +15,10 @@ include("../../modules/menu/menu_usuario.php");
 
 <div class="main-content">
 <h2>Lista de foros</h2>
-<table class="table table-striped mt-5">
+<table class="table table-striped mt-5 text-center">
   <thead>
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal">Agregar nuevo
-      tema</button>
+      foro</button>
     <?php include("../../configuracion/controller/conexion.php");
     $conexion = new Conexion();
     $con = $conexion->conectarDB();
@@ -53,7 +54,7 @@ include("../../modules/menu/menu_usuario.php");
           <?php echo $fila['respuestas']; ?>
         </td>
         <td>
-          <?php echo '<a class="btn btn-primary" href="../funciones/ver-tema.php?id=' . $fila['id'] . '">Ver tema</a>' ?>
+          <?php echo '<a class="btn btn-primary" href="../funciones/ver-tema.php?id=' . $fila['id'] . '">Ver foro</a>' ?>
         </td>
       </tr>
     <?php } ?>
@@ -64,8 +65,8 @@ include("../../modules/menu/menu_usuario.php");
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="nuevoTemaModalLabel">Nuevo tema</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+        <h5 class="modal-title" id="nuevoTemaModalLabel">Nuevo foro</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Cerrar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -74,7 +75,7 @@ include("../../modules/menu/menu_usuario.php");
           <input type='hidden' id="identificador" name='identificador' value="">
           <div class="form-group">
             <label for="autor">Autor</label>
-            <input type="text" class="form-control" id="autor" name="autor" required>
+            <input type="text" class="form-control" id="autor" value="<?php echo $usuario;?>" name="autor" required disabled>
           </div>
           <div class="form-group">
             <label for="titulo">Título</label>

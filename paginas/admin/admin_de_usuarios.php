@@ -14,6 +14,8 @@
               <h2>Lista de los usuarios registrados en el sistema</h2>
               <table id="data_table" class="table table-striped mt-5">
                 <thead>
+                <button class="btn btn-primary mt-3" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal">
+                Agregar un nuevo usuario</button>
                         <?php include("../../configuracion/controller/conexion.php");
                                           $conexion = new Conexion();
                                           $con = $conexion->conectarDB();
@@ -49,7 +51,23 @@
                             </tr>
                           <?php } ?>
                       </tbody>
-                  </table>    
+                  </table>  
+                  <!--Modal-->
+                  <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="nuevoTemaModalLabel">Nuevo Usuario</h5>
+                          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Cerrar">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <?php include_once ("../../configuracion/config/config.php"); ?>
+                        </div>
+                      </div>
+                    </div>
+                  </div>  
             </div>
           </div>
         </div>

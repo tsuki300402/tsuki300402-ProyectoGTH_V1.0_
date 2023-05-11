@@ -12,7 +12,7 @@ include "../../modules/menu/menu_admin.php"
   <div class="row">
     <div class="col-md-12">
       <h2>Lista de los aspirantes que realizaron las pruebas psicotecnicas</h2>
-      <table id="data_table" class="table table-striped mt-5">
+      <table id="data_table" class="table table-striped mt-5 text-center">
         <thead>
           <?php include("../../configuracion/controller/conexion.php");
           $conexion = new Conexion();
@@ -22,7 +22,10 @@ include "../../modules/menu/menu_admin.php"
             <th>Id</th>
             <th>Nombre</th>
             <th>Apellido</th>
-            <th>Nivel de prueba</th>
+            <th>Descarga</th>
+            <th>Ver Mas</th>
+            <th>Contratado</th>
+            <th>No Contratado</th>
           </tr>
         </thead>
         <tbody class="text-center">

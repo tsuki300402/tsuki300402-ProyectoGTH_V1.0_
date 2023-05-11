@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <?php include "../../modules/menu/menu.php" ?>
+    <?php //include "../../modules/menu/menu.php" ?>
 
     <?php
     if (isset($_SESSION["ErrorDB"])) {
@@ -36,14 +36,14 @@
 
 
     <div class="container-fluid">
-        <a class="btn btn-primary btn-lg mt-3" href="../../index.php">Volver</a>
-        <div class="row g-4 text-center justify-content-center mt-5">
-            <div class="col-6">
+        <!--<a class="btn btn-primary btn-lg mt-3" href="../../index.php">Volver</a>-->
+        <div class="row g-4 text-center justify-content-center">
+            <div class="col-12">
                 <div class="card h-100">
                     <img src="../../libs/bootstrap-icons/people-fill.svg" class="card-img-top" alt="person-plus"
                         width="90px" height="90">
                     <div class="card-body">
-                        <form action="inicio.php" method="POST" class="was-validated">
+                        <form action="../../configuracion/config/inicio.php" method="POST" class="was-validated">
                             <div class="row g-3">
                                 <div class="col">
 

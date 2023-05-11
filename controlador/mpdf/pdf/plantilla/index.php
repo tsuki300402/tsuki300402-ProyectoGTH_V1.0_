@@ -35,11 +35,10 @@ function getplantilla(){
 
   $array1 = mysqli_fetch_array($resultset2,MYSQLI_BOTH); 
   //$P = unserialize($array1, ['allowed_classes' => false]);
-  $plantilla = '<body>
+  $plantilla = '
+  <body>
   <header class="clearfix">
-  <div id="logo">
-  <img src="../../../img/empresa/NielRoo_logo.png">
-  </div>
+  
     <h1>Resultado de la prueba del usuario '.$nombre.'</h1>
     <div id="company" class="clearfix">
     <div>NielRoo</div>
