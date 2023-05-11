@@ -256,7 +256,8 @@
             break;  
             case "slid":
                 console.log("El option es slid");
-                campo_resp.innerHTML = "<p>Este es un nuevo párrafo.</p>";
+                campo_resp.innerHTML = "<div class='container mt-3'><input type='range' class='form-range' id='Preg' name='Preg'></div>";
+                
             break;  
         } 
         
