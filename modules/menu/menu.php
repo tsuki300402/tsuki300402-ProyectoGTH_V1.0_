@@ -44,6 +44,7 @@
   <title>Hi</title>
   <link href="http://localhost/ProyectoGTH_V1.0_/css/custom.css" rel="stylesheet">
   <link href="http://localhost/ProyectoGTH_V1.0_/libs/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="http://localhost/ProyectoGTH_V1.0_/css/estilos.css" rel="stylesheet">
   <script src="http://localhost/ProyectoGTH_V1.0_/js/bootstrap.bundle.min.js"></script>
   <script src="http://localhost/ProyectoGTH_V1.0_/jq/jquery-3.6.1.min.js"></script>
   <!-- Bootstrap CSS -->
