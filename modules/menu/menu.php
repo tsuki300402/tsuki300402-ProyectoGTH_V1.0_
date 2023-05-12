@@ -55,7 +55,7 @@
 <body class="bg-light">
   <nav class="navbar navbar-expand-sm navbar-dark bg-danger">
       <div class="container-fluid p-3 justify-content-center text-white">
-        <img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo.png" alt=""  style="width:60px;height:65px;">
+        <img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo.png" alt=""  style="max-width:90px;max-height:95px;">
         <h1 class="text-white">Niel</h1><h1 class="text-primary">Roo</h1>
       </div>    
   </nav>

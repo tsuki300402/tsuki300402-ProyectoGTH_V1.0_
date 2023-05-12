@@ -43,6 +43,7 @@
     margin-left: 20%; /* Add margin to the main content to separate it from the sidebar */
    }
    
+   
   </style>
 </head>
 
@@ -50,9 +51,9 @@
   <div class="d-flex">
     <div id="sidebar">
     <div class="container p-2 border-bottom">
-        <a href="#" class="navbar-brand text-center text-light w-100 m-2 p-4 " style="font-size: 22px;">
-          <img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo.png" alt="NielRoo"  style="max-width:70px;max-height:65px;">
-          <i class="text-white">Niel</i><i class="text-primary">Roo</i>
+        <a href="#" class="navbar-brand text-center text-light w-100 m-2 p-4">
+          <h1><img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo.png" alt="NielRoo"  style="max-width:90px;max-height:105px;">
+          <i class="text-white">Niel</i><i class="text-primary">Roo </i></h1>
         </a>
       </div>
       <div id="sidebar-accordion" class="accordion">
@@ -77,10 +78,10 @@
       </div>
     </div>
     <div class="content w-100" id="main-content">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-danger bg-danger">
         <div class="container-xl">
-          <div class="text-white text-center">Bienvenido
-            <?php echo $_SESSION['Usuario'] ?> a la empresa NielRoo
+          <div class="text-white text-center">
+            <i> Bienvenido <?php echo $_SESSION['Usuario'] ?> a la empresa NielRoo </i>
           </div>
         </div>
       </nav>
