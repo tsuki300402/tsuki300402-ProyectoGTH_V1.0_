@@ -59,7 +59,7 @@
                 imagecopyresampled($new_image, $original_image, 0, 0, 0, 0, $new_width, $new_height, $original_width, $original_height);
             
                 // Generar un nombre único para la imagen
-                $new_filename = "prueba_" .$tema. ".png";
+                $new_filename ="$tema.png";
                 
                 // Guardar la nueva imagen en la carpeta de destino con el nombre único generado
                 imagepng($new_image, $destination . $new_filename, 9);

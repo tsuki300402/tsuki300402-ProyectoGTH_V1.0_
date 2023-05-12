@@ -49,16 +49,6 @@ class Traer
 								<td colspan='3'><i>" . $value['descripcion'] . "</i></td>
 							</tr>
 							<tr>
-								<td colspan='3'><b>Progreso</b></td>
-							</tr>
-							<tr>
-								<td colspan='3'>
-									<div class='progress mt-1' style='height: 20px'>
-										<div class='progress-bar bg-success progress-bar-striped progress-bar-animated' style='width:" . $value['progreso'] . "%'>
-										" . $value['progreso'] . "%	
-										</div>
-									</div>
-								</td>
 									<input type='hidden' name='archivo' value='" . $value['id'] . "'></input>
 							</tr>
 						</table>
@@ -83,9 +73,10 @@ class Traer
 				<div class='form-page'>
 					<label for='name'><h2>Pregunta</h2></label>
 					<div class='container p-4 border'>
-					<b>" . $answ . "</b>
+						<b>" . $answ . "</b>
+						<br>
+						<img src='http://localhost/ProyectoGTH_V1.0_/img/".$value['imagen']."' alt='Vista previa '>
 					</div>
-				
 					<label for='valores[]'>Respuesta</label>
 					<input type='text' class='form-control' id='valores[]' name='valores[]'>
 				</div>
@@ -128,17 +119,18 @@ class Traer
 									Doesn't Looks good!
 								</div>
 							</div>";			
+
+							if($value['tipo_respuesta'] == "mult"){
+								$resp_posible= unserialize($value['respuestas_posibles']);
 					echo "	<div class='form-group'>
 							<label for='title'>Modificar <i class='text-warning'> respuesta </i></label>";
-							if ($value['tipo_respuesta'] == "unica"){
-								echo "<textarea class='form-control is-valid' id='title' name='title' rows='4' cols='50'required>".$value['pregunta']."</textarea>";
-							}else if($value['tipo_respuesta'] == "multiple"){
-								echo "<br>es multiple";
+								foreach ($resp_posible as $valor) {
+									echo "<div class='mt-2 input-group'><div><span class='input-group-text' for='resp_posible'>Opcion :</span class='input-group-text'></div><textarea class='form-control is-valid' id='resp_posible[]' name='resp_posible[]' rows='1' cols='1'required>{$valor}</textarea><div class='invalid-feedback'>Doesn't Looks good!</div>";
+									
+								}
+							echo "</div>";
 							}
-					echo "	<div class='invalid-feedback'>
-								Doesn't Looks good!
-							</div>
-						</div>";						
+										
 					echo " <div class='container-fluid text-center'>" ;
 					echo " <button type='button' class='btn btn-warning mt-2'>Modificar</button>" ;
 					echo " </div>" ;
@@ -204,7 +196,7 @@ class Traer
 											</div>
 											<div class='form-group'>
 												<label for='exampleInputPassword1'>Descripcion</label>
-												<textarea class='form-control is-valid' id='desc' name='desc' rows='4' cols='50'required>".$value['titulo']."</textarea>
+												<textarea class='form-control is-valid' id='desc' name='desc' rows='4' cols='50'required>".$value['descripcion']."</textarea>
 												<div class='invalid-feedback'>
 													Doesn't Looks good!
 												</div>

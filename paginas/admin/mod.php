@@ -21,6 +21,7 @@
         <div class="col">
                 <?php 
                     $prueba = $_POST['idBtnMod'];
+                    $_SESSION['IdBtnMod'] = $prueba;
                     include '../funciones/archivos.php';
                     $conexion = new Traer();
                     $conexion->Prueba($prueba);
@@ -47,8 +48,8 @@
                     <button type='button' class='btn-close' data-bs-dismiss='modal'></button>
 	            </div>
 	            <div class='modal-body'>
-	                <form action='' method='post' class='was-validated' enctype='multipart/form-data'>
-                    <input type='hidden' name='idQuest' value='<?php $prueba = $_POST['idBtnMod'];?>'></input>
+	                <form action='../funciones/subir_pregunta.php' method='post' class='was-validated' enctype='multipart/form-data'>
+                    <input type='hidden' id='idQuest' name='idQuest' value='<?php echo $prueba;?>'></input>
                         <div class="form-group">
                             <label for='pregun_tipo'>Pregunta Tipo:</label>
                             <select class="form-control" name="pregun_tipo" id="pregun_tipo" onchange="QuestType()">
@@ -67,9 +68,9 @@
                             <label for='resp_tipo'>Respuesta Tipo:</label>
                             <select class="form-control" name="resp_tipo" id="resp_tipo" onchange="QuestType()">
                                 <option value="uni">unica</option>
-                                <option value="mul">multiple</option>
+                                <option value="mult">multiple</option>
                                 <!--<option value="img">imagen</option>-->
-                                <option value="slid">deslizante</option>
+                                 <!--<option value="slid">deslizante</option>-->
                             </select>
                         </div>		
                         <div class='form-group mt-2' id="Tipo_Respuesta">
@@ -193,7 +194,7 @@
             case "img":
                 console.log("El pregunta es imagen");
                 campo_preg.innerHTML = "<label for='pregunta_txt'>Texto de la Pregunta</label><textarea class='form-control is-valid' id='pregunta_txt' name='pregunta_txt' rows='2' cols='1'required></textarea><div class='invalid-feedback'>Doesn't Looks good!</div>";
-                campo_preg.innerHTML +="<div class='custom-file mb-4 mt-2'><label class='custom-file-label' for='Preg'>Elija un archivo imagen</label><input type='file' class='custom-file-input form-control required' id='imagePreg' name='pregunta_img' accept='.png, .jpg, .jpeg' required/><span id='imagenPreg'>Nada seleccionado</span></div>";
+                campo_preg.innerHTML +="<div class='custom-file mb-4 mt-2'><label class='custom-file-label' for='Preg'>Elija un archivo imagen</label><input type='file' class='custom-file-input form-control required' id='imagePreg' name='imagePreg' accept='.png, .jpg, .jpeg' required/><span id='imagenPreg'>Nada seleccionado</span></div>";
                 const input = document.getElementById('imagePreg');
                 const span = document.getElementById('imagenPreg');
 
@@ -224,13 +225,13 @@
                 campo_resp.innerHTML = " ";
                 
             break;
-            case "mul":
+            case "mult":
                 console.log("El option es multiple");
-                campo_resp.innerHTML = "<div class='mt-2 input-group'><div><span class='input-group-text' for='title'>Opcion Correcta</span class='input-group-text'></div><textarea class='form-control is-valid' id='title' name='title' rows='1' cols='1'required></textarea><div class='invalid-feedback'>Doesn't Looks good!</div></div>";
+                campo_resp.innerHTML = "<div class='mt-2 input-group'><div><span class='input-group-text' for='resp_c'>Opcion Correcta</span class='input-group-text'></div><textarea class='form-control is-valid' id='resp_c' name='resp_c' rows='1' cols='1'required></textarea><div class='invalid-feedback'>Doesn't Looks good!</div></div>";
                 
     
                 for (i=1;i<4;i++){
-                    campo_resp.innerHTML += "<div class='mt-2 input-group'><div><span class='input-group-text' for='title'>Opcion "+i+" </span class='input-group-text'></div><textarea class='form-control is-valid' id='title' name='title' rows='1' cols='1'required></textarea><div class='invalid-feedback'>Doesn't Looks good!</div></div>";
+                    campo_resp.innerHTML += "<div class='mt-2 input-group'><div><span class='input-group-text' for='resp_posible'>Opcion "+i+" </span class='input-group-text'></div><textarea class='form-control is-valid' id='resp_posible[]' name='resp_posible[]' rows='1' cols='1'required></textarea><div class='invalid-feedback'>Doesn't Looks good!</div></div>";
                 }
                 
             break;   
