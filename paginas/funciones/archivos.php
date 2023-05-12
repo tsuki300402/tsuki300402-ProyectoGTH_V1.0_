@@ -122,12 +122,23 @@ class Traer
 					echo " <div class='modal-body'>" ;
 					echo " <form action='upload.php' method='post'>" ;
 					echo "	<div class='form-group'>
-								<label for='title'>Modificar</label>
+								<label for='title'>Modificar <i class='text-warning'> pregunta</i></label>
 								<textarea class='form-control is-valid' id='title' name='title' rows='4' cols='50'required>".$value['pregunta']."</textarea>
 								<div class='invalid-feedback'>
 									Doesn't Looks good!
 								</div>
-							</div>";									
+							</div>";			
+					echo "	<div class='form-group'>
+							<label for='title'>Modificar <i class='text-warning'> respuesta </i></label>";
+							if ($value['tipo_respuesta'] == "unica"){
+								echo "<textarea class='form-control is-valid' id='title' name='title' rows='4' cols='50'required>".$value['pregunta']."</textarea>";
+							}else if($value['tipo_respuesta'] == "multiple"){
+								echo "<br>es multiple";
+							}
+					echo "	<div class='invalid-feedback'>
+								Doesn't Looks good!
+							</div>
+						</div>";						
 					echo " <div class='container-fluid text-center'>" ;
 					echo " <button type='button' class='btn btn-warning mt-2'>Modificar</button>" ;
 					echo " </div>" ;
@@ -204,8 +215,6 @@ class Traer
 														<option>1</option>
 														<option>2</option>
 														<option>3</option>
-														<option>4</option>
-														<option>5</option>
 													</select>
 											</div>
 											<div class='form-group'>

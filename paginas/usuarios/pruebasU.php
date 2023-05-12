@@ -32,7 +32,7 @@ class Crear
 		$resultado_paginado = mysqli_query($enlace, $sql);
 		while ($value = mysqli_fetch_assoc($resultado_paginado)) {
 			echo "<form action='./arc.php' class='col-3' name='" . $value['tema'] . "' id='" . $value['id'] . "' method='POST'>
-				<div class='container bg-dark text-start p-3' style='height:270px; background-image: url(../../img/1.png);'>
+				<div class='container bg-dark text-start p-3' style='height:270px; background-image: url(../../img/".$value['imagen']."); background-size: cover;'>
 					<div class='container text-white' style='background-color: rgba(31, 30, 30, 0.311);'>
 						<b class='fs-5' name='" . $value['id'] . "' >" . $value['titulo'] . "</b>
 					</div>

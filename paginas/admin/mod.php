@@ -44,6 +44,7 @@
                 <!--modal header-->
                 <div class='modal-header'>
 	                <h2>Añadir Pregunta </h2>
+                    <button type='button' class='btn-close' data-bs-dismiss='modal'></button>
 	            </div>
 	            <div class='modal-body'>
 	                <form action='' method='post' class='was-validated' enctype='multipart/form-data'>
@@ -67,16 +68,12 @@
                             <select class="form-control" name="resp_tipo" id="resp_tipo" onchange="QuestType()">
                                 <option value="uni">unica</option>
                                 <option value="mul">multiple</option>
-                                <option value="img">imagen</option>
+                                <!--<option value="img">imagen</option>-->
                                 <option value="slid">deslizante</option>
                             </select>
                         </div>		
                         <div class='form-group mt-2' id="Tipo_Respuesta">
-                            <label for='ResP'>Texto de la Pregunta</label>
-                            <textarea class='form-control is-valid' id='ResP' name='ResP' rows='2' cols='1'required></textarea>
-                            <div class='invalid-feedback'>
-                                Doesn't Looks good!
-                            </div>
+                            
 				        </div>						
                         <div class='container-fluid text-center'>
                             <button type='submit' class='btn btn-success mt-2'>Aceptar</button>
@@ -190,13 +187,13 @@
         switch (QuestVTipo){
             case "uni": 
                 console.log("El pregunta es unica");
-                campo_preg.innerHTML = "<label for='Preg'>Texto de la Pregunta</label><textarea class='form-control is-valid' id='Preg' name='Preg' rows='2' cols='1'required></textarea><div class='invalid-feedback'>Doesn't Looks good!</div>";
+                campo_preg.innerHTML = "<label for='pregunta_txt'>Texto de la Pregunta</label><textarea class='form-control is-valid' id='pregunta_txt' name='pregunta_txt' rows='2' cols='1'required></textarea><div class='invalid-feedback'>Doesn't Looks good!</div>";
 
             break; 
             case "img":
                 console.log("El pregunta es imagen");
-                $("#Tipo_Pregunta").addClass("custom-file mb-4");
-                campo_preg.innerHTML = "<label class='custom-file-label' for='Preg'>Elija un archivo imagen</label><input type='file' class='custom-file-input form-control' id='imagePreg' name='Preg' accept='.png, .jpg, .jpeg' required/><span id='imagenPreg'>Nada seleccionado</span>";
+                campo_preg.innerHTML = "<label for='pregunta_txt'>Texto de la Pregunta</label><textarea class='form-control is-valid' id='pregunta_txt' name='pregunta_txt' rows='2' cols='1'required></textarea><div class='invalid-feedback'>Doesn't Looks good!</div>";
+                campo_preg.innerHTML +="<div class='custom-file mb-4 mt-2'><label class='custom-file-label' for='Preg'>Elija un archivo imagen</label><input type='file' class='custom-file-input form-control required' id='imagePreg' name='pregunta_img' accept='.png, .jpg, .jpeg' required/><span id='imagenPreg'>Nada seleccionado</span></div>";
                 const input = document.getElementById('imagePreg');
                 const span = document.getElementById('imagenPreg');
 
@@ -224,18 +221,22 @@
         switch (AnswVTipo){
             case "uni": 
                 console.log("El option es unica");
-                campo_resp.innerHTML = "<label for='title'>Texto de la Pregunta</label><textarea class='form-control is-valid' id='title' name='title' rows='2' cols='1'required></textarea><div class='invalid-feedback'>Doesn't Looks good!</div>";
+                campo_resp.innerHTML = " ";
                 
             break;
             case "mul":
                 console.log("El option es multiple");
-                campo_resp.innerHTML = "<p>Este es un nuevo párrafo.</p>";
+                campo_resp.innerHTML = "<div class='mt-2 input-group'><div><span class='input-group-text' for='title'>Opcion Correcta</span class='input-group-text'></div><textarea class='form-control is-valid' id='title' name='title' rows='1' cols='1'required></textarea><div class='invalid-feedback'>Doesn't Looks good!</div></div>";
+                
+    
+                for (i=1;i<4;i++){
+                    campo_resp.innerHTML += "<div class='mt-2 input-group'><div><span class='input-group-text' for='title'>Opcion "+i+" </span class='input-group-text'></div><textarea class='form-control is-valid' id='title' name='title' rows='1' cols='1'required></textarea><div class='invalid-feedback'>Doesn't Looks good!</div></div>";
+                }
+                
             break;   
             case "img":
                 console.log("El option es imagen");
-                console.log("El pregunta es imagen");
-                $("#Tipo_Respuesta").addClass("custom-file mb-4");
-                campo_resp.innerHTML = "<label class='custom-file-label' for='imageResP'>Elija un archivo imagen</label><input type='file' class='custom-file-input form-control' id='imageResP' name='imageResP' accept='.png, .jpg, .jpeg' required/><span id='imagenResP'>Nada seleccionado</span>";
+                campo_resp.innerHTML = "<div class='custom-file mb-4 mt-2'><label class='custom-file-label' for='imageResP'>Elija un archivo imagen</label><input type='file' class='custom-file-input form-control required' id='imageResP' name='imageResP' accept='.png, .jpg, .jpeg' required/><span id='imagenResP'>Nada seleccionado</span></div>";
                 const input = document.getElementById('imageResP');
                 const span = document.getElementById('imagenResP');
 
@@ -256,7 +257,7 @@
             break;  
             case "slid":
                 console.log("El option es slid");
-                campo_resp.innerHTML = "<div class='container mt-3'><input type='range' class='form-range' id='Preg' name='Preg'></div>";
+                campo_resp.innerHTML = "<div class='input-group mt-3'><span for='min-value' class='input-group-text'>Valor mínimo:</span><select id='min-value' name='min-value' class='form-control'><option value='0'>0</option><option value='1'>1</option><option value='2'>2</option><!-- Agrega más opciones según tus necesidades --></select></div><div class='input-group mt-2'><span for='max-value' class='input-group-text'>Valor máximo:</span><select id='max-value' name='max-value' class='form-control'><option value='10'>10</option><option value='20'>20</option><option value='30'>30</option><!-- Agrega más opciones según tus necesidades --></select></div>";
                 
             break;  
         } 

@@ -24,9 +24,9 @@ if (isset($_SESSION["Usuario"]) && ($_SESSION["estado"] == "inactivo")) {
 }
 ?>
 <div class="container">
+<h1>Hola, Bienvenido al Apartado de Pruebas!</h1>
     <div class="row justify-content-center">
         <div class="col-4 p-4">
-
         </div>
         <div class="col-4 p-4">
             <div class="input-group">
@@ -148,7 +148,6 @@ if (isset($_SESSION["Usuario"]) && ($_SESSION["estado"] == "inactivo")) {
     .conPag {
         width: 100%;
         height: 100%;
-        background: linear-gradient(45deg, #410358, #4700bc);
         display: flex;
         align-items: center;
         justify-content: center;

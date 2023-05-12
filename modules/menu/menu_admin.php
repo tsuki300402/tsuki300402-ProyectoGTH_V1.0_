@@ -48,10 +48,10 @@
 <body>
   <div class="d-flex">
     <div id="sidebar" class="">
-      <div class="container p-2">
-        <a href="#" class="navbar-brand text-center text-light w-100 p-4 border-bottom ">
-          <img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo.png" alt="NielRoo"  style="width:70px;height:65px;">
-            <u class="">NielRoo</u>
+      <div class="container p-2 border-bottom">
+        <a href="#" class="navbar-brand text-center text-light w-100 m-2 p-4 ">
+          <h1><img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo.png" alt="NielRoo"  style="max-width:90px;max-height:105px;">
+          <i class="text-white">Niel</i><i class="text-primary">Roo </i></h1>
         </a>
       </div>
       <div id="sidebar-accordion" class="accordion">
@@ -83,7 +83,7 @@
       <nav class="navbar navbar-expand-lg navbar-primary bg-primary">
         <div class="container-xl ">
           <div class="text-white text-center">Bienvenido
-            <?php echo $_SESSION['Usuario'] ?> a la empresa NielRoo
+            <?php echo $_SESSION['Usuario'] ?>, administrador de la empresa NielRoo
           </div>
 
           <!-- 
