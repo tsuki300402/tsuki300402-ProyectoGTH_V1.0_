@@ -19,7 +19,7 @@ if (isset($_SESSION["Usuario"]) && ($_SESSION["estado"] == "inactivo")) {
                  <button type='button' class='btn-close' data-bs-dismiss='alert'></button>
                  <strong>Ojo!</strong> Este usuario esta inhabilitado tiene un maximo de 30 días o será eliminado 
                  <br>
-                 <strong>Dias restantes : </strong> 14
+                 <strong>Dias restantes : </strong> 12
              </div>";
 }
 ?>
@@ -31,14 +31,14 @@ if (isset($_SESSION["Usuario"]) && ($_SESSION["estado"] == "inactivo")) {
         <div class="col-4 p-4">
             <div class="input-group">
                 <b class="input-group-text">Temas: </b>
-                <input class="form-control" name="listatemas" list="temas" id="listatemas">
-                <datalist id="temas" name="temas">
-                    <option value="Matematicas">
-                    <option value="Logica">
-                    <option value="P. Abstracto">
-                    <option value="Psicotecnicas">
-                    <option value="Salud Mental">
-                </datalist>
+                
+                <select class="form-control" id="temas" name="temas">
+                    <option value="Matematicas">Matematicas
+                    <option value="Logica">Logica
+                    <option value="P. Abstracto"> P.Abstracto
+                    <option value="Psicotecnicas">Psicotecnicas
+                    <option value="Salud Mental">Salud Mental 
+                </select>
                 <button type="button" class="btn btn-success" id="filtro" name="filtro"><i
                         class="bi bi-search"></i></button>
             </div>
@@ -158,7 +158,6 @@ if (isset($_SESSION["Usuario"]) && ($_SESSION["estado"] == "inactivo")) {
         align-items: center;
         background-color: #fff;
         color: #383838;
-        padding: 10px 40px;
         border-radius: 6px;
     }
 
@@ -173,6 +172,8 @@ if (isset($_SESSION["Usuario"]) && ($_SESSION["estado"] == "inactivo")) {
         margin: 0 10px;
         width: 45px;
         height: 45px;
+        border: 1px solid black;
+        background-color: #5757583a;
         border-radius: 50%;
         text-align: center;
         font-size: 22px;
@@ -194,18 +195,6 @@ if (isset($_SESSION["Usuario"]) && ($_SESSION["estado"] == "inactivo")) {
         color: #fff;
     }
 
-    .btn1,
-    .btn2 {
-        display: flex;
-        align-items: center;
-        font-size: 22px;
-        font-weight: 500;
-        color: #383838;
-        background: transparent;
-        outline: none;
-        border: none;
-        cursor: pointer;
-    }
 </style>
 
 </html>

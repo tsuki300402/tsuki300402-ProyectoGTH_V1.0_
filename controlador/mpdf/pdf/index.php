@@ -14,7 +14,7 @@ $mpdf = new \Mpdf\Mpdf();
 $plantilla = getplantilla();
 $imagePath = 'NielRoo_logo.png';
 $html = '<div id="logo">
-<img src="'.$imagePath.'">
+<img src="'.$imagePath.'" style="width: 200px; height: 200px; margin-left:230px;">
 </div>';
 $mpdf->WriteHTML($html);
 

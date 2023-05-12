@@ -111,8 +111,9 @@ class Traer
 					echo " <button type='button' class='btn-close' data-bs-dismiss='modal'></button>" ;
 					echo " </div>" ;
 					echo " <div class='modal-body'>" ;
-					echo " <form action='upload.php' method='post'>" ;
+					echo " <form action='mod_preg.php' method='post'>" ;
 					echo "	<div class='form-group'>
+								<input type='hidden' id='idP' name='idP' value='".$id."'>
 								<label for='title'>Modificar <i class='text-warning'> pregunta</i></label>
 								<textarea class='form-control is-valid' id='title' name='title' rows='4' cols='50'required>".$value['pregunta']."</textarea>
 								<div class='invalid-feedback'>
@@ -127,12 +128,12 @@ class Traer
 								foreach ($resp_posible as $valor) {
 									echo "<div class='mt-2 input-group'><div><span class='input-group-text' for='resp_posible'>Opcion :</span class='input-group-text'></div><textarea class='form-control is-valid' id='resp_posible[]' name='resp_posible[]' rows='1' cols='1'required>{$valor}</textarea><div class='invalid-feedback'>Doesn't Looks good!</div>";
 									
-								}
+								} 
 							echo "</div>";
 							}
 										
 					echo " <div class='container-fluid text-center'>" ;
-					echo " <button type='button' class='btn btn-warning mt-2'>Modificar</button>" ;
+					echo " <button type='submit' class='btn btn-warning mt-2'>Modificar</button>" ;
 					echo " </div>" ;
 					echo " </form>" ;
 					echo " </div>" ; 

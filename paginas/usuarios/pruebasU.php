@@ -53,7 +53,6 @@ class Crear
 		}
 		echo "<div class='conPag'>
 				   <div class='pagination'>
-				   <button class='btn1' onclick='BtnPrev()'>prev</button>
 					 <ul>";
 		for ($i = 1; $i <= $total_pag; $i++) {
 			if ($i == $pagina_actual) {
@@ -64,7 +63,7 @@ class Crear
 
 		}
 		echo "</ul>
-					<button class='btn2' onclick='BtnNext()'>next</button>
+				
 					</div>
 		 		</div>";
 	}

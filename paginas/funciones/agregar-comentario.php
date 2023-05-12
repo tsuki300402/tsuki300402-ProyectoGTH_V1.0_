@@ -4,6 +4,7 @@ $conexion = new Conexion();
 $con = $conexion->conectarDB();
 
 $nombre = $_POST['autor'];
+
 $id = $_POST['id_tema'];
 $comentario = $_POST['comentario'];
 $fecha = date("Y-m-d H:i:s");

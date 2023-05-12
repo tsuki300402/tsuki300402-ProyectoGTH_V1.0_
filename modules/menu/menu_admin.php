@@ -50,8 +50,8 @@
     <div id="sidebar" class="">
       <div class="container p-2 border-bottom">
         <a href="#" class="navbar-brand text-center text-light w-100 m-2 p-4 ">
-          <h1><img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo.png" alt="NielRoo"  style="max-width:90px;max-height:105px;">
-          <i class="text-white">Niel</i><i class="text-primary">Roo </i></h1>
+          <img src="http://localhost/ProyectoGTH_V1.0_/img/empresa/NielRoo.png" alt="NielRoo"  style="max-width:90px;max-height:105px;">
+          <h1> <i class="text-white">Niel</i><i class="text-primary">Roo </i></h1>
         </a>
       </div>
       <div id="sidebar-accordion" class="accordion">

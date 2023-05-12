@@ -11,6 +11,7 @@ include("../../configuracion/controller/conexion.php");
 $conexion = new Conexion();
 $con = $conexion->conectarDB();
 $id = $_GET['id'];
+$Usuario = $_SESSION['Usuario'];
 $resultado = mysqli_query($con, "SELECT * FROM tema WHERE id=$id");
 $fila = mysqli_fetch_assoc($resultado);
 
@@ -56,7 +57,8 @@ echo '</div>';
     echo '<form method="POST" action="agregar-comentario.php">';
     echo '<div class="form-group">';
     echo '<label for="autor">Nombre</label>';
-    echo '<input type="text" class="form-control" id="autor" name="autor" value="'.$_SESSION['Usuario'].'" required disabled>';
+    echo '<input type="text" class="form-control" name="autor1" value="'.$Usuario.'"  disabled>';
+    echo '<input type="hidden" class="form-control" name="autor" value="'.$Usuario.'"  >';
     echo '</div>';
     echo '<div class="form-group">';
     echo '<label for="comentario">Comentario</label>';

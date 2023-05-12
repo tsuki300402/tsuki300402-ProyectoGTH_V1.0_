@@ -60,48 +60,7 @@
   </div>
     <hr>  
     <!--Ubicacion-->
-    <div class="container-fluid text-center">
-      <h1>Proyectos</h1>
-      <div class="row mt-4 justify-content-center">
-      <div class="col-3">
-                <div class="card border-0">
-                  <div class="face front">
-                        <img src="./img/img.jpg" alt="">
-                        <h3>Black</h3>
-                    </div>
-                    <div class="face back">
-                        <h3>Black</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci reiciendis commodi voluptatem voluptas eius repudiandae ipsa. Laborum, magni optio omnis beatae</p>
-                    </div>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="card border-0">
-                  <div class="face front">
-                        <img src="./img/diseño.jpg" alt="">
-                        <h3>Crash</h3>
-                    </div>
-                    <div class="face back">
-                        <h3>Crash</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci reiciendis commodi voluptatem voluptas eius repudiandae ipsa. Laborum, magni optio omnis beatae</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-            <div class="card border-0">
-                    <div class="face front">
-                        <img src="./img/fondomenuadmin.jpg" alt="">
-                        <h3>Metal Slug 2</h3>
-                    </div>
-                    <div class="face back">
-                        <h3>Metal Slug 2</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci reiciendis commodi voluptatem voluptas eius repudiandae ipsa. Laborum, magni optio omnis beatae</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-    </div>
+  
     <!--Fin -->
     <hr>
   <!-- -->
