@@ -27,7 +27,10 @@ while ($fila = mysqli_fetch_assoc($resultado)) {
     echo '<div class="card mt-2">';
     echo '<div class="card-body">';
     echo '<h5 class="card-title">'."<i class='bi bi-person me-1'></i>" . $fila['nombre'] . '</h5>';
+    echo '<div class"d-flex flex-column align-items-start">';
     echo '<p class="card-text">' . $fila['comentario'] . '</p>';
+    echo '<p class="card-text position-absolute bottom-0 end-0 text-gray me-2">' . $fila['fecha_creacion'] . '</p>';
+    echo '</div>';
     echo '</div>';
     echo '</div>';
 }

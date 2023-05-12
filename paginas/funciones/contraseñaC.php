@@ -16,8 +16,8 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'elmasgamerdelmundo@gmail.com'; // Tu correo electrónico de Gmail
-    $mail->Password = 'ddxbnolmjeitjmla'; // Tu contraseña de Gmail
+    $mail->Username = 'rooseveltrodriguez3004@gmail.com'; // Tu correo electrónico de Gmail
+    $mail->Password = 'faovldohfvtmcgbs'; // Tu contraseña de Gmail
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->SMTPAuth = true;
     $mail->Port = 465;
@@ -26,7 +26,7 @@ try {
     require_once "../../recuperar.php";
     $correo = $_POST['email'];
     // Configurar el correo electrónico
-    $mail->setFrom('elmasgamerdelmundo@gmail.com', 'Correo de registro');
+    $mail->setFrom('rooseveltrodriguez3004@gmail.com', 'Correo de registro');
     $mail->addAddress($correo, 'nombre del usuario');
     //$mail->addReplyTo('tu_correo@gmail.com', 'Responder a');
     $mail->isHTML(true);
